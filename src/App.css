@@ -834,7 +834,7 @@ div.demo img {
 }
 
 .body-overlay:hover {
-  cursor: url(../public/assets/img/icon/call.svg), pointer;
+  cursor: url(..\/public\/assets\/img\/icon\/call.svg), pointer;
 }
 
 .body-overlay.opened {

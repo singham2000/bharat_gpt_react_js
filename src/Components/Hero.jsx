@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import ShapeOne from '../Assets/images/shape-1.png';
 import ShapeTwo from '../Assets/images/shape-4.png';
 import BannerOne from '../Assets/images/banner1.jpg';
 
 const Hero = () => {
+    const refA = useRef(null);
     return (
-        <section className="tp-hero-area tp-hero-space">
+        <section ref={refA} className="tp-hero-area tp-hero-space">
             <div className="tp-hero-wrapper p-relative">
                 <div className="hero-active-1 swiper-container">
                     <div className="swiper-wrapper">
@@ -30,7 +31,7 @@ const Hero = () => {
                                                         </span>
                                                         <h3 className="tp-hero-title">
                                                             Introducing
-                                                            <span className="title-color"  style={{ marginLeft: '13px' }}>India's First </span>
+                                                            <span className="title-color" style={{ marginLeft: '13px' }}>India's First </span>
                                                             <br />
                                                             <span className="title-text-transparent" >
                                                                 Gen AI Platform

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 const Navbar = () => {
     const [show, setShow] = useState(false);
+
     const scrollToDiv = (id) => {
         const element = document.getElementById(id);
         if (element) {
@@ -44,11 +45,11 @@ const Navbar = () => {
                                         </div>
                                         <div className="tp-header-logo">
                                             <div className="d-flex justify-content-between align-items-center">
-                                            <Link to={'/'}>
+                                                <Link to={'/'}>
                                                     <img src={BharatAi} alt="" className="logo-main" />
 
-                                            </Link>
-                                               
+                                                </Link>
+
                                                 <span className="tp-btn d-block d-sm-none back-change"
                                                     style={{ padding: "9px 12px", marginLeft: '15px' }}>
                                                     <div id="buttonText"></div>
@@ -108,90 +109,96 @@ const Navbar = () => {
                             className="d-flex justify-content-center align-items-start flex-column gap-4 mb-10"
                             style={{ fontWeight: "600" }}
                         >
-                            <span onclick={()=>scrollToDiv('about-area')}>
-                                <span
-                                    style={{
-                                        fontSize: "large",
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        cursor: "pointer",
-                                         color: "black"
-                                    }}
-                                >
-                                    <i
-                                        className="fa-solid fa-globe"
+                            <Link to={'#about-area'}>
+                                <span onclick={() => (scrollToDiv('about-area'))}>
+                                    <span
                                         style={{
-                                            fontSize: '18px',
-                                            marginRight: '20px',
+                                            fontSize: "large",
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                            cursor: "pointer",
+                                            color: "black"
                                         }}
-                                    ></i>
-                                    About
+                                    >
+                                        <i
+                                            className="fa-solid fa-globe"
+                                            style={{
+                                                fontSize: '18px',
+                                                marginRight: '20px',
+                                            }}
+                                        ></i>
+                                        About
+                                    </span>
                                 </span>
-                            </span>
-
-                            <span onclick={()=>scrollToDiv('services')}>
-                                <span
-                                    style={{
-                                        fontSize: 'large',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        cursor: 'pointer',
-                                         color: "black"
-                                    }}
-                                >
-                                    <i
-                                        className="fa-solid fa-gear"
+                            </Link>
+                            <Link to={'#services'}>
+                                <span onclick={() => scrollToDiv('services')}>
+                                    <span
                                         style={{
-                                            fontSize: '18px',
-                                            marginRight: '20px',
-                                        }}></i>
-                                    Services
+                                            fontSize: 'large',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            cursor: 'pointer',
+                                            color: "black"
+                                        }}
+                                    >
+                                        <i
+                                            className="fa-solid fa-gear"
+                                            style={{
+                                                fontSize: '18px',
+                                                marginRight: '20px',
+                                            }}></i>
+                                        Services
+                                    </span>
                                 </span>
-                            </span>
-                            <span onclick={()=>scrollToDiv('clients-feedback')}>
-                                <span
-                                    style={{
-                                        fontSize: 'large',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        cursor: 'pointer',
-                                         color: "black"
-                                    }}>
-                                    <i
-                                        className="fa-solid fa-people-simple"
+                            </Link>
+                            <Link to={'#clients-feedback'}>
+                                <span onclick={() => scrollToDiv('clients-feedback')}>
+                                    <span
                                         style={{
-                                            fontSize: '18px',
-                                            marginRight: '20px',
-                                        }}></i>
-                                    Testimonials
+                                            fontSize: 'large',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            cursor: 'pointer',
+                                            color: "black"
+                                        }}>
+                                        <i
+                                            className="fa-solid fa-people-simple"
+                                            style={{
+                                                fontSize: '18px',
+                                                marginRight: '20px',
+                                            }}></i>
+                                        Testimonials
+                                    </span>
                                 </span>
-                            </span>
-                            <span onclick={()=>scrollToDiv('faq')}>
-                                <span
-                                    style={{
-                                        fontSize: 'large',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        cursor: 'pointer',
-                                        color: "black"
-                                    }}>
-                                    <i
-                                        className="fa-solid fa-question"
+                            </Link>
+                            <Link to={'#faq'}>
+                                <span onclick={() => scrollToDiv('faq')}>
+                                    <span
                                         style={{
-                                            fontSize: '18px',
-                                            marginRight: '20px',
-                                        }}></i>
-                                    FAQ
-                                </span>
-                                {/* <!-- <span className="tp-btn mt-20"
+                                            fontSize: 'large',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            cursor: 'pointer',
+                                            color: "black"
+                                        }}>
+                                        <i
+                                            className="fa-solid fa-question"
+                                            style={{
+                                                fontSize: '18px',
+                                                marginRight: '20px',
+                                            }}></i>
+                                        FAQ
+                                    </span>
+                                    {/* <!-- <span className="tp-btn mt-20"
                   >Faq <i className="fa-regular fa-arrow-right-long"></i
                 ></span> --> */}
-                            </span>
-
+                                </span>
+                            </Link>
                             <a
                                 href="https://corover.ai/home/"
                                 style={{ textDecoration: 'none', color: 'black' }}
@@ -205,7 +212,7 @@ const Navbar = () => {
                                         justifyContent: 'center',
                                         alignItems: 'center',
                                         cursor: 'pointer',
-                                         color: "black"
+                                        color: "black"
                                     }}
                                 >
                                     <i
@@ -231,7 +238,7 @@ const Navbar = () => {
                                         justifyContent: 'center',
                                         alignItems: 'center',
                                         cursor: 'pointer',
-                                         color: "black"
+                                        color: "black"
                                     }}
                                 >
                                     <i
@@ -241,43 +248,46 @@ const Navbar = () => {
                                     Pricing
                                 </span>
                             </a>
-
-                            <span onclick={()=>scrollToDiv('video-gallery')}>
-                                <span
-                                    style={{
-                                        fontSize: 'large',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        cursor: 'pointer',
-                                         color: "black"
-                                    }}
-                                >
-                                    <i
-                                        className="fa-solid fa-video"
-                                        style={{ fontSize: '18px', important: 'true', marginRight: '20px' }}
-                                    ></i>
-                                    Video Gallery
+                            <Link to={'#video-gallery'}>
+                                <span onclick={() => scrollToDiv('video-gallery')}>
+                                    <span
+                                        style={{
+                                            fontSize: 'large',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            cursor: 'pointer',
+                                            color: "black"
+                                        }}
+                                    >
+                                        <i
+                                            className="fa-solid fa-video"
+                                            style={{ fontSize: '18px', important: 'true', marginRight: '20px' }}
+                                        ></i>
+                                        Video Gallery
+                                    </span>
                                 </span>
-                            </span>
-                            <span onclick={()=>scrollToDiv('community')}>
-                                <span
-                                    style={{
-                                        fontSize: 'large',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        cursor: 'pointer',
-                                         color: "black"
-                                    }}
-                                >
-                                    <i
-                                        className="fa-solid fa-people-arrows"
-                                        style={{ fontSize: '18px', important: 'true', marginRight: '20px' }}
-                                    ></i>
-                                    Developer Community
+                            </Link>
+                            <Link to={'#community'}>
+                                <span onclick={() => scrollToDiv('community')}>
+                                    <span
+                                        style={{
+                                            fontSize: 'large',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            cursor: 'pointer',
+                                            color: "black"
+                                        }}
+                                    >
+                                        <i
+                                            className="fa-solid fa-people-arrows"
+                                            style={{ fontSize: '18px', important: 'true', marginRight: '20px' }}
+                                        ></i>
+                                        Developer Community
+                                    </span>
                                 </span>
-                            </span>
+                            </Link>
                         </div>
                     </div>
                     <div

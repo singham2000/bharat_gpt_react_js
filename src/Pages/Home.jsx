@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import { useLocation } from 'react-router-dom';
+
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Hero from "../Components/Hero";
@@ -14,6 +17,16 @@ import Developer from "../Components/Developer";
 
 
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const elementId = location.hash.slice(1); // Get the hash value without the '#'
+    const element = document.getElementById(elementId);
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [location]);
   return (
     <div>
       <Navbar />

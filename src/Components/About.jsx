@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import Poster from '../Assets/images/poster.jpg';
 import Video from '../Assets/video/corover_video.mp4';
 import LogoImg1 from '../Assets/images/img-1.png';
@@ -9,6 +9,7 @@ import '../Assets/css/swiper-bundle.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const About = () => {
+    const refB = useRef(null);
     const [isLoop, setIsLoop] = useState(false);
     const setting = {
         slidesPerView: 3,
@@ -54,7 +55,7 @@ const About = () => {
 
     register();
     return (
-        <section id="about-area" class="tp-about-area box-plr p-relative"
+        <section ref={refB} id="about-area" class="tp-about-area box-plr p-relative"
             style={{ height: 'max-content' }}>
 
             <div class="container-fluid">

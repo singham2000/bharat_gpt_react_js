@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Poster from '../Assets/images/poster.jpg';
 import Video from '../Assets/video/corover_video.mp4';
 import LogoImg1 from '../Assets/images/img-1.png';
@@ -7,6 +7,8 @@ import LogoImg3 from '../Assets/images/img-3.png';
 import { register } from 'swiper/element/bundle';
 import '../Assets/css/swiper-bundle.css';
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import EditPencil from '../Components/EditPencil';
 
 const About = () => {
     const refB = useRef(null);
@@ -68,7 +70,9 @@ const About = () => {
                         <center class="d-flex flex-column">
                             <label for="corover_video"
                                 style={{ fontSize: '18px', textAlign: 'center' }}
-                            >Make Your GenAI Bot</label>
+                            >
+                                Make Your GenAI Bot
+                            </label>
                             <h3 class="tp-feature-title">
                                 We aspire you becoming GEN AI developer.... in fraction of
                                 time.
@@ -88,14 +92,19 @@ const About = () => {
                                 <div class="col-lg-12">
                                     <div class="tp-about-title-wrapper p-relative" style={{ marginBottom: '50px' }} >
                                         <span class="tp-section-title__pre">
-                                            AI AUTOMATED WORKFORCES:<span class="title-pre-color">
-                                                THE FUTURE OF ENTERPRISE</span>
+                                            <EditPencil>
+                                                AI AUTOMATED WORKFORCES:<span class="title-pre-color">
+                                                    THE FUTURE OF ENTERPRISE</span>
+                                            </EditPencil>
                                         </span>
                                         <h3 class="tp-section-title"
                                             style={{ marginBottom: '0px', important: 'true' }}
                                         >
-                                            Choose multiple LLMs to create a world class
-                                            Virtual Assistant
+                                            <EditPencil>
+                                                Choose multiple LLMs to create a world class
+                                                Virtual Assistant
+                                            </EditPencil>
+
                                             <span class="title-left-shape">
                                                 <svg width="194" height="5" viewBox="0 0 194 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -175,7 +184,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import EditPencil from '../Components/EditPencil';
 
 const VideoGallery = () => {
     const setting = {
@@ -37,7 +38,9 @@ const VideoGallery = () => {
                     <div className="col-lg-12">
                         <div className="tp-industry-title-wrapper text-center">
                             <h3 className="tp-section-title">
-                                Video Gallery
+                                <EditPencil>
+                                    Video Gallery
+                                </EditPencil>
                                 <span className="title-center-shape">
                                     <svg width="194" height="5" viewBox="0 0 194 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -56,21 +59,27 @@ const VideoGallery = () => {
                                         <button className="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
                                             data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
                                             aria-selected="true">
-                                            Testimonials
+                                            <EditPencil>
+                                                Testimonials
+                                            </EditPencil>
                                         </button>
                                     </li>
                                     <li className="nav-item" role="presentation">
                                         <button className="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
                                             data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
                                             aria-selected="false">
-                                            Products and Demos
+                                            <EditPencil>
+                                                Products and Demos
+                                            </EditPencil>
                                         </button>
                                     </li>
                                     <li className="nav-item" role="presentation">
                                         <button className="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
                                             data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
                                             aria-selected="false">
-                                            Awards & Recognitions
+                                            <EditPencil>
+                                                Awards & Recognitions
+                                            </EditPencil>
                                         </button>
                                     </li>
                                 </ul>
@@ -112,9 +121,11 @@ const VideoGallery = () => {
                                                                     <span className="video_label pl-10"
                                                                         style={{ height: 'fit-content' }}
                                                                     >
-                                                                        Dr. Pushpendra Singh, IIIT Delhi,
-                                                                        Transformative Impact of BharatGPT,
-                                                                        Enterprise Adoption.
+                                                                        <EditPencil>
+                                                                            Dr. Pushpendra Singh, IIIT Delhi,
+                                                                            Transformative Impact of BharatGPT,
+                                                                            Enterprise Adoption.
+                                                                        </EditPencil>
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -136,9 +147,11 @@ const VideoGallery = () => {
                                                                     <span className="video_label pl-10"
                                                                         style={{ height: 'fit-content' }}
                                                                     >
-                                                                        Dr. Vikram Goyal, IIIT Delhi, Experiences
-                                                                        in the world of Artificial Intelligence
-                                                                        (BharatGPT).
+                                                                        <EditPencil>
+                                                                            Dr. Vikram Goyal, IIIT Delhi, Experiences
+                                                                            in the world of Artificial Intelligence
+                                                                            (BharatGPT).
+                                                                        </EditPencil>
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -159,9 +172,11 @@ const VideoGallery = () => {
                                                                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                                                     </center>
                                                                     <span className="video_label pl-10" style={{ height: 'fit-content' }}>
-                                                                        Satya Nadella, Narendra Modi, and many
-                                                                        renowned personalities are talking about
-                                                                        CoRover.
+                                                                        <EditPencil>
+                                                                            Satya Nadella, Narendra Modi, and many
+                                                                            renowned personalities are talking about
+                                                                            CoRover.
+                                                                        </EditPencil>
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -181,8 +196,10 @@ const VideoGallery = () => {
                                                                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                                                     </center>
                                                                     <span className="video_label pl-10" style={{ height: 'fit-content' }}>
-                                                                        Microsoft CEO Satya Nadella talking about
-                                                                        CoRover Conversational AI
+                                                                        <EditPencil>
+                                                                            Microsoft CEO Satya Nadella talking about
+                                                                            CoRover Conversational AI
+                                                                        </EditPencil>
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -227,9 +244,11 @@ const VideoGallery = () => {
                                                                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                                                     </center>
                                                                     <span className="video_label pl-10" style={{ height: 'fit-content' }}>
-                                                                        CoRover.ai द्वारा BharatGPT, भारत का अपना
-                                                                        जेनेरेटिव AI, टेक्स्ट, वॉयस और वीडियो के
-                                                                        साथ।
+                                                                        <EditPencil>
+                                                                            CoRover.ai द्वारा BharatGPT, भारत का अपना
+                                                                            जेनेरेटिव AI, टेक्स्ट, वॉयस और वीडियो के
+                                                                            साथ।
+                                                                        </EditPencil>
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -250,9 +269,11 @@ const VideoGallery = () => {
                                                                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                                                     </center>
                                                                     <span className="video_label pl-10" style={{ height: 'fit-content' }}>
-                                                                        Multilingual Virtual Assistant with Gen
-                                                                        AI, powered by the CoRover Conversational
-                                                                        AI Platform
+                                                                        <EditPencil>
+                                                                            Multilingual Virtual Assistant with Gen
+                                                                            AI, powered by the CoRover Conversational
+                                                                            AI Platform
+                                                                        </EditPencil>
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -273,9 +294,11 @@ const VideoGallery = () => {
                                                                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                                                     </center>
                                                                     <span className="video_label pl-10" style={{ height: 'fit-content' }}>
-                                                                        Real Time Speech Translation |
-                                                                        Simultaneously one to many | CoRover |
-                                                                        Bhashini | Google
+                                                                        <EditPencil>
+                                                                            Real Time Speech Translation |
+                                                                            Simultaneously one to many | CoRover |
+                                                                            Bhashini | Google
+                                                                        </EditPencil>
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -295,9 +318,11 @@ const VideoGallery = () => {
                                                                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                                                     </center>
                                                                     <span className="video_label pl-10" style={{ height: 'fit-content' }}>
-                                                                        Yukimi Virtual Assistant is an AI VideoBot
-                                                                        (Interactive Digital Twin) in Japan,
-                                                                        powered by CoRover.
+                                                                        <EditPencil>
+                                                                            Yukimi Virtual Assistant is an AI VideoBot
+                                                                            (Interactive Digital Twin) in Japan,
+                                                                            powered by CoRover.
+                                                                        </EditPencil>
                                                                     </span>
                                                                 </div>
                                                             </div>

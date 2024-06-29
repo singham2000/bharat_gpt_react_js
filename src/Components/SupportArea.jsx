@@ -1,6 +1,6 @@
 import React from 'react';
 import ShapeBg from '../Assets/images/fun-fact/shape-2.png';
-
+import EditPencil from '../Components/EditPencil';
 
 const SupportArea = () => {
     return (
@@ -11,18 +11,22 @@ const SupportArea = () => {
             </div>
             <div className="container container-large">
                 <div class="tp-fun-fact-shape">
-                    <img  alt=''/>
+                    <img alt='' />
                     <img class="shape-2_copy" src={ShapeBg} alt="" />
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-xxl-8 col-xl-10">
                         <div className="tp-support-title-wrapper text-center">
                             <span className="tp-section-title__pre">
-                                The best GEN AI <span className="title-pre-color">assistant</span>
+                                <EditPencil>The best GEN AI</EditPencil><span className="title-pre-color"> <EditPencil> assistant </EditPencil> </span>
                                 <h3 className="tp-section-title">
-                                    HUMAN-CENTRIC GEN AI ASSISTANT
+                                    <EditPencil>
+                                        HUMAN-CENTRIC GEN AI ASSISTANT
+                                    </EditPencil>
                                     <span className="title-color">
-                                        WITH VOICE AND VIDEO COMMERCE
+                                        <EditPencil>
+                                            WITH VOICE AND VIDEO COMMERCE
+                                        </EditPencil>
                                     </span>
                                     <span className="title-center-shape">
                                         <svg width="194" height="5" viewBox="0 0 194 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,14 +46,18 @@ const SupportArea = () => {
                                         <h2 className="accordion-header" id="headingTwo">
                                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                Vernacular Voice Support
+                                                <EditPencil>
+                                                    Vernacular Voice Support
+                                                </EditPencil>
                                             </button>
                                         </h2>
                                         <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
                                             data-bs-parent="#general_accordion">
                                             <div className="accordion-body">
                                                 <p>
-                                                    Auto training of multiple languages and dialects
+                                                    <EditPencil>
+                                                        Auto training of multiple languages and dialects
+                                                    </EditPencil>
                                                 </p>
                                             </div>
                                         </div>
@@ -58,13 +66,19 @@ const SupportArea = () => {
                                         <h2 className="accordion-header" id="headingOne">
                                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                Multi-device support
+                                                <EditPencil>
+                                                    Multi-device support
+                                                </EditPencil>
                                             </button>
                                         </h2>
                                         <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne"
                                             data-bs-parent="#general_accordion">
                                             <div className="accordion-body">
-                                                <p>Easy integration with POS and ERP systems</p>
+                                                <p>
+                                                    <EditPencil>
+                                                        Easy integration with POS and ERP systems
+                                                    </EditPencil>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -72,15 +86,19 @@ const SupportArea = () => {
                                         <h2 className="accordion-header" id="headingThree">
                                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                Subset dictionary for high accuracy
+                                                <EditPencil>
+                                                    Subset dictionary for high accuracy
+                                                </EditPencil>
                                             </button>
                                         </h2>
                                         <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree"
                                             data-bs-parent="#general_accordion">
                                             <div className="accordion-body">
                                                 <p>
-                                                    Auto training of unlimited SKUs, Store, Vendor, Ware
-                                                    House.
+                                                    <EditPencil>
+                                                        Auto training of unlimited SKUs, Store, Vendor, Ware
+                                                        House.
+                                                    </EditPencil>
                                                 </p>
                                             </div>
                                         </div>

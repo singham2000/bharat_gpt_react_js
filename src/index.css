@@ -1,12 +1,12 @@
-@import url(./Assets/css/css/animate.css);
-@import url(./Assets/css/css/bootstrap-rtl.css);
-@import url(./Assets/css/css/bootstrap.css);
-@import url(./Assets/css/css/font-awesome-pro.css);
-@import url(./Assets/css/css/magnific-popup.css);
-@import url(./Assets/css/css/nouislider.css);
-@import url(./Assets/css/css/slick.css);
-@import url(./Assets/css/css/spacing.css);
-@import url(./Assets/css/css/splide.css);
+@import url('./Assets/css/css/animate.css');
+@import url('./Assets/css/css/bootstrap-rtl.css');
+@import url('./Assets/css/css/bootstrap.css');
+@import url('./Assets/css/css/font-awesome-pro.css');
+@import url('./Assets/css/css/magnific-popup.css');
+@import url('./Assets/css/css/nouislider.css');
+@import url('./Assets/css/css/slick.css');
+@import url('./Assets/css/css/spacing.css');
+@import url('./Assets/css/css/splide.css');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

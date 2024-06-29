@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import ShapeOne from '../Assets/images/shape-1.png';
 import ShapeTwo from '../Assets/images/shape-4.png';
 import BannerOne from '../Assets/images/banner1.jpg';
-
+import EditPencil from '../Components/EditPencil';
 const Hero = () => {
     const refA = useRef(null);
     return (
@@ -25,16 +25,25 @@ const Hero = () => {
                                                 <div className="tp-hero-content p-relative">
                                                     <div className="tp-hero-title-wrapper">
                                                         <span className="tp-section-title__pre p-relative">
+                                                        <EditPencil>
                                                             Redefine Efficiency using
+                                                        </EditPencil>
                                                             <span className="title-pre-color" style={{ marginLeft: '13px' }}>
-                                                                human-centric bots</span>
+                                                            <EditPencil>
+                                                                human-centric bots
+                                                            </EditPencil>
+                                                                </span>
                                                         </span>
                                                         <h3 className="tp-hero-title">
+                                                        <EditPencil>
                                                             Introducing
+                                                        </EditPencil>
                                                             <span className="title-color" style={{ marginLeft: '13px' }}>India's First </span>
                                                             <br />
                                                             <span className="title-text-transparent" >
+                                                            <EditPencil>
                                                                 Gen AI Platform
+                                                            </EditPencil>
                                                             </span>
                                                         </h3>
                                                         <div className="tp-hero-btn">

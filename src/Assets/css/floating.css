@@ -1,0 +1,22 @@
+/* FloatingPencilIcon.css */
+.floating-pencil-icon {
+  position: relative;
+  display: inline-block;
+  z-index: 1000; /* Ensure the parent container has a high z-index */
+}
+
+.pencil-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 1100; /* Ensure pencil icon is above all other content */
+}
+
+.pencil-icon svg {
+  fill: #333;
+}

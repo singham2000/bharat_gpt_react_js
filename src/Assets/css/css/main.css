@@ -9761,7 +9761,7 @@ only screen and (min-width: 1600px) and (max-width: 1700px) {
   text-align: center;
   color: transparent;
   text-transform: lowercase;
-  background-image: url("./text-img.jpg");
+  background-image: url(./text-img.jpg);
   -webkit-background-clip: text;
   background-size: auto;
   background-position: center;

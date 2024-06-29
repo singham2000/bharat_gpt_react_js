@@ -25,14 +25,14 @@ const Hero = () => {
                                                     <div className="tp-hero-title-wrapper">
                                                         <span className="tp-section-title__pre p-relative">
                                                             Redefine Efficiency using
-                                                            <span className="title-pre-color">
+                                                            <span className="title-pre-color" style={{ marginLeft: '13px' }}>
                                                                 human-centric bots</span>
                                                         </span>
                                                         <h3 className="tp-hero-title">
                                                             Introducing
-                                                            <span className="title-color">India's First </span>
+                                                            <span className="title-color"  style={{ marginLeft: '13px' }}>India's First </span>
                                                             <br />
-                                                            <span className="title-text-transparent">
+                                                            <span className="title-text-transparent" >
                                                                 Gen AI Platform
                                                             </span>
                                                         </h3>

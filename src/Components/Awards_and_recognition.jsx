@@ -9,7 +9,12 @@ const Awards_and_recognition = () => {
                     <div className="row justify-content-center">
                         <div className="col-xl-10">
                             <div className="breadcrumb__content text-center">
-                                <h3 className="breadcrumb__title">Awards and Recognitions
+
+                                <h3 className="breadcrumb__title">
+                                <h3 className='tp-section-title'>
+
+                                Awards and Recognitions
+                                </h3>
                                     <img src="assets/img/breadcrumb/titile.svg" alt="" />
                                 </h3>
                             </div>

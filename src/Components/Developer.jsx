@@ -15,7 +15,9 @@ const Developer = () => {
                     <div className="col-xl-10">
                         <div className="breadcrumb__content text-center">
                             <h3 className="breadcrumb__title">
+                            <h3 className='tp-section-title'>
                                 Developer Community
+                            </h3>
                                 <img src="assets/img/breadcrumb/titile.svg" alt="" />
                             </h3>
                         </div>

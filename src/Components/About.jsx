@@ -7,7 +7,7 @@ import LogoImg3 from '../Assets/images/img-3.png';
 import { register } from 'swiper/element/bundle';
 import '../Assets/css/swiper-bundle.css';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+
 const About = () => {
     const [isLoop, setIsLoop] = useState(false);
     const setting = {

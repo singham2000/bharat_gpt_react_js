@@ -12,6 +12,7 @@ const Service = () => {
         setReloadClassName(reload);
     }, []);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const scrollRotate = () => {
         reloadClassName.style.transform = `rotate(${window.pageYOffset / 2}deg)`;
     };

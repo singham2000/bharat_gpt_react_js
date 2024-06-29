@@ -32,6 +32,7 @@ const Footer = () => {
                                 </div>
                                 {/* <!-- Modal --> */}
                                 <div className="modal fade mt-10 overflow-scroll" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                    // eslint-disable-next-line jsx-a11y/aria-props
                                     aria-labelled-by="exampleModalCenterTitle" aria-hidden="true">
                                     <div className="modal-dialog modal-dialog-centered" role="document">
                                         <div className="modal-content">

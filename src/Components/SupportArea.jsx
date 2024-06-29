@@ -11,7 +11,7 @@ const SupportArea = () => {
             </div>
             <div className="container container-large">
                 <div class="tp-fun-fact-shape">
-                    <img />
+                    <img  alt=''/>
                     <img class="shape-2_copy" src={ShapeBg} alt="" />
                 </div>
                 <div className="row justify-content-center">

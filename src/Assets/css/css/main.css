@@ -786,7 +786,7 @@ div.demo img {
 }
 
 .body-overlay:hover {
-  cursor: url(../img/icon/close.png), pointer;
+  cursor: url(./close.png), pointer;
 }
 
 .body-overlay.opened {
@@ -9761,7 +9761,7 @@ only screen and (min-width: 1600px) and (max-width: 1700px) {
   text-align: center;
   color: transparent;
   text-transform: lowercase;
-  background-image: url("../img/feature/home-3/text-img.jpg");
+  background-image: url("./text-img.jpg");
   -webkit-background-clip: text;
   background-size: auto;
   background-position: center;

@@ -108,7 +108,7 @@ const Navbar = () => {
                             className="d-flex justify-content-center align-items-start flex-column gap-4 mb-10"
                             style={{ fontWeight: "600" }}
                         >
-                            <span onclick={scrollToDiv('about-area')}>
+                            <span onclick={()=>scrollToDiv('about-area')}>
                                 <span
                                     style={{
                                         fontSize: "large",
@@ -130,7 +130,7 @@ const Navbar = () => {
                                 </span>
                             </span>
 
-                            <span onclick={scrollToDiv('services')}>
+                            <span onclick={()=>scrollToDiv('services')}>
                                 <span
                                     style={{
                                         fontSize: 'large',
@@ -150,7 +150,7 @@ const Navbar = () => {
                                     Services
                                 </span>
                             </span>
-                            <span onclick={scrollToDiv('clients-feedback')}>
+                            <span onclick={()=>scrollToDiv('clients-feedback')}>
                                 <span
                                     style={{
                                         fontSize: 'large',
@@ -169,7 +169,7 @@ const Navbar = () => {
                                     Testimonials
                                 </span>
                             </span>
-                            <span onclick={scrollToDiv('faq')}>
+                            <span onclick={()=>scrollToDiv('faq')}>
                                 <span
                                     style={{
                                         fontSize: 'large',
@@ -242,7 +242,7 @@ const Navbar = () => {
                                 </span>
                             </a>
 
-                            <span onclick={scrollToDiv('video-gallery')}>
+                            <span onclick={()=>scrollToDiv('video-gallery')}>
                                 <span
                                     style={{
                                         fontSize: 'large',
@@ -260,7 +260,7 @@ const Navbar = () => {
                                     Video Gallery
                                 </span>
                             </span>
-                            <span onclick={scrollToDiv('community')}>
+                            <span onclick={()=>scrollToDiv('community')}>
                                 <span
                                     style={{
                                         fontSize: 'large',

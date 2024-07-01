@@ -1,6 +1,28 @@
-import React from 'react'
+import { useEffect, useState } from 'react';
+import React from 'react';
 import Trans_Back_Logo from '../Assets/images/logo-trans-back.png';
+import axios from 'axios';
 const Footer = () => {
+    const [countries, setCountries] = useState([]);
+
+    const getCountries = async () => {
+        const { data } = await axios.get('https://www.universal-tutorial.com/api/countries/', {
+            headers: {
+                Authorization: `Bearer ${'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJzdXJ5YXByYXRhcDg4NTk5QGdtYWlsLmNvbSIsImFwaV90b2tlbiI6IldMUDkzeVp1M2c2VGhWT1BDLXlVSm0tSU03bXhTbTRpZXY3c0R1WXV4elVvRHZTVFJuSm9aUkp6bFRleG4wblE0ek0ifSwiZXhwIjoxNzE5ODk2NzIzfQ.Mq3w0o5BQMY3XuXsyJ7OUASf7hr1BlU0ksRGiDF1c68'}`
+            }
+        });
+        setCountries(data);
+    }
+
+    useEffect(() => {
+
+        getCountries();
+        return () => {
+
+        }
+    }, [])
+
+
     return (
         <footer className="tp-footer-area p-relative">
             <div className="tp-footer-bg" data-background="assets/img/footer/footer-bg.jpg"></div>
@@ -74,8 +96,8 @@ const Footer = () => {
                                                         <div className="col-md-6">
                                                             <div className="tp-contact-input">
                                                                 <div>
-                                                                    <select name="role" id="" className="role-select" style={{ width: '100%' }}>
-                                                                        <option selected>
+                                                                    <select name="role" id="" className="role-select" style={{ width: '100%', borderColor: 'transparent' }}>
+                                                                        <option selected style={{borderColor: 'transparent' }}>
                                                                             What describes you best?
                                                                         </option>
                                                                         <option value="developer">Developer</option>
@@ -83,6 +105,22 @@ const Footer = () => {
                                                                             Enterprise
                                                                         </option>
                                                                         <option value="other">Other</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="col-md-6">
+                                                            <div className="tp-contact-input">
+                                                                <div>
+                                                                    <select name="country" id="" className="country-code-select" style={{ width: '100%', borderColor: 'transparent' }}>
+                                                                        <option selected style={{borderColor: 'transparent' }}>
+                                                                            Country
+                                                                        </option>
+                                                                        {
+                                                                            countries.map((country, index) => (
+                                                                                <option key={index} value={country.country_phone_code}>{country.country_name}</option>
+                                                                            ))
+                                                                        }
                                                                     </select>
                                                                 </div>
                                                             </div>

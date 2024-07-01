@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useLocation } from 'react-router-dom';
-
+import { useContext } from "react";
+import contentContext from "../utils/contentContext";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Hero from "../Components/Hero";
@@ -18,9 +19,14 @@ import Developer from "../Components/Developer";
 
 const Home = () => {
   const location = useLocation();
-
+  const [fetchedData, setFetchedData] = useState([]);
+  const { getContent } = useContext(contentContext);
   useEffect(() => {
-    const elementId = location.hash.slice(1); // Get the hash value without the '#'
+    getContent().then((data) => {
+      console.log(data);
+      setFetchedData(data.result)
+    });
+    const elementId = location.hash.slice(1);
     const element = document.getElementById(elementId);
 
     if (element) {
@@ -32,7 +38,7 @@ const Home = () => {
       <Navbar />
       <main>
         <Hero />
-        <About />
+        <About data={fetchedData} />
         <Service />
         <Brand />
         <Testimonial />

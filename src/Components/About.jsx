@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import EditPencil from '../Components/EditPencil';
 
-const About = () => {
+const About = ({data}) => {
     const refB = useRef(null);
     const [isLoop, setIsLoop] = useState(false);
     const setting = {
@@ -92,17 +92,21 @@ const About = () => {
                                 <div class="col-lg-12">
                                     <div class="tp-about-title-wrapper p-relative" style={{ marginBottom: '50px' }} >
                                         <span class="tp-section-title__pre">
-                                            <EditPencil>
-                                                AI AUTOMATED WORKFORCES:<span class="title-pre-color">
-                                                    THE FUTURE OF ENTERPRISE</span>
-                                            </EditPencil>
+                                            <EditPencil id={1} existing={data[1]?.display_content} content_type={data[1]?.content_type}>
+                                            {data[1]?.display_content}
+                                                </EditPencil>
+                                                <span class="title-pre-color">
+                                                <EditPencil id={3} existing={data[3]?.display_content} content_type={data[3]?.content_type}>
+                                            {data[3]?.display_content}
+                                                </EditPencil>
+                                                   </span>
+                                       
                                         </span>
                                         <h3 class="tp-section-title"
                                             style={{ marginBottom: '0px', important: 'true' }}
                                         >
-                                            <EditPencil>
-                                                Choose multiple LLMs to create a world class
-                                                Virtual Assistant
+                                            <EditPencil id={2} existing={data[2]?.display_content} content_type={data[2]?.content_type}>
+                                                {data[2]?.display_content}
                                             </EditPencil>
 
                                             <span class="title-left-shape">

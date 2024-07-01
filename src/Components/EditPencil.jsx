@@ -13,7 +13,11 @@ const FloatingPencilIcon = ({ children, id, existing, content_type }) => {
 
   const updateContent = async (e) => {
     e.preventDefault();
-    const { data } = await axiosInstance.post('/api/content/content', { id:id+1, display_content: dataset, content_type });
+    const { data } = await axiosInstance.post('/api/content/content', { id:id+1, display_content: dataset, content_type },{
+      headers:{
+        Authorization:`Bearer ${localStorage.getItem('token')}`
+      }
+    });
     console.log(data);
   }
 

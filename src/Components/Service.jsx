@@ -69,7 +69,7 @@ const Service = () => {
                     <div className="tp-fun-fact-shape">
                         <img className="shape-1" src={ShapeOne} alt="" />
                         <img className="shape-3" src={ShapeThree} alt="" />
-                        <img className="shadow" src={Shadow} alt="" />
+                        {/* <img className="shadow" src={Shadow} alt="" /> */}
                     </div>
                     <div className="row">
                         <div className="col-lg-2 col-md-4">

@@ -3,6 +3,7 @@ import BharatAi from '../Assets/images/bharatai.jpg';
 import BharatAiLogo from "../Assets/images/bharatai.jpg";
 import { Link } from 'react-router-dom';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+
 const Navbar = () => {
     const [show, setShow] = useState(false);
 
@@ -11,6 +12,9 @@ const Navbar = () => {
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
+    };
+    const handleExternalClick = () => {
+        window.open('https://corover.ai/home/', '_blank');  // Open external link in new tab
     };
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -65,6 +69,7 @@ const Navbar = () => {
                                     <div className="tp-header-main-right d-flex align-items-center justify-content-xl-end">
                                         <button className="tp-header-btn d-none d-sm-block pl-40"
                                             style={{ borderRadius: '15px' }}
+                                            onClick={handleExternalClick}
                                         >
                                             <div className="flip-button-container">
                                                 <div className="flip-button">

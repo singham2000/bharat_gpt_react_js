@@ -1,8 +1,87 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import EditPencil from "../Components/EditPencil";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 const VideoGallery = () => {
+  const videos = [
+    {
+      id: "PnZ-nMS-USQ",
+      title:
+        "Dr. Pushpendra Singh, IIIT Delhi, Transformative Impact of BharatGPT, Enterprise Adoption.",
+    },
+    {
+      id: "wSfNfFzQFDY",
+      title:
+        "Dr. Vikram Goyal, IIIT Delhi, Experiences in the world of Artificial Intelligence (BharatGPT).",
+    },
+    {
+      id: "yUiwy7viOHQ",
+      title:
+        "Satya Nadella, Narendra Modi, and many renowned personalities are talking about CoRover.",
+    },
+    {
+      id: "j0i99Vo5vf4",
+      title:
+        "AskSarkar.Com - Pakki Jankari by Prime Minister, Mr. Narendra Modi (Powered by CoRover.ai).",
+    },
+    {
+      id: "gsEK7X1bEyI",
+      title:
+        "IT Minister Ashwini Vaishnaw talks about the IRCTC ChatBot, AskDISHA, powered by CoRover.ai.",
+    },
+
+    // second
+    {
+      id: "QVhHvPYQlTY",
+      title:
+        "Yukimi Virtual Assistant is an AI VideoBot (Interactive Digital Twin) in Japan, powered by CoRover.",
+    },
+    {
+      id: "Sm1ehLvan_0",
+      title:
+        "Create Google Gemini Virtual Assistant (ChatBot, VoiceBot) using CoRover.ai’s No-Code Platform",
+    },
+    {
+      id: "sKGTn_T1ba8",
+      title:
+        "CoroAssist: CoRover.ai’s Gen AI Co-Pilot for Enterprises Powered by BharatGPT",
+    },
+
+    {
+      id: "oUyaemUKbO8",
+      title:
+        "Real Time Speech Translation |Simultaneously one to many | CoRover |Bhashini | Google",
+    },
+    {
+      id: "oLM5IACnNFY",
+      title:
+        "eSevak | Grievance | AI Virtual Assistant| WhatsApp Bot | Dashboard | Samba J&K | CoRover BharatGPT",
+    },
+    {
+      id: "Ck0XwuBxBf4",
+      title:
+        "Conversational Analytics Dashboard - talk to your dashboards powered by CoRover.",
+    },
+    // third
+
+    { id: "n2y8BgUqkvk", title: "Winner of the National Startup Awards 2022." },
+    {
+      id: "zKlhAjbEnMM",
+      title:
+        "The Government of India has honored CoRover with a special award - Azadi Ka Digital Mahotsav.",
+    },
+    {
+      id: "yRqAtQkt1Is",
+      title: "CoRover (Conversational AI Platform) wins Asia Leadership Award",
+    },
+    {
+      id: "bxlwyLaEXMM",
+      title:
+        "AI Virtual Assistant AskDISHA of IRCTC, powered by CoRover | Best Digital Innovation Award.",
+    },
+  ];
   const setting = {
     slidesPerView: 3,
     spaceBetween: 30,
@@ -48,6 +127,73 @@ const VideoGallery = () => {
         }
       }
     }, 500);
+  };
+  const [showModal, setShowModal] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  const openModal = (videoId) => {
+    setSelectedVideo(videoId);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setSelectedVideo(null);
+    setShowModal(false);
+  };
+  const renderVideoThumbnails = (vidArr) => {
+    return (
+      <>
+        <Swiper {...setting}>
+          {vidArr.map((video, index) => (
+            <SwiperSlide key={index}>
+              <div className="tp-team-wrapper p-relative">
+                <div className="swiper-slide-x1">
+                  <center>
+                    <div
+                      className="video-container"
+                      onClick={() => openModal(video.id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <img
+                        src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                        alt="Video Thumbnail"
+                      />
+                      <div className="play-button"></div>
+                    </div>
+                    <span className="video_label m-10">{video.title}</span>
+                  </center>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <Modal show={showModal} onHide={closeModal} centered>
+          <Modal.Header closeButton>
+            <Modal.Title style={{ fontSize: "15px" }}>Video Player</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <div className="video-container">
+              <iframe
+                width="100%"
+                height="400"
+                src={`https://www.youtube.com/embed/${selectedVideo}?rel=0`}
+                title="YouTube Video Player"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </Modal.Body>
+          {/* <Modal.Footer>
+            <Button
+              style={{ fontSize: "10px" }}
+              variant="secondary"
+              onClick={closeModal}
+            >
+              Close
+            </Button>
+          </Modal.Footer> */}
+        </Modal>
+      </>
+    );
   };
 
   return (
@@ -184,7 +330,7 @@ const VideoGallery = () => {
                       </div>
                       <div className="tp-industry-tab-content-inner d-flex mb-30">
                         <div className="team-active swiper-container" id="hx">
-                          <Swiper {...setting}>
+                          {/* <Swiper {...setting}>
                             <SwiperSlide>
                               <div className="tp-team-wrapper p-relative">
                                 <div className="swiper-slide-x1">
@@ -353,7 +499,8 @@ const VideoGallery = () => {
                                 </div>
                               </div>
                             </SwiperSlide>
-                          </Swiper>
+                          </Swiper> */}
+                          {renderVideoThumbnails(videos.slice(0, 5))}
                         </div>
                       </div>
                     </div>
@@ -394,7 +541,7 @@ const VideoGallery = () => {
                       </div>
                       <div className="tp-industry-tab-content-inner d-flex mb-30">
                         <div className="team-active swiper-container" id="hx1">
-                          <Swiper {...setting}>
+                          {/* <Swiper {...setting}>
                             <SwiperSlide>
                               <div className="tp-team-wrapper p-relative">
                                 <div className="swiper-slide-x1">
@@ -561,7 +708,9 @@ const VideoGallery = () => {
                                 </div>
                               </div>
                             </SwiperSlide>
-                          </Swiper>
+                          </Swiper> */}
+                          {/* {renderVideoThumbnails()} */}
+                          {renderVideoThumbnails(videos.slice(5, 10))}
                         </div>
                       </div>
                     </div>
@@ -603,7 +752,7 @@ const VideoGallery = () => {
                       </div>
                       <div className="tp-industry-tab-content-inner d-flex mb-30">
                         <div className="team-active swiper-container" id="hx2">
-                          <Swiper {...setting}>
+                          {/* <Swiper {...setting}>
                             <SwiperSlide>
                               <div className="tp-team-wrapper p-relative">
                                 <div className="swiper-slide-x1">
@@ -770,7 +919,9 @@ const VideoGallery = () => {
                                 </div>
                               </div>
                             </SwiperSlide>
-                          </Swiper>
+                          </Swiper> */}
+                          {/* {renderVideoThumbnails()} */}
+                          {renderVideoThumbnails(videos.slice(10, 15))}
                         </div>
                       </div>
                     </div>

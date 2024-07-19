@@ -7,7 +7,9 @@ swiper-container {
   display: flex;
   justify-content: space-evenly;
 }
-
+button.btn-close {
+  font-size: 12px;
+}
 swiper-slide-x1 {
   text-align: center;
   font-size: 18px;

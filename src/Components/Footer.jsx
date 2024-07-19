@@ -4,7 +4,6 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 import { Country } from "country-state-city";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -162,122 +161,6 @@ const Footer = () => {
                         <p>
                           <i> Required fields are marked *</i>
                         </p>
-
-                        {/* <form
-                          id="contact-form"
-                          action="https://html.hixstudio.net/technix-prv/technix/assets/mail.php"
-                          method="POST"
-                        >
-                          <div className="row">
-                            <div class="col-md-6">
-                              <div class="tp-contact-input">
-                                <input
-                                  name="name"
-                                  type="text"
-                                  placeholder="Your Name*"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="tp-contact-input">
-                                <input
-                                  name="email"
-                                  type="email"
-                                  placeholder="Email Address*"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                              <div class="tp-contact-input">
-                                <select class="countries">
-                                  <option value="" selected disabled>
-                                    Select Country
-                                  </option>
-                                  <option value="+91">India +91</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="tp-contact-input">
-                                <input
-                                  name="text"
-                                  id="phone"
-                                  type="text"
-                                  placeholder="Phone Number"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-md-12">
-                              <div class="tp-contact-input">
-                                <div>
-                                  <select>
-                                    <option selected>
-                                      What describes you best?
-                                    </option>
-                                    <option value="developer">Developer</option>
-                                    <option value="enterprise">
-                                      Enterprise
-                                    </option>
-                                    <option value="other">Other</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="col-md-12">
-                              <div className="tp-contact-input">
-                                <textarea
-                                  name="message"
-                                  cols="2"
-                                  placeholder="Your Query"
-                                ></textarea>
-                              </div>
-                            </div>
-
-                            <input
-                              type="text"
-                              name="honeypot"
-                              style={{ display: "none" }}
-                            />
-
-                            <div className="col-md-12">
-                              <div className="form-group">
-                                <div
-                                  className="g-recaptcha"
-                                  data-sitekey="YOUR_SITE_KEY"
-                                ></div>
-                              </div>
-                            </div>
-                            <div className="col-md-12 d-flex justify-content-end align-content-end">
-                              <button
-                                className="tp-header-btn pl-40 rounded-2"
-                                data-dismiss="modal"
-                              >
-                                <span
-                                  className="tp-btn"
-                                  style={{
-                                    color: "white",
-                                    padding: "12px 24px",
-                                    important: "true",
-                                  }}
-                                >
-                                  Close
-                                </span>
-                              </button>
-                              <button className="tp-header-btn pl-10 rounded-2">
-                                <span
-                                  className="tp-btn"
-                                  style={{
-                                    color: "white",
-                                    padding: "12px 24px",
-                                    important: "true",
-                                  }}
-                                >
-                                  Submit
-                                </span>
-                              </button>
-                            </div>
-                          </div>
-                        </form> */}
                         <Form
                           noValidate
                           validated={validated}

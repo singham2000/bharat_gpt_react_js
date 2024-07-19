@@ -5,7 +5,6 @@ import Mahindra from "../Assets/images/picturesss/mahindra.png";
 import Npci from "../Assets/images/picturesss/npci.png";
 import Irctc from "../Assets/images/picturesss/irctc.png";
 import Slider from "react-slick";
-import EditPencil from "../Components/EditPencil";
 
 const TextArea = () => {
   const setting = {

@@ -31,14 +31,13 @@ const Home = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
   return (
     <div>
-
-
       <Navbar />
       <main>
-        <Hero data={fetchedData}/>
+        <Hero data={fetchedData} />
         <About data={fetchedData} />
         <Service />
         <Brand />

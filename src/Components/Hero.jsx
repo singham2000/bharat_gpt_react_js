@@ -3,7 +3,8 @@ import ShapeOne from "../Assets/images/shape-1.png";
 import ShapeTwo from "../Assets/images/shape-4.png";
 import BannerOne from "../Assets/images/banner1.jpg";
 import EditPencil from "../Components/EditPencil";
-const Hero = () => {
+const Hero = ({ data }) => {
+  console.log(data);
   const refA = useRef(null);
   return (
     <section ref={refA} className="tp-hero-area tp-hero-space">
@@ -28,19 +29,56 @@ const Hero = () => {
                         <div className="tp-hero-content p-relative">
                           <div className="tp-hero-title-wrapper">
                             <span className="tp-section-title__pre p-relative">
-                              Redefine Efficiency using
+                              <EditPencil
+                                id={32}
+                                existing={data[32]?.display_content}
+                                content_type={"txt"}
+                              >
+                                {data[32]?.display_content}
+                                {/* Redefine Efficiency using */}
+                              </EditPencil>
                               <span className="title-pre-color">
-                                Human-Centric Bots
+                                {" "}
+                                <EditPencil
+                                  id={33}
+                                  existing={data[33]?.display_content}
+                                  content_type={"txt"}
+                                >
+                                  {data[33]?.display_content}
+                                  {/* Human-Centric bots */}
+                                </EditPencil>
                               </span>
                             </span>
                             <h3 className="tp-hero-title">
-                              Introducing
+                              <EditPencil
+                                id={34}
+                                existing={data[34]?.display_content}
+                                content_type={"txt"}
+                              >
+                                {data[34]?.display_content}
+                                {/* Introducing India's */}
+                              </EditPencil>
+                              <br />
                               <span className="title-color">
-                                India's First{" "}
+                                <EditPencil
+                                  id={35}
+                                  existing={data[35]?.display_content}
+                                  content_type={"txt"}
+                                >
+                                  {data[35]?.display_content}
+                                  {/* First */}
+                                </EditPencil>
                               </span>
                               <br />
                               <span className="title-text-transparent">
-                                Gen AI Platform
+                                <EditPencil
+                                  id={36}
+                                  existing={data[36]?.display_content}
+                                  content_type={"txt"}
+                                >
+                                  {data[36]?.display_content}
+                                  {/* Gen AI Platform */}
+                                </EditPencil>
                               </span>
                             </h3>
                             <div className="tp-hero-btn">

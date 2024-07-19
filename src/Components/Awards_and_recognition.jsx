@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import EditPencil from "../Components/EditPencil";
 const Awards_and_recognition = () => {
   return (
     <div>
@@ -13,7 +14,7 @@ const Awards_and_recognition = () => {
             <div className="col-xl-10">
               <div className="breadcrumb__content text-center">
                 <h3 className="breadcrumb__title">
-                  <h3 className="tp-section-title">Awards and Recognitions</h3>
+                  <h3 className="tp-section-title">Awards and Recognition</h3>
                 </h3>
               </div>
             </div>
@@ -37,12 +38,26 @@ const Awards_and_recognition = () => {
                   <div className="tp-team-wrapper-content-text">
                     <h3 className="team-title">
                       <span style={{ textDecoration: "none", color: "black" }}>
-                        Global Fintech Competition
+                        <EditPencil
+                          id={12}
+                          existing={"Global Fintech Competition"}
+                          content_type={"txt"}
+                        >
+                          Global Fintech Competition
+                        </EditPencil>
                       </span>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
-                      Winner of Global Fintech Award 2021 by GEP - DIT,
-                      Government of UK
+                      <EditPencil
+                        id={13}
+                        existing={
+                          "Winner of Global Fintech Award 2021 by GEP - DIT, Government of UK"
+                        }
+                        content_type={"txt"}
+                      >
+                        Winner of Global Fintech Award 2021 by GEP - DIT,
+                        Government of UK
+                      </EditPencil>
                     </p>
                   </div>
                 </div>
@@ -61,12 +76,26 @@ const Awards_and_recognition = () => {
                   <div className="tp-team-wrapper-content-text">
                     <h3 className="team-title">
                       <span style={{ textDecoration: "none", color: "black" }}>
-                        Certificate of Recognition
+                        <EditPencil
+                          id={14}
+                          existing={"Certificate of Recognition"}
+                          content_type={"txt"}
+                        >
+                          Certificate of Recognition
+                        </EditPencil>
                       </span>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
-                      Certified by Department of Industrial Promotion and Policy
-                      , Startup India
+                      <EditPencil
+                        id={15}
+                        existing={
+                          "Certified by Department of Industrial Promotion and Policy, Startup India"
+                        }
+                        content_type={"txt"}
+                      >
+                        Certified by Department of Industrial Promotion and
+                        Policy , Startup India
+                      </EditPencil>
                     </p>
                   </div>
                 </div>
@@ -89,8 +118,16 @@ const Awards_and_recognition = () => {
                       </span>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
-                      Best Company for Data Scientists, Data Analysts and
-                      Engineers
+                      <EditPencil
+                        id={16}
+                        existing={
+                          "Best Company for Data Scientists, Data Analysts and Engineers"
+                        }
+                        content_type={"txt"}
+                      >
+                        Best Company for Data Scientists, Data Analysts and
+                        Engineers
+                      </EditPencil>
                     </p>
                   </div>
                 </div>

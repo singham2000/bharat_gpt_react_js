@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 import { useContext } from "react";
 import contentContext from "../utils/contentContext";
 import Navbar from "../Components/Navbar";
@@ -16,7 +16,6 @@ import Awardsandrecognition from "../Components/Awards_and_recognition";
 import VideoGallery from "../Components/VideoGallery";
 import Developer from "../Components/Developer";
 
-
 const Home = () => {
   const location = useLocation();
   const [fetchedData, setFetchedData] = useState([]);
@@ -24,20 +23,22 @@ const Home = () => {
   useEffect(() => {
     getContent().then((data) => {
       console.log(data);
-      setFetchedData(data.result)
+      setFetchedData(data.result);
     });
     const elementId = location.hash.slice(1);
     const element = document.getElementById(elementId);
 
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [location]);
   return (
     <div>
+
+
       <Navbar />
       <main>
-        <Hero />
+        <Hero data={fetchedData}/>
         <About data={fetchedData} />
         <Service />
         <Brand />

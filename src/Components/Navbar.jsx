@@ -3,10 +3,29 @@ import BharatAi from "../Assets/images/bharatai.jpg";
 import BharatAiLogo from "../Assets/images/bharatai.jpg";
 import { Link } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import EditPencil from "../Components/EditPencil";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
+  const [visible, setVisible] = useState(false);
 
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300) {
+      setVisible(true);
+    } else if (scrolled <= 300) {
+      setVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  window.addEventListener("scroll", toggleVisible);
   const scrollToDiv = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -20,24 +39,25 @@ const Navbar = () => {
   const handleShow = () => setShow(true);
   return (
     <div>
-      <div className="back-to-top-wrapper">
-        <button id="back_to_top" type="button" className="back-to-top-btn">
-          <svg
-            width="12"
-            height="7"
-            viewBox="0 0 12 7"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11 6L6 1L1 6"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
+      <div
+        class="back-to-top-wrapper"
+        onClick={scrollToTop}
+        style={{ display: visible ? "inline" : "none" }}
+      >
+        <a
+          type="button"
+          class="back-to-top-btn"
+          href="https://corover.ai/demo"
+          target="_blank"
+          style={{ color: "white" }}
+          onmouseover="this.style.color='white'"
+          onmouseout="this.style.color='white'"
+          rel={"noreferrer"}
+        >
+          <EditPencil id={37} existing={"Book a Demo"} content_type={"txt"}>
+            Book a Demo
+          </EditPencil>
+        </a>
       </div>
       <header
         className="tp-header-area tp-header-height p-relative"
@@ -119,7 +139,13 @@ const Navbar = () => {
                                 important: "true",
                               }}
                             >
-                              Create your own bot
+                              <EditPencil
+                                id={38}
+                                existing={"Create your own bot"}
+                                content_type={"txt"}
+                              >
+                                Create your own bot
+                              </EditPencil>
                             </span>
                           </div>
                         </div>
@@ -175,7 +201,13 @@ const Navbar = () => {
                         color: "grey",
                       }}
                     ></i>
-                    About
+                    <EditPencil
+                      id={39}
+                      existing={"   About"}
+                      content_type={"txt"}
+                    >
+                      About
+                    </EditPencil>
                   </span>
                 </span>
               </Link>
@@ -199,7 +231,13 @@ const Navbar = () => {
                         color: "grey",
                       }}
                     ></i>
-                    Services
+                    <EditPencil
+                      id={40}
+                      existing={"Services"}
+                      content_type={"txt"}
+                    >
+                      Services
+                    </EditPencil>
                   </span>
                 </span>
               </Link>
@@ -223,7 +261,13 @@ const Navbar = () => {
                         color: "grey",
                       }}
                     ></i>
-                    Testimonials
+                    <EditPencil
+                      id={41}
+                      existing={"Testimonials"}
+                      content_type={"txt"}
+                    >
+                      Testimonials
+                    </EditPencil>
                   </span>
                 </span>
               </Link>
@@ -247,7 +291,13 @@ const Navbar = () => {
                         color: "grey",
                       }}
                     ></i>
-                    Business Benefits
+                    <EditPencil
+                      id={42}
+                      existing={"Business Benefits"}
+                      content_type={"txt"}
+                    >
+                      Business Benefits
+                    </EditPencil>
                   </span>
                 </span>
               </Link>
@@ -277,7 +327,48 @@ const Navbar = () => {
                       color: "grey",
                     }}
                   ></i>
-                  Products
+                  <EditPencil
+                    id={43}
+                    existing={"Products"}
+                    content_type={"txt"}
+                  >
+                    Products
+                  </EditPencil>
+                </span>
+              </a>
+              <a
+                href="https://corover.ai/quote/"
+                style={{ textDecoration: "none", color: "black" }}
+                target="_blank"
+                without
+                rel="noreferrer"
+              >
+                <span
+                  style={{
+                    fontSize: "15px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    fontWeight: "100",
+                    color: "grey",
+                  }}
+                >
+                  <i
+                    className="fa-solid fa-briefcase"
+                    style={{
+                      fontSize: "15px",
+                      marginRight: "13px",
+                      color: "grey",
+                    }}
+                  ></i>
+                  <EditPencil
+                    id={44}
+                    existing={"Professional Service"}
+                    content_type={"txt"}
+                  >
+                    Professional Service
+                  </EditPencil>
                 </span>
               </a>
               <Link to={"#video-gallery"}>
@@ -300,7 +391,13 @@ const Navbar = () => {
                         color: "grey",
                       }}
                     ></i>
-                    Video Gallery
+                    <EditPencil
+                      id={45}
+                      existing={"Video Gallery"}
+                      content_type={"txt"}
+                    >
+                      Video Gallery
+                    </EditPencil>
                   </span>
                 </span>
               </Link>
@@ -324,7 +421,13 @@ const Navbar = () => {
                         color: "grey",
                       }}
                     ></i>
-                    Developer Community
+                    <EditPencil
+                      id={46}
+                      existing={"Developer Community"}
+                      content_type={"txt"}
+                    >
+                      Developer Community
+                    </EditPencil>
                   </span>
                 </span>
               </Link>
@@ -354,7 +457,13 @@ const Navbar = () => {
                       color: "grey",
                     }}
                   ></i>
-                  Become a partner
+                  <EditPencil
+                    id={47}
+                    existing={"Become a partner"}
+                    content_type={"txt"}
+                  >
+                    Become a partner
+                  </EditPencil>
                 </span>
               </a>
             </div>
@@ -365,7 +474,10 @@ const Navbar = () => {
             data-target="#exampleModalCenter"
           >
             <span className="tp-btn mt-20">
-              Reach Us <i className="fa-regular fa-arrow-right-long"></i>
+              <EditPencil id={48} existing={"Reach Us"} content_type={"txt"}>
+                Reach Us
+              </EditPencil>
+              <i className="fa-regular fa-arrow-right-long"></i>
             </span>
           </div>
           <div className="offcanvas__social mt-20">

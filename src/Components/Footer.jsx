@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import React from "react";
 import Trans_Back_Logo from "../Assets/images/logo-trans-back.png";
 import axios from "axios";
+import EditPencil from "../Components/EditPencil";
+
 const Footer = () => {
   const [countries, setCountries] = useState([]);
 
@@ -10,7 +12,7 @@ const Footer = () => {
       "https://www.universal-tutorial.com/api/countries/",
       {
         headers: {
-          Authorization: `Bearer ${"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJzdXJ5YXByYXRhcDg4NTk5QGdtYWlsLmNvbSIsImFwaV90b2tlbiI6IldMUDkzeVp1M2c2VGhWT1BDLXlVSm0tSU03bXhTbTRpZXY3c0R1WXV4elVvRHZTVFJuSm9aUkp6bFRleG4wblE0ek0ifSwiZXhwIjoxNzE5ODk2NzIzfQ.Mq3w0o5BQMY3XuXsyJ7OUASf7hr1BlU0ksRGiDF1c68"}`,
+          Authorization: `Bearer ${"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJzdXJ5YXByYXRhcDg4NTk5QGdtYWlsLmNvbSIsImFwaV90b2tlbiI6IldMUDkzeVp1M2c2VGhWT1BDLXlVSm0tSU03bXhTbTRpZXY3c0R1WXV4elVvRHZTVFJuSm9aUkp6bFRleG4wblE0ek0ifSwiZXhwIjoxNzIxNDgwODg4fQ.fFHdjBpzAPnuy1xhSy8zphMMZSzYyXNEBfYV3c3HTwY"}`,
         },
       }
     );
@@ -51,7 +53,15 @@ const Footer = () => {
                 </div>
                 <div className="col-lg-6">
                   <div className="tp-demo-copyright-content text-center">
-                    <h3 className="text-white">Bharat GPT</h3>
+                    <h3 className="text-white">
+                      <EditPencil
+                        id={28}
+                        existing={"Bharat GPT"}
+                        content_type={"txt"}
+                      >
+                        Bharat GPT
+                      </EditPencil>
+                    </h3>
                     <img
                       width={300}
                       src={Trans_Back_Logo}
@@ -61,7 +71,13 @@ const Footer = () => {
                   <div className="tp-demo-copyright-area">
                     <div className="tp-demo-copyright-content text-center">
                       <p style={{ color: " #cac2c2", important: "true" }}>
-                        India's Foundational Large Language Model
+                        <EditPencil
+                          id={29}
+                          existing={"India's Foundational Large Language Model"}
+                          content_type={"txt"}
+                        >
+                          India's Foundational Large Language Model
+                        </EditPencil>
                       </p>
                     </div>
                   </div>
@@ -246,10 +262,26 @@ const Footer = () => {
                 </div>
               </div>
               <div className="tp-footer-top-right-copyright">
-                <p>Copyright ©️ 2024 CoRover®️ P. Limited</p>
+                <p>
+                  <EditPencil
+                    id={30}
+                    existing={"Copyright ©️ 2024 CoRover®️ P. Limited"}
+                    content_type={"txt"}
+                  >
+                    Copyright ©️ 2024 CoRover®️ P. Limited
+                  </EditPencil>
+                </p>
               </div>
               <div className="tp-footer-top-right-copyright">
-                <p>All rights reserved. Patent Pending. </p>
+                <p>
+                  <EditPencil
+                    id={31}
+                    existing={"Copyright ©️ 2024 CoRover®️ P. Limited"}
+                    content_type={"txt"}
+                  >
+                    All rights reserved. Patent Pending.
+                  </EditPencil>
+                </p>
               </div>
             </div>
           </div>

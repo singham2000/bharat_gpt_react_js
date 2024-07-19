@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ShapeOne from "../Assets/images/fun-fact/shape-1.png";
-import Shadow from "../Assets/images/fun-fact/shadow.png";
 import ShapeThree from "../Assets/images/fun-fact/shape-3.png";
 import World from "../Assets/images/fun-fact/world.png";
 import Count from "./Count";
@@ -35,7 +34,18 @@ const Service = () => {
             <div className="col-lg-12">
               <div className="tp-service-title-wrapper text-center">
                 <span className="tp-section-title__pre">
-                  Service <span className="title-pre-color">AI Solutions</span>
+                  <EditPencil id={49} existing={"Service"} content_type={"txt"}>
+                    Service
+                  </EditPencil>
+                  <span className="title-pre-color">
+                    <EditPencil
+                      id={50}
+                      existing={"AI Solutions"}
+                      content_type={"txt"}
+                    >
+                      AI Solutions
+                    </EditPencil>
+                  </span>
                 </span>
                 <h3 className="tp-section-title">
                   Our Accomplishments with<i> Various Industry </i> Verticals
@@ -80,7 +90,15 @@ const Service = () => {
                       <Count number={100} duration={2} text={"+"} />
                     </span>
                   </h3>
-                  <p>Enterprises</p>
+                  <p>
+                    <EditPencil
+                      id={51}
+                      existing={"Enterprises"}
+                      content_type={"txt"}
+                    >
+                      Enterprises
+                    </EditPencil>
+                  </p>
                 </div>
                 <div className="tp-fun-fact-wrapper">
                   <h3
@@ -94,7 +112,15 @@ const Service = () => {
                       <Count number={20} duration={2} text={"B+"} />
                     </span>
                   </h3>
-                  <p>Interactions</p>
+                  <p>
+                    <EditPencil
+                      id={52}
+                      existing={"Interactions"}
+                      content_type={"txt"}
+                    >
+                      Interactions
+                    </EditPencil>
+                  </p>
                 </div>
                 <div className="tp-fun-fact-wrapper">
                   <h3
@@ -105,7 +131,15 @@ const Service = () => {
                       <Count number={20} text={"M+"} duration={4} />
                     </span>
                   </h3>
-                  <p>Monthly Active Users</p>
+                  <p>
+                    <EditPencil
+                      id={53}
+                      existing={"Monthly Active Users"}
+                      content_type={"txt"}
+                    >
+                      Monthly Active Users
+                    </EditPencil>
+                  </p>
                 </div>
               </div>
             </div>
@@ -134,7 +168,17 @@ const Service = () => {
                       </svg>
                     </span>
                   </h3>
-                  <p>Easy Product Discovery & Customer Support Automation</p>
+                  <p>
+                    <EditPencil
+                      id={54}
+                      existing={
+                        "Easy Product Discovery & Customer Support Automation"
+                      }
+                      content_type={"txt"}
+                    >
+                      Easy Product Discovery & Customer Support Automation
+                    </EditPencil>
+                  </p>
                   <ul>
                     <li>
                       <span>
@@ -151,7 +195,15 @@ const Service = () => {
                           />
                         </svg>
                       </span>
-                      Connect with consumers virtually and increase conversion
+                      <EditPencil
+                        id={55}
+                        existing={
+                          "Connect with consumers virtually and increase conversion"
+                        }
+                        content_type={"txt"}
+                      >
+                        Connect with consumers virtually and increase conversion
+                      </EditPencil>
                     </li>
                     <li>
                       <span>
@@ -168,7 +220,15 @@ const Service = () => {
                           />
                         </svg>
                       </span>
-                      Delight customers with Enhanced User Experience
+                      <EditPencil
+                        id={56}
+                        existing={
+                          "Delight customers with Enhanced User Experience"
+                        }
+                        content_type={"txt"}
+                      >
+                        Delight customers with Enhanced User Experience
+                      </EditPencil>
                     </li>
                   </ul>
                   <div
@@ -177,7 +237,15 @@ const Service = () => {
                     style={{ cursor: "pointer" }}
                     data-target="#exampleModalCenter"
                   >
-                    <span className="tp-btn">Tell us How Can We Help</span>
+                    <span className="tp-btn">
+                      <EditPencil
+                        id={57}
+                        existing={"Tell us How Can We Help"}
+                        content_type={"txt"}
+                      >
+                        Tell us How Can We Help
+                      </EditPencil>
+                    </span>
                   </div>
                 </div>
               </div>

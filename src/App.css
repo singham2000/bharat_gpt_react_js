@@ -919,17 +919,17 @@ div.demo img {
 /*  2.1 Back to top
 /*----------------------------------------*/
 .back-to-top-wrapper {
+  position: fixed;  
+  z-index: 999; 
+  cursor: pointer; 
+  color: green; 
   position: fixed;
   right: 50px;
-  bottom: 0;
+  bottom: 20px;
   height: 44px;
-  /* width: 44px; */
   cursor: pointer;
   display: block;
   border-radius: 50%;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
 }
 
 @media (max-width: 575px) {

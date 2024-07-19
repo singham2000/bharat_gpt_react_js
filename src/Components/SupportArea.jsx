@@ -24,14 +24,34 @@ const SupportArea = () => {
           <div className="col-xxl-8 col-xl-10">
             <div className="tp-support-title-wrapper text-center">
               <span className="tp-section-title__pre">
-                <EditPencil> The Best Gen AI</EditPencil>
+                <EditPencil
+                  id={58}
+                  existing={"The Best Gen AI"}
+                  content_type={"txt"}
+                >
+                  {" "}
+                  The Best Gen AI
+                </EditPencil>
                 <span className="title-pre-color">
                   {" "}
-                  <EditPencil> Assistant </EditPencil>{" "}
+                  <EditPencil
+                    id={59}
+                    existing={"Assistant"}
+                    content_type={"txt"}
+                  >
+                    Assistant
+                  </EditPencil>{" "}
                 </span>
                 <h3 className="tp-section-title">
                   <span className="title-color">
-                    <EditPencil> Business Benefits</EditPencil>
+                    <EditPencil
+                      id={60}
+                      existing={"Business Benefits"}
+                      content_type={"txt"}
+                    >
+                      {" "}
+                      Business Benefits
+                    </EditPencil>
                   </span>
                   <span className="title-center-shape">
                     <svg
@@ -64,7 +84,13 @@ const SupportArea = () => {
                         aria-expanded="false"
                         aria-controls="collapseTwo"
                       >
-                        <EditPencil>Versatility</EditPencil>
+                        <EditPencil
+                          id={61}
+                          existing={"Versatility"}
+                          content_type={"txt"}
+                        >
+                          Versatility
+                        </EditPencil>
                       </button>
                     </h2>
                     <div
@@ -75,11 +101,20 @@ const SupportArea = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          BharatGPT is highly versatile, able to handle a wide
-                          range of natural language processing tasks, including
-                          text classification, sentiment analysis, language
-                          translation, and more. This makes it an ideal solution
-                          for a wide range of industries and applications.
+                          <EditPencil
+                            id={62}
+                            existing={
+                              "BharatGPT is highly versatile, able to handle a wide range of natural language processing tasks, including text classification, sentiment analysis, language translation, and more. This makes it an ideal solution for a wide range of industries and applications."
+                            }
+                            content_type={"txt"}
+                          >
+                            BharatGPT is highly versatile, able to handle a wide
+                            range of natural language processing tasks,
+                            including text classification, sentiment analysis,
+                            language translation, and more. This makes it an
+                            ideal solution for a wide range of industries and
+                            applications.
+                          </EditPencil>
                         </p>
                       </div>
                     </div>
@@ -94,7 +129,13 @@ const SupportArea = () => {
                         aria-expanded="false"
                         aria-controls="collapseOne"
                       >
-                        <EditPencil> Accessibility</EditPencil>
+                        <EditPencil
+                          id={63}
+                          existing={"Accessibility"}
+                          content_type={"txt"}
+                        >
+                          Accessibility
+                        </EditPencil>
                       </button>
                     </h2>
                     <div
@@ -105,7 +146,13 @@ const SupportArea = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          <EditPencil>
+                          <EditPencil
+                            id={64}
+                            existing={
+                              " BharatGPT is designed to be accessible to anyone,regardless of their level of technical expertise or experience ith NLP. Whether you’re a researcher, a business owner, or anyone else, BharatGPT is here to help you break down language barriers and unlock new insights."
+                            }
+                            content_type={"txt"}
+                          >
                             BharatGPT is designed to be accessible to anyone,
                             regardless of their level of technical expertise or
                             experience with NLP. Whether you’re a researcher, a
@@ -127,7 +174,13 @@ const SupportArea = () => {
                         aria-expanded="false"
                         aria-controls="collapseThree"
                       >
-                        <EditPencil>Accuracy</EditPencil>
+                        <EditPencil
+                          id={65}
+                          existing={"Accuracy"}
+                          content_type={"txt"}
+                        >
+                          Accuracy
+                        </EditPencil>
                       </button>
                     </h2>
                     <div
@@ -138,7 +191,13 @@ const SupportArea = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          <EditPencil>
+                          <EditPencil
+                            id={66}
+                            existing={
+                              "One of the key benefits of using BharatGPT is its accuracy. By leveraging the latest advances in AI and machine earning, BharatGPT is able to accurately process and analyze indian language text data, giving you insights and information what you can trust."
+                            }
+                            content_type={"txt"}
+                          >
                             One of the key benefits of using BharatGPT is its
                             accuracy. By leveraging the latest advances in AI
                             and machine learning, BharatGPT is able to
@@ -160,7 +219,14 @@ const SupportArea = () => {
                         aria-expanded="false"
                         aria-controls="collapseFour"
                       >
-                        <EditPencil> Scalability</EditPencil>
+                        <EditPencil
+                          id={66}
+                          existing={"Scalability"}
+                          content_type={"txt"}
+                        >
+                          {" "}
+                          Scalability
+                        </EditPencil>
                       </button>
                     </h2>
                     <div
@@ -171,7 +237,13 @@ const SupportArea = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          <EditPencil>
+                          <EditPencil
+                            id={67}
+                            existing={
+                              "BharatGPT has been designed to be scalable, making it suitable for use in a variety of settings, from small research projects to large-scale business applications."
+                            }
+                            content_type={"txt"}
+                          >
                             BharatGPT has been designed to be scalable, making
                             it suitable for use in a variety of settings, from
                             small research projects to large-scale business

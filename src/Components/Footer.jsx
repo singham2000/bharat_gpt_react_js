@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Trans_Back_Logo from "../Assets/images/logo-trans-back.png";
-import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -8,8 +7,9 @@ import Row from "react-bootstrap/Row";
 import { Country } from "country-state-city";
 import ReCAPTCHA from "react-google-recaptcha";
 import EditPencil from "../Components/EditPencil";
+import axiosInstance from "../utils/axios";
 
-const Footer = () => {
+const Footer = ({ data }) => {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
@@ -21,15 +21,17 @@ const Footer = () => {
 
   const [captchaValue, setCaptchaValue] = useState(null);
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
+    name: "",
     country: "",
     number: "",
-    description: "",
+    role: "",
     query: "",
+    description: "",
   });
 
   const handleSubmit = async (event) => {
+    event.preventDefault();
     const form = event.currentTarget;
     event.preventDefault();
     event.stopPropagation();
@@ -39,16 +41,13 @@ const Footer = () => {
       return;
     }
 
-    // Submit the form data along with the reCAPTCHA token
     try {
-      const response = await axios.post("/submit", {
+      const response = await axiosInstance.post("/api/user/sendMail", {
         ...formData,
         captchaValue,
       });
-      // Handle successful submission (e.g., show a success message)
       console.log(response.data.message);
     } catch (error) {
-      // Handle errors (e.g., show an error message)
       console.error(error.response.data.message);
     }
   };
@@ -56,16 +55,6 @@ const Footer = () => {
   const handleCaptchaChange = (value) => {
     setCaptchaValue(value);
   };
-
-  // const handleSubmit = (event) => {
-  //   const form = event.currentTarget;
-  //   if (form.checkValidity() === false) {
-  //     event.preventDefault();
-  //     event.stopPropagation();
-  //   }
-
-  //   setValidated(true);
-  // };
 
   return (
     <footer className="tp-footer-area p-relative">
@@ -99,10 +88,11 @@ const Footer = () => {
                     <h3 className="text-white">
                       <EditPencil
                         id={28}
-                        existing={"Bharat GPT"}
+                        existing={data[28]?.display_content}
                         content_type={"txt"}
                       >
-                        Bharat GPT
+                        {data[28]?.display_content}
+                        {/* Bharat GPT */}
                       </EditPencil>
                     </h3>
                     <img
@@ -116,10 +106,11 @@ const Footer = () => {
                       <p style={{ color: " #cac2c2", important: "true" }}>
                         <EditPencil
                           id={29}
-                          existing={"India's Foundational Large Language Model"}
+                          existing={data[29]?.display_content}
                           content_type={"txt"}
                         >
-                          India's Foundational Large Language Model
+                          {data[29]?.display_content}
+                          {/* India's Foundational Large Language Model */}
                         </EditPencil>
                       </p>
                     </div>
@@ -175,7 +166,14 @@ const Footer = () => {
                               <Form.Control
                                 required
                                 type="text"
+                                name="name"
                                 placeholder="Enter your name"
+                                onChange={(e) =>
+                                  setFormData({
+                                    ...formData,
+                                    [e.target.name]: e.target.value,
+                                  })
+                                }
                               />
                             </Form.Group>
                             <Form.Group
@@ -186,7 +184,14 @@ const Footer = () => {
                               <Form.Control
                                 required
                                 type="text"
+                                name="email"
                                 placeholder="Enter your email id"
+                                onChange={(e) =>
+                                  setFormData({
+                                    ...formData,
+                                    [e.target.name]: e.target.value,
+                                  })
+                                }
                               />
                             </Form.Group>
                           </Row>
@@ -196,7 +201,17 @@ const Footer = () => {
                               md="6"
                               controlId="validationCustom01"
                             >
-                              <Form.Control as="select" required>
+                              <Form.Control
+                                as="select"
+                                required
+                                name="country"
+                                onChange={(e) =>
+                                  setFormData({
+                                    ...formData,
+                                    [e.target.name]: e.target.value,
+                                  })
+                                }
+                              >
                                 <option value="">Select a country...</option>
                                 {countries.map((country) => (
                                   <option
@@ -217,6 +232,13 @@ const Footer = () => {
                               <Form.Control
                                 required
                                 type="text"
+                                name="number"
+                                onChange={(e) =>
+                                  setFormData({
+                                    ...formData,
+                                    [e.target.name]: e.target.value,
+                                  })
+                                }
                                 placeholder="Enter your number"
                               />
                             </Form.Group>
@@ -227,7 +249,17 @@ const Footer = () => {
                               md="12"
                               controlId="validationCustom01"
                             >
-                              <Form.Control as="select" required>
+                              <Form.Control
+                                as="select"
+                                required
+                                name="role"
+                                onChange={(e) =>
+                                  setFormData({
+                                    ...formData,
+                                    [e.target.name]: e.target.value,
+                                  })
+                                }
+                              >
                                 <option value="">
                                   What describes you best?
                                 </option>
@@ -250,8 +282,13 @@ const Footer = () => {
                                 cols={3}
                                 required
                                 placeholder="your query"
-                                // value={query}
-                                // onChange={(e) => setQuery(e.target.value)}
+                                name="query"
+                                onChange={(e) =>
+                                  setFormData({
+                                    ...formData,
+                                    [e.target.name]: e.target.value,
+                                  })
+                                }
                               />
                             </Form.Group>
                           </Row>
@@ -296,10 +333,11 @@ const Footer = () => {
                 <p>
                   <EditPencil
                     id={30}
-                    existing={"Copyright ©️ 2024 CoRover®️ P. Limited"}
+                    existing={data[30]?.display_content}
                     content_type={"txt"}
                   >
-                    Copyright ©️ 2024 CoRover®️ P. Limited
+                    {data[30]?.display_content}
+                    {/* Copyright ©️ 2024 CoRover®️ P. Limited */}
                   </EditPencil>
                 </p>
               </div>
@@ -307,9 +345,10 @@ const Footer = () => {
                 <p>
                   <EditPencil
                     id={31}
-                    existing={"Copyright ©️ 2024 CoRover®️ P. Limited"}
+                    existing={data[31]?.display_content}
                     content_type={"txt"}
                   >
+                    {data[31]?.display_content}
                     All rights reserved. Patent Pending.
                   </EditPencil>
                 </p>

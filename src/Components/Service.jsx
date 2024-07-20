@@ -5,7 +5,7 @@ import World from "../Assets/images/fun-fact/world.png";
 import Count from "./Count";
 import EditPencil from "../Components/EditPencil";
 
-const Service = () => {
+const Service = ({ data }) => {
   const [reloadClassName, setReloadClassName] = useState(null);
   useEffect(() => {
     const reload = document.getElementById("reload");
@@ -34,21 +34,34 @@ const Service = () => {
             <div className="col-lg-12">
               <div className="tp-service-title-wrapper text-center">
                 <span className="tp-section-title__pre">
-                  <EditPencil id={49} existing={"Service"} content_type={"txt"}>
-                    Service
+                  <EditPencil
+                    id={49}
+                    existing={data[49]?.display_content}
+                    content_type={"txt"}
+                  >
+                    {data[49]?.display_content}
+                    {/* Service */}
                   </EditPencil>
                   <span className="title-pre-color">
                     <EditPencil
                       id={50}
-                      existing={"AI Solutions"}
+                      existing={data[49]?.display_content}
                       content_type={"txt"}
                     >
-                      AI Solutions
+                      {data[50]?.display_content}
+                      {/* AI Solutions */}
                     </EditPencil>
                   </span>
                 </span>
                 <h3 className="tp-section-title">
-                  Our Accomplishments with<i> Various Industry </i> Verticals
+                  <EditPencil
+                    id={84}
+                    existing={data[84]?.display_content}
+                    content_type={"txt"}
+                  >
+                    {data[84]?.display_content}
+                    {/* Our Accomplishments with Various Industry Verticals */}
+                  </EditPencil>
                   <span className="title-center-shape">
                     <svg
                       width="194"
@@ -93,10 +106,11 @@ const Service = () => {
                   <p>
                     <EditPencil
                       id={51}
-                      existing={"Enterprises"}
+                      existing={data[51]?.display_content}
                       content_type={"txt"}
                     >
-                      Enterprises
+                      {data[51]?.display_content}
+                      {/* Enterprises */}
                     </EditPencil>
                   </p>
                 </div>
@@ -115,10 +129,11 @@ const Service = () => {
                   <p>
                     <EditPencil
                       id={52}
-                      existing={"Interactions"}
+                      existing={data[52]?.display_content}
                       content_type={"txt"}
                     >
-                      Interactions
+                      {data[52]?.display_content}
+                      {/* Interactions */}
                     </EditPencil>
                   </p>
                 </div>
@@ -134,10 +149,11 @@ const Service = () => {
                   <p>
                     <EditPencil
                       id={53}
-                      existing={"Monthly Active Users"}
+                      existing={data[53]?.display_content}
                       content_type={"txt"}
                     >
-                      Monthly Active Users
+                      {data[53]?.display_content}
+                      {/* Monthly Active Users */}
                     </EditPencil>
                   </p>
                 </div>
@@ -152,7 +168,14 @@ const Service = () => {
               <div className="tp-fun-fact-content">
                 <div className="tp-fun-fact-title-wrapper">
                   <h3 className="tp-section-title">
-                    GEN AI VIRTUAL ASSISTANT FOR B2B, B2B2C AND G2C
+                    <EditPencil
+                      id={85}
+                      existing={data[84]?.display_content}
+                      content_type={"txt"}
+                    >
+                      {data[85]?.display_content}
+                      {/* GEN AI VIRTUAL ASSISTANT FOR B2B, B2B2C AND G2C */}
+                    </EditPencil>
                     <span className="title-left-shape">
                       <svg
                         width="194"
@@ -171,12 +194,11 @@ const Service = () => {
                   <p>
                     <EditPencil
                       id={54}
-                      existing={
-                        "Easy Product Discovery & Customer Support Automation"
-                      }
+                      existing={data[54]?.display_content}
                       content_type={"txt"}
                     >
-                      Easy Product Discovery & Customer Support Automation
+                      {data[54]?.display_content}
+                      {/* Easy Product Discovery & Customer Support Automation */}
                     </EditPencil>
                   </p>
                   <ul>
@@ -197,12 +219,11 @@ const Service = () => {
                       </span>
                       <EditPencil
                         id={55}
-                        existing={
-                          "Connect with consumers virtually and increase conversion"
-                        }
+                        existing={data[55]?.display_content}
                         content_type={"txt"}
                       >
-                        Connect with consumers virtually and increase conversion
+                        {data[55]?.display_content}
+                        {/* Connect with consumers virtually and increase conversion */}
                       </EditPencil>
                     </li>
                     <li>
@@ -222,12 +243,11 @@ const Service = () => {
                       </span>
                       <EditPencil
                         id={56}
-                        existing={
-                          "Delight customers with Enhanced User Experience"
-                        }
+                        existing={data[56]?.display_content}
                         content_type={"txt"}
                       >
-                        Delight customers with Enhanced User Experience
+                        {data[55]?.display_content}
+                        {/* Delight customers with Enhanced User Experience */}
                       </EditPencil>
                     </li>
                   </ul>
@@ -240,10 +260,11 @@ const Service = () => {
                     <span className="tp-btn">
                       <EditPencil
                         id={57}
-                        existing={"Tell us How Can We Help"}
+                        existing={data[57]?.display_content}
                         content_type={"txt"}
                       >
-                        Tell us How Can We Help
+                        {data[57]?.display_content}
+                        {/* Tell us How Can We Help */}
                       </EditPencil>
                     </span>
                   </div>

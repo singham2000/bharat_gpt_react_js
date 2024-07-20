@@ -2,14 +2,11 @@ import "./App.css";
 import Awards from "./Pages/Awards";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
-import ContentContext from './utils/contentContext';
+import ContentContext from "./utils/contentContext";
 import axiosInstance from "./utils/axios";
-import {  useEffect } from "react";
+import { useEffect } from "react";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 function App() {
   const router = createBrowserRouter([
     {
@@ -17,26 +14,27 @@ function App() {
       element: <Home />,
     },
     {
-      path: '/awards',
-      element: <Awards />
+      path: "/awards",
+      element: <Awards />,
     },
     {
       path: "/login",
-      element: <Login />
-    }
+      element: <Login />,
+    },
   ]);
 
   const getContent = async () => {
-    const { data } = await axiosInstance.get('/api/content/content');
-    return data;
+    try {
+      const { data } = await axiosInstance.get("/api/content/content");
+      return data;
+    } catch (error) {
+      console.log(error);
+    }
   };
   useEffect(() => {
-
-    getContent()
-    return () => {
-
-    }
-  }, [])
+    getContent();
+    return () => {};
+  }, []);
 
   return (
     <div className="App">

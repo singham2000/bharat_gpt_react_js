@@ -5,7 +5,7 @@ import User3 from "../Assets/images/irctc.jpeg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import EditPencil from "../Components/EditPencil";
 
-const Testimonial = () => {
+const Testimonial = ({ data }) => {
   const setting = {
     slidesPerView: 3,
     spaceBetween: 30,
@@ -40,35 +40,43 @@ const Testimonial = () => {
           <div className="col-lg-12">
             <div className="tp-testimonial-title-wrapper text-center">
               <span className="tp-section-title__pre">
-                <EditPencil id={68} existing={"Client’s"} content_type={"txt"}>
-                  Client’s
+                <EditPencil
+                  id={68}
+                  existing={data[68]?.display_content}
+                  content_type={"txt"}
+                >
+                  {data[68]?.display_content}
+                  {/* Client’s */}
                 </EditPencil>
                 <span className="title-pre-color">
                   <EditPencil
                     id={69}
-                    existing={"Feedback"}
+                    existing={data[69]?.display_content}
                     content_type={"txt"}
                   >
-                    Feedback
+                    {data[69]?.display_content}
+                    {/* Feedback */}
                   </EditPencil>
                 </span>
               </span>
               <h3 className="tp-section-title">
                 <EditPencil
                   id={70}
-                  existing={"Testimonial"}
+                  existing={data[70]?.display_content}
                   content_type={"txt"}
                 >
-                  Testimonial
+                  {data[70]?.display_content}
+                  {/* Testimonial */}
                 </EditPencil>
                 <span className="title-color">
                   &
                   <EditPencil
                     id={71}
-                    existing={"Feedback"}
+                    existing={data[71]?.display_content}
                     content_type={"txt"}
                   >
-                    Feedback
+                    {data[71]?.display_content}
+                    {/* Feedback */}
                   </EditPencil>
                 </span>
                 <span className="title-center-shape">
@@ -122,16 +130,17 @@ const Testimonial = () => {
                           <EditPencil
                             id={72}
                             existing={
-                              "We are thrilled to partner with CoRover to bring BharatGPT for the public sector in India. Technology truly has the potential to transform lives and our language and generative AI capabilities built into the platform will make access easy and democratize the use of the platform"
+                              " We are thrilled to partner with CoRover to bring BharatGPT for the public sector in India.Technology truly has the potential to transform lives and our language and generative AI capabilities built into the platform will make access easy and democratize the use of the platform"
                             }
                             content_type={"txt"}
                           >
-                            We are thrilled to partner with CoRover to bring
+                            {data[72]?.display_content}
+                            {/* We are thrilled to partner with CoRover to bring
                             BharatGPT for the public sector in India. Technology
                             truly has the potential to transform lives and our
                             language and generative AI capabilities built into
                             the platform will make access easy and democratize
-                            the use of the platform
+                            the use of the platform */}
                           </EditPencil>
                         </p>
                       </div>
@@ -161,19 +170,21 @@ const Testimonial = () => {
                       <h4 className="testimonial-title">
                         <EditPencil
                           id={73}
-                          existing={"Bikram Singh Bedi"}
+                          existing={data[73]?.display_content}
                           content_type={"txt"}
                         >
+                          {data[73]?.display_content}
                           Bikram Singh Bedi
                         </EditPencil>
                       </h4>
                       <p>
                         <EditPencil
                           id={74}
-                          existing={"Managing director, Google Cloud India"}
+                          existing={data[74]?.display_content}
                           content_type={"txt"}
                         >
-                          Managing director, Google Cloud India
+                          {data[74]?.display_content}
+                          {/* Managing director, Google Cloud India */}
                         </EditPencil>
                       </p>
                     </div>
@@ -207,15 +218,14 @@ const Testimonial = () => {
                         <p style={{ height: "280px" }}>
                           <EditPencil
                             id={75}
-                            existing={
-                              "“AskYukimi a VideoBot created using CoRover’s Human Centric Conversational AI platform, has been a huge success in Japan We have been fortunate to work with CoRover as a client and also as their partner"
-                            }
+                            existing={data[75]?.display_content}
                             content_type={"txt"}
                           >
-                            “AskYukimi a VideoBot created using CoRover’s Human
+                            {data[75]?.display_content}
+                            {/* “AskYukimi a VideoBot created using CoRover’s Human
                             Centric Conversational AI platform, has been a huge
                             success in Japan We have been fortunate to work with
-                            CoRover as a client and also as their partner
+                            CoRover as a client and also as their partner */}
                           </EditPencil>
                         </p>
                       </div>
@@ -244,19 +254,21 @@ const Testimonial = () => {
                       <h4 className="testimonial-title">
                         <EditPencil
                           id={76}
-                          existing={"Hazimi Suzuki"}
+                          existing={data[76]?.display_content}
                           content_type={"txt"}
                         >
-                          Hazimi Suzuki
+                          {data[76]?.display_content}
+                          {/* Hazimi Suzuki */}
                         </EditPencil>
                       </h4>
                       <p>
                         <EditPencil
                           id={77}
-                          existing={"Ceo of innovation Hills Inc"}
+                          existing={data[77]?.display_content}
                           content_type={"txt"}
                         >
-                          Ceo of innovation Hills Inc
+                          {data[77]?.display_content}
+                          {/* Ceo of innovation Hills Inc */}
                         </EditPencil>
                       </p>
                     </div>
@@ -285,15 +297,14 @@ const Testimonial = () => {
                         <p style={{ height: "280px" }}>
                           <EditPencil
                             id={78}
-                            existing={
-                              "Chatbot, named Ask Disha, has great accuracy of 90% along with the approx. 85% positive feedback from IRCTC users and has improved customer and employee engagement.                            "
-                            }
+                            existing={data[78]?.display_content}
                             content_type={"txt"}
                           >
-                            Chatbot, named Ask Disha, has great accuracy of 90%
+                            {data[78]?.display_content}
+                            {/* Chatbot, named Ask Disha, has great accuracy of 90%
                             along with the approx. 85% positive feedback from
                             IRCTC users and has improved customer and employee
-                            engagement.
+                            engagement. */}
                           </EditPencil>
                         </p>
                       </div>
@@ -322,19 +333,21 @@ const Testimonial = () => {
                       <h4 className="testimonial-title">
                         <EditPencil
                           id={79}
-                          existing={"Sandip Trivedi"}
+                          existing={data[79]?.display_content}
                           content_type={"txt"}
                         >
-                          Sandip Trivedi
+                          {data[79]?.display_content}
+                          {/* Sandip Trivedi */}
                         </EditPencil>
                       </h4>
                       <p>
                         <EditPencil
                           id={80}
-                          existing={"GGM,IRCTC"}
+                          existing={data[80]?.display_content}
                           content_type={"txt"}
                         >
-                          GGM,IRCTC
+                          {data[80]?.display_content}
+                          {/* GGM,IRCTC */}
                         </EditPencil>
                       </p>
                     </div>
@@ -368,15 +381,15 @@ const Testimonial = () => {
                         <p style={{ height: "280px" }}>
                           <EditPencil
                             id={81}
-                            existing={
-                              " “AskYukimi a VideoBot created using CoRover’s Human Centric Conversational AI platform, has been a huge success in Japan We have been fortunate to work with CoRover as client and also as their partner"
-                            }
+                            existing={data[81]?.display_content}
                             content_type={"txt"}
                           >
-                            “AskYukimi a VideoBot created using CoRover’s Human
-                            Centric Conversational AI platform, has been a huge
-                            success in Japan We have been fortunate to work with
-                            CoRover as a client and also as their partner
+                            {data[81]?.display_content}
+                            {/* “AskYukimi a VideoBot
+                            created using CoRover’s Human Centric Conversational
+                            AI platform, has been a huge success in Japan We
+                            have been fortunate to work with CoRover as a client
+                            and also as their partner */}
                           </EditPencil>
                         </p>
                       </div>
@@ -405,19 +418,21 @@ const Testimonial = () => {
                       <h4 className="testimonial-title">
                         <EditPencil
                           id={82}
-                          existing={"Hazimi Suzuki"}
+                          existing={data[82]?.display_content}
                           content_type={"txt"}
                         >
+                          {data[82]?.display_content}
                           Hazimi Suzuki
                         </EditPencil>
                       </h4>
                       <p>
                         <EditPencil
                           id={83}
-                          existing={"Ceo of innovation Hills Inc"}
+                          existing={data[83]?.display_content}
                           content_type={"txt"}
                         >
-                          Ceo of innovation Hills Inc
+                          {data[83]?.display_content}
+                          {/* Ceo of innovation Hills Inc */}
                         </EditPencil>
                       </p>
                     </div>

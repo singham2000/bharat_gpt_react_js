@@ -1,7 +1,7 @@
 import React from "react";
 import EditPencil from "../Components/EditPencil";
 
-const Developer = () => {
+const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
   return (
     <section
       class="breadcrumb__area breadcrumb-style pt-20 pb-20 p-relative z-index-1"
@@ -16,10 +16,11 @@ const Developer = () => {
               <h3 class="breadcrumb__title">
                 <EditPencil
                   id={21}
-                  existing={"Developer Community."}
+                  existing={data[92]?.display_content}
                   content_type={"txt"}
                 >
-                  Developer Community
+                  {data[21]?.display_content}
+                  {/* Developer Community */}
                 </EditPencil>
               </h3>
             </div>
@@ -40,22 +41,22 @@ const Developer = () => {
                     <h3 class="tp-feature-title">
                       <EditPencil
                         id={22}
-                        existing={" Support"}
+                        existing={data[22]?.display_content}
                         content_type={"txt"}
                       >
-                        Support
+                        {data[22]?.display_content}
+                        {/* Support */}
                       </EditPencil>
                     </h3>
                     <p>
                       <EditPencil
                         id={23}
-                        existing={
-                          " Get assistance from our experts to troubleshoot and resolve your queries."
-                        }
+                        existing={data[23]?.display_content}
                         content_type={"txt"}
                       >
-                        Get assistance from our experts to troubleshoot and
-                        resolve your queries.
+                        {data[23]?.display_content}
+                        {/* Get assistance from our experts to troubleshoot and
+                        resolve your queries. */}
                       </EditPencil>
                       <br />
                     </p>
@@ -64,6 +65,7 @@ const Developer = () => {
                       data-toggle="modal"
                       data-target="#supportModal"
                       style={{ cursor: "pointer", color: "blue" }}
+                      onClick={() => handleOpenModal(1)}
                     >
                       Know more <i class="fa fa-link-simple pl-10"></i>
                     </span>
@@ -77,22 +79,22 @@ const Developer = () => {
                     <h3 class="tp-feature-title">
                       <EditPencil
                         id={24}
-                        existing={"Hire an Expert"}
+                        existing={data[24]?.display_content}
                         content_type={"txt"}
                       >
-                        Hire an Expert
+                        {data[24]?.display_content}
+                        {/* Hire an Expert */}
                       </EditPencil>
                     </h3>
                     <p>
                       <EditPencil
                         id={25}
-                        existing={
-                          " Connect with skilled professionals for your project needs."
-                        }
+                        existing={data[25]?.display_content}
                         content_type={"txt"}
                       >
-                        Connect with skilled professionals for your project
-                        needs.
+                        {data[25]?.display_content}
+                        {/* Connect with skilled professionals for your project
+                        needs. */}
                       </EditPencil>
                     </p>
                     <span
@@ -100,6 +102,7 @@ const Developer = () => {
                       data-toggle="modal"
                       data-target="#supportModal"
                       style={{ cursor: "pointer", color: "blue" }}
+                      onClick={() => handleOpenModal(2)}
                     >
                       Know more <i class="fa fa-link-simple pl-10"></i>
                     </span>
@@ -113,22 +116,22 @@ const Developer = () => {
                     <h3 class="tp-feature-title">
                       <EditPencil
                         id={26}
-                        existing={"Learn & Share"}
+                        existing={data[26]?.display_content}
                         content_type={"txt"}
                       >
-                        Learn & Share
+                        {data[26]?.display_content}
+                        {/* Learn & Share */}
                       </EditPencil>
                     </h3>
                     <p>
                       <EditPencil
                         id={27}
-                        existing={
-                          "Expand your knowledge and contribute to the community by sharing insights."
-                        }
+                        existing={data[27]?.display_content}
                         content_type={"txt"}
                       >
-                        Expand your knowledge and contribute to the community by
-                        sharing insights.
+                        {data[27]?.display_content}
+                        {/* Expand your knowledge and contribute to the community by
+                        sharing insights. */}
                       </EditPencil>
                     </p>
                     <span
@@ -136,6 +139,7 @@ const Developer = () => {
                       data-toggle="modal"
                       data-target="#supportModal"
                       style={{ cursor: "pointer", color: "blue" }}
+                      onClick={() => handleOpenModal(3)}
                     >
                       Know more <i class="fa fa-link-simple pl-10"></i>
                     </span>

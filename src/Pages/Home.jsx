@@ -15,10 +15,12 @@ import SupportArea from "../Components/SupportArea";
 import Awardsandrecognition from "../Components/Awards_and_recognition";
 import VideoGallery from "../Components/VideoGallery";
 import Developer from "../Components/Developer";
+import ModalService from "../Components/ModalService";
 
 const Home = () => {
   const location = useLocation();
   const [fetchedData, setFetchedData] = useState([]);
+  const [selectedId, setSelectedId] = useState(0);
   const { getContent } = useContext(contentContext);
   useEffect(() => {
     getContent().then((data) => {
@@ -33,22 +35,44 @@ const Home = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = (id) => {
+    setShowModal(true);
+    setSelectedId(id);
+  };
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div>
       <Navbar />
       <main>
         <Hero data={fetchedData} />
         <About data={fetchedData} />
-        <Service />
-        <Brand />
-        <Testimonial />
-        <TextArea />
-        <SupportArea />
-        <Awardsandrecognition />
-        <VideoGallery />
-        <Developer />
+        <Service data={fetchedData} />
+        <Brand data={fetchedData} />
+        <Testimonial data={fetchedData} />
+        <TextArea data={fetchedData} />
+        <SupportArea data={fetchedData} />
+        <Awardsandrecognition data={fetchedData} />
+        <VideoGallery data={fetchedData} />
+        <Developer
+          data={fetchedData}
+          handleOpenModal={handleOpenModal}
+          handleCloseModal={handleCloseModal}
+        />
+        <ModalService
+          data={fetchedData}
+          handleOpenModal={handleOpenModal}
+          handleCloseModal={handleCloseModal}
+          showModal={showModal}
+          selectedId={selectedId}
+        />
       </main>
-      <Footer />
+      <Footer data={fetchedData} />
     </div>
   );
 };

@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import contentContext from "../utils/contentContext";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import BannerS from "../Assets/images/banner.jpg";
+import EditPencil from "../Components/EditPencil";
+
 const Awards = () => {
+  const location = useLocation();
+  const { getContent } = useContext(contentContext);
+  const [fetchedData, setFetchedData] = useState([]);
+  useEffect(() => {
+    getContent().then((data) => {
+      console.log(data);
+      setFetchedData(data.result);
+    });
+    const elementId = location.hash.slice(1);
+    const element = document.getElementById(elementId);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location]);
   return (
     <div>
       <Navbar />
@@ -21,7 +41,14 @@ const Awards = () => {
                   className="tp-section-title"
                   style={{ color: "black", fontSize: "45px" }}
                 >
-                  Awards & Recognition
+                  <EditPencil
+                    id={93}
+                    existing={fetchedData[93]?.display_content}
+                    content_type={"txt"}
+                  >
+                    {fetchedData[93]?.display_content}
+                  </EditPencil>
+                  {/* Awards & Recognition */}
                 </h3>
               </div>
             </div>
@@ -45,12 +72,26 @@ const Awards = () => {
                   <div className="tp-team-wrapper-content-text">
                     <h3 className="team-title">
                       <span style={{ textDecoration: "none", color: "black" }}>
-                        Global Fintech Competition
+                        <EditPencil
+                          id={95}
+                          existing={fetchedData[95]?.display_content}
+                          content_type={"txt"}
+                        >
+                          {fetchedData[95]?.display_content}
+                          {/* Global Fintech Competition */}
+                        </EditPencil>
                       </span>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
-                      Winner of Global Fintech Award 2021 by GEP - DIT,
-                      Government of UK
+                      <EditPencil
+                        id={96}
+                        existing={fetchedData[96]?.display_content}
+                        content_type={"txt"}
+                      >
+                        {fetchedData[96]?.display_content}
+                      </EditPencil>
+                      {/* Winner of Global Fintech Award 2021 by GEP - DIT,
+                      Government of UK */}
                     </p>
                   </div>
                 </div>
@@ -69,12 +110,23 @@ const Awards = () => {
                   <div className="tp-team-wrapper-content-text">
                     <h3 className="team-title">
                       <span style={{ textDecoration: "none", color: "black" }}>
-                        Certificate of Recognition
+                        <EditPencil
+                          id={97}
+                          existing={fetchedData[97]?.display_content}
+                          content_type={"txt"}
+                        >
+                          {fetchedData[97]?.display_content}
+                        </EditPencil>
                       </span>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
-                      Certified by Department of Industrial Promotion and Policy
-                      , Startup India
+                      <EditPencil
+                        id={98}
+                        existing={fetchedData[98]?.display_content}
+                        content_type={"txt"}
+                      >
+                        {fetchedData[98]?.display_content}
+                      </EditPencil>
                     </p>
                   </div>
                 </div>
@@ -93,12 +145,27 @@ const Awards = () => {
                   <div className="tp-team-wrapper-content-text">
                     <h3 className="team-title">
                       <span style={{ textDecoration: "none", color: "black" }}>
-                        Best firm for Data Scientists
+                        <EditPencil
+                          id={99}
+                          existing={fetchedData[99]?.display_content}
+                          content_type={"txt"}
+                        >
+                          {fetchedData[99]?.display_content}
+                        </EditPencil>
                       </span>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
-                      Best Company for Data Scientists, Data Analysts and
-                      Engineers
+                      <EditPencil
+                        id={100}
+                        existing={
+                          fetchedData[100]?.display_content
+                        }
+                        content_type={"txt"}
+                      >
+                        {fetchedData[100]?.display_content}
+                      </EditPencil>
+                      {/* Best Company for Data Scientists, Data Analysts and
+                      Engineers */}
                     </p>
                   </div>
                 </div>
@@ -117,13 +184,25 @@ const Awards = () => {
                   <div className="tp-team-wrapper-content-text">
                     <h3 className="team-title">
                       <span style={{ textDecoration: "none", color: "black" }}>
-                        HR AI Virtual Assistant
+                        <EditPencil
+                          id={101}
+                          existing={fetchedData[101]?.display_content}
+                          content_type={"txt"}
+                        >
+                          {fetchedData[101]?.display_content}
+                        </EditPencil>
                       </span>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
-                      Ask ANVESHA, an HR AI Virtual Assistant of a Defence
-                      (Navy) PSU, GRSE, powered by CoRover.ai, is recognised as
-                      one of the top 75 AI-Enabled defence products in India.
+                      <EditPencil
+                        id={102}
+                        existing={
+                          " Ask ANVESHA, an HR AI Virtual Assistant of a Defense(Navy) PSU, GRSE, powered by CoRover.ai, is recognized as one of the top 75 AI-Enabled defense products in India."
+                        }
+                        content_type={"txt"}
+                      >
+                        {fetchedData[102]?.display_content}
+                      </EditPencil>
                     </p>
                   </div>
                 </div>
@@ -142,10 +221,24 @@ const Awards = () => {
                   <div className="tp-team-wrapper-content-text">
                     <h3 className="team-title">
                       <span style={{ textDecoration: "none", color: "black" }}>
-                        Asia Leadership Award
+                        <EditPencil
+                          id={103}
+                          existing={"Asia Leadership Award"}
+                          content_type={"txt"}
+                        >
+                          {fetchedData[103]?.display_content}
+                        </EditPencil>
                       </span>
                     </h3>
-                    <p style={{ fontSize: "16px", color: "#9f9b94" }}></p>
+                    <p style={{ fontSize: "16px", color: "#9f9b94" }}>
+                      <EditPencil
+                        id={104}
+                        existing={fetchedData[104]?.display_content}
+                        content_type={"txt"}
+                      >
+                        {fetchedData[104]?.display_content}
+                      </EditPencil>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -163,10 +256,24 @@ const Awards = () => {
                   <div className="tp-team-wrapper-content-text">
                     <h3 className="team-title">
                       <span style={{ textDecoration: "none", color: "black" }}>
-                        Digital Dragon Awards
+                        <EditPencil
+                          id={105}
+                          existing={"Digital Dragon Awards"}
+                          content_type={"txt"}
+                        >
+                          {fetchedData[105]?.display_content}
+                        </EditPencil>
                       </span>
                     </h3>
-                    <p style={{ fontSize: "16px", color: "#9f9b94" }}></p>
+                    <p style={{ fontSize: "16px", color: "#9f9b94" }}>
+                      <EditPencil
+                        id={106}
+                        existing={fetchedData[106]?.display_content}
+                        content_type={"txt"}
+                      >
+                        {fetchedData[106]?.display_content}
+                      </EditPencil>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -184,11 +291,25 @@ const Awards = () => {
                   <div className="tp-team-wrapper-content-text">
                     <h3 className="team-title">
                       <span style={{ textDecoration: "none", color: "black" }}>
-                        Certificate of Compliance
+                        <EditPencil
+                          id={107}
+                          existing={"Certificate of Compliance"}
+                          content_type={"txt"}
+                        >
+                          {fetchedData[107]?.display_content}
+                        </EditPencil>
+                        {/* Certificate of Compliance */}
                       </span>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
-                      CMMI Level 5 Appraised
+                      <EditPencil
+                        id={108}
+                        existing={"CMMI Level 5 Appraised"}
+                        content_type={"txt"}
+                      >
+                        {fetchedData[108]?.display_content}
+                      </EditPencil>
+                      {/* CMMI Level 5 Appraised */}
                     </p>
                   </div>
                 </div>
@@ -207,11 +328,25 @@ const Awards = () => {
                   <div className="tp-team-wrapper-content-text">
                     <h3 className="team-title">
                       <spana style={{ textDecoration: "none", color: "black" }}>
+                        <EditPencil
+                          id={109}
+                          existing={"CMMI Level 5 Appraised"}
+                          content_type={"txt"}
+                        >
+                          {fetchedData[109]?.display_content}
+                        </EditPencil>
                         CMMI Level 5 Appraised
                       </spana>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
-                      CMMI Maturity Level 5 Certificate
+                      <EditPencil
+                        id={110}
+                        existing={"CMMI Level 5 Appraised"}
+                        content_type={"txt"}
+                      >
+                        {fetchedData[110]?.display_content}
+                      </EditPencil>
+                      {/* CMMI Maturity Level 5 Certificate */}
                     </p>
                   </div>
                 </div>
@@ -230,13 +365,26 @@ const Awards = () => {
                   <div className="tp-team-wrapper-content-text">
                     <h3 className="team-title">
                       <spana style={{ textDecoration: "none", color: "black" }}>
-                        Startup Karnataka Showcase
+                        <EditPencil
+                          id={111}
+                          existing={"Startup Karnataka Showcase"}
+                          content_type={"txt"}
+                        >
+                          {fetchedData[111]?.display_content}
+                        </EditPencil>
+                        {/* Startup Karnataka Showcase */}
                       </spana>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
-                      CoRover’s AskDoc.ai is a winner in Combat Covid-19
-                      Challenge launched by Karnataka Innovation & Technology
-                      Society
+                      <EditPencil
+                        id={112}
+                        existing={
+                          "CoRover’s AskDoc.ai is a winner in Combat Covid-19                      Challenge launched by Karnataka Innovation & Technology                      Society"
+                        }
+                        content_type={"txt"}
+                      >
+                        {fetchedData[112]?.display_content}
+                      </EditPencil>
                     </p>
                   </div>
                 </div>
@@ -252,7 +400,7 @@ const Awards = () => {
         </div>
       </div>
 
-      <Footer />
+      <Footer data={fetchedData} />
     </div>
   );
 };

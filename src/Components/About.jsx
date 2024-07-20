@@ -79,10 +79,11 @@ const About = ({ data }) => {
               <source src={Video} type="video/mp4" />
               <EditPencil
                 id={1}
-                existing={"Your browser does not support the video tag."}
+                existing={data[1]?.display_content}
                 content_type={"txt"}
               >
-                Your browser does not support the video tag.
+                {data[1]?.display_content}
+                {/* Your browser does not support the video tag. */}
               </EditPencil>
             </video>
             <center class="d-flex flex-column">
@@ -95,19 +96,19 @@ const About = ({ data }) => {
                   existing={" Make Your GenAI Bot"}
                   content_type={"txt"}
                 >
-                  Make Your GenAI Bot
+                  {/* Make Your GenAI Bot */}
+                  {data[2]?.display_content}
                 </EditPencil>
               </label>
               <h3 class="tp-feature-title">
                 <EditPencil
                   id={3}
-                  existing={
-                    "  We aspire you becoming GEN AI developer.... in fraction of time."
-                  }
+                  existing={data[3]?.display_content}
                   content_type={"txt"}
                 >
-                  We aspire you becoming GEN AI developer.... in fraction of
-                  time.
+                  {data[3]?.display_content}
+                  {/* We aspire you becoming GEN AI developer.... in fraction of
+                  time. */}
                 </EditPencil>
               </h3>
               <center>
@@ -137,18 +138,20 @@ const About = ({ data }) => {
                     <span class="tp-section-title__pre">
                       <EditPencil
                         id={4}
-                        existing={" AI AUTOMATED WORKFORCES:"}
+                        existing={data[4]?.display_content}
                         content_type={"txt"}
                       >
-                        AI AUTOMATED WORKFORCES:
+                        {data[4]?.display_content}
+                        {/* AI AUTOMATED WORKFORCES: */}
                       </EditPencil>
                       <span class="title-pre-color">
                         <EditPencil
                           id={5}
-                          existing={"   THE FUTURE OF ENTERPRISE"}
+                          existing={data[5]?.display_content}
                           content_type={"txt"}
                         >
-                          THE FUTURE OF ENTERPRISE
+                          {data[5]?.display_content}
+                          {/* THE FUTURE OF ENTERPRISE */}
                         </EditPencil>
                       </span>
                     </span>
@@ -199,25 +202,23 @@ const About = ({ data }) => {
                       >
                         <EditPencil
                           id={6}
-                          existing={
-                            "Build your Organization’s GenAI powered bots using the sensational and proven platform from CoRover."
-                          }
+                          existing={data[6]?.display_content}
                           content_type={"txt"}
                         >
-                          Build your Organization’s GenAI powered bots using the
-                          sensational and proven platform from CoRover.
+                          {data[6]?.display_content}
+                          {/* Build your Organization’s GenAI powered bots using the
+                          sensational and proven platform from CoRover. */}
                         </EditPencil>
                       </h4>
                       <p style={{ lineHeight: "24px", important: "true" }}>
                         <EditPencil
                           id={7}
-                          existing={
-                            "    Build next-generation AI applications trained on a dataset of over 2 trillion tokens."
-                          }
+                          existing={data[7]?.display_content}
                           content_type={"txt"}
                         >
-                          Build next-generation AI applications trained on a
-                          dataset of over 2 trillion tokens.
+                          {data[7]?.display_content}
+                          {/* Build next-generation AI applications trained on a
+                          dataset of over 2 trillion tokens. */}
                         </EditPencil>
                       </p>
                     </div>
@@ -234,25 +235,23 @@ const About = ({ data }) => {
                         >
                           <EditPencil
                             id={8}
-                            existing={
-                              "BharatGPT.ai is your transformation partner with deep built-in knowledge in its Foundational Model."
-                            }
+                            existing={data[8]?.display_content}
                             content_type={"txt"}
                           >
-                            BharatGPT.ai is your transformation partner with
-                            deep built-in knowledge in its Foundational Model.
+                            {data[8]?.display_content}
+                            {/* BharatGPT.ai is your transformation partner with
+                            deep built-in knowledge in its Foundational Model. */}
                           </EditPencil>
                         </h4>
                         <p style={{ lineHeight: "24px", important: "true" }}>
                           <EditPencil
                             id={11}
-                            existing={
-                              " This platform is the core to GenAI based Chatbots                            (codeless solutions), using BharatGPT.ai"
-                            }
+                            existing={data[11]?.display_content}
                             content_type={"txt"}
                           >
-                            This platform is the core to GenAI based Chatbots
-                            (codeless solutions), using BharatGPT.ai.
+                            {data[11]?.display_content}
+                            {/* This platform is the core to GenAI based Chatbots
+                            (codeless solutions), using BharatGPT.ai. */}
                           </EditPencil>
                         </p>
                       </div>
@@ -270,26 +269,24 @@ const About = ({ data }) => {
                         >
                           <EditPencil
                             id={9}
-                            existing={
-                              " We enable enterprises and other communities to develop their function-specific Chatbots."
-                            }
+                            existing={data[9]?.display_content}
                             content_type={"txt"}
                           >
-                            We enable enterprises and other communities to
-                            develop their function-specific Chatbots.
+                            {data[9]?.display_content}
+                            {/* We enable enterprises and other communities to
+                            develop their function-specific Chatbots. */}
                           </EditPencil>
                         </h5>
                         <p style={{ lineHeight: "24px", important: "true" }}>
                           <EditPencil
                             id={10}
-                            existing={
-                              "We invite business and development community to sign up and witness the magic of building their function-specific chatbots"
-                            }
+                            existing={data[10]?.display_content}
                             content_type={"txt"}
                           >
-                            We invite business and development community to sign
+                            {data[10]?.display_content}
+                            {/* We invite business and development community to sign
                             up and witness the magic of building their
-                            function-specific chatbots.
+                            function-specific chatbots. */}
                           </EditPencil>
                         </p>
                       </div>

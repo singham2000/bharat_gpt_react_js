@@ -2,7 +2,7 @@ import React from "react";
 import ShapeBg from "../Assets/images/fun-fact/shape-2.png";
 import EditPencil from "../Components/EditPencil";
 
-const SupportArea = () => {
+const SupportArea = ({ data }) => {
   return (
     <section
       id="faq"
@@ -26,31 +26,34 @@ const SupportArea = () => {
               <span className="tp-section-title__pre">
                 <EditPencil
                   id={58}
-                  existing={"The Best Gen AI"}
+                  existing={data[58]?.display_content}
                   content_type={"txt"}
                 >
                   {" "}
-                  The Best Gen AI
+                  {data[58]?.display_content}
+                  {/* The Best Gen AI */}
                 </EditPencil>
                 <span className="title-pre-color">
                   {" "}
                   <EditPencil
                     id={59}
-                    existing={"Assistant"}
+                    existing={data[59]?.display_content}
                     content_type={"txt"}
                   >
-                    Assistant
+                    {data[59]?.display_content}
+                    {/* Assistant */}
                   </EditPencil>{" "}
                 </span>
                 <h3 className="tp-section-title">
                   <span className="title-color">
                     <EditPencil
                       id={60}
-                      existing={"Business Benefits"}
+                      existing={data[60]?.display_content}
                       content_type={"txt"}
                     >
                       {" "}
-                      Business Benefits
+                      {data[60]?.display_content}
+                      {/* Business Benefits */}
                     </EditPencil>
                   </span>
                   <span className="title-center-shape">
@@ -86,10 +89,11 @@ const SupportArea = () => {
                       >
                         <EditPencil
                           id={61}
-                          existing={"Versatility"}
+                          existing={data[61]?.display_content}
                           content_type={"txt"}
                         >
-                          Versatility
+                          {data[61]?.display_content}
+                          {/* Versatility */}
                         </EditPencil>
                       </button>
                     </h2>
@@ -103,17 +107,16 @@ const SupportArea = () => {
                         <p>
                           <EditPencil
                             id={62}
-                            existing={
-                              "BharatGPT is highly versatile, able to handle a wide range of natural language processing tasks, including text classification, sentiment analysis, language translation, and more. This makes it an ideal solution for a wide range of industries and applications."
-                            }
+                            existing={data[62]?.display_content}
                             content_type={"txt"}
                           >
-                            BharatGPT is highly versatile, able to handle a wide
+                            {data[62]?.display_content}
+                            {/* BharatGPT is highly versatile, able to handle a wide
                             range of natural language processing tasks,
                             including text classification, sentiment analysis,
                             language translation, and more. This makes it an
                             ideal solution for a wide range of industries and
-                            applications.
+                            applications. */}
                           </EditPencil>
                         </p>
                       </div>
@@ -131,9 +134,10 @@ const SupportArea = () => {
                       >
                         <EditPencil
                           id={63}
-                          existing={"Accessibility"}
+                          existing={data[63]?.display_content}
                           content_type={"txt"}
                         >
+                          {data[63]?.display_content}
                           Accessibility
                         </EditPencil>
                       </button>
@@ -148,17 +152,16 @@ const SupportArea = () => {
                         <p>
                           <EditPencil
                             id={64}
-                            existing={
-                              " BharatGPT is designed to be accessible to anyone,regardless of their level of technical expertise or experience ith NLP. Whether you’re a researcher, a business owner, or anyone else, BharatGPT is here to help you break down language barriers and unlock new insights."
-                            }
+                            existing={data[64]?.display_content}
                             content_type={"txt"}
                           >
-                            BharatGPT is designed to be accessible to anyone,
+                            {data[64]?.display_content}
+                            {/* BharatGPT is designed to be accessible to anyone,
                             regardless of their level of technical expertise or
                             experience with NLP. Whether you’re a researcher, a
                             business owner, or anyone else, BharatGPT is here to
                             help you break down language barriers and unlock new
-                            insights.
+                            insights. */}
                           </EditPencil>
                         </p>
                       </div>
@@ -176,10 +179,11 @@ const SupportArea = () => {
                       >
                         <EditPencil
                           id={65}
-                          existing={"Accuracy"}
+                          existing={data[65]?.display_content}
                           content_type={"txt"}
                         >
-                          Accuracy
+                          {data[65]?.display_content}
+                          {/* Accuracy */}
                         </EditPencil>
                       </button>
                     </h2>
@@ -193,17 +197,16 @@ const SupportArea = () => {
                         <p>
                           <EditPencil
                             id={66}
-                            existing={
-                              "One of the key benefits of using BharatGPT is its accuracy. By leveraging the latest advances in AI and machine earning, BharatGPT is able to accurately process and analyze indian language text data, giving you insights and information what you can trust."
-                            }
+                            existing={data[66]?.display_content}
                             content_type={"txt"}
                           >
-                            One of the key benefits of using BharatGPT is its
+                            {data[66]?.display_content}
+                            {/* One of the key benefits of using BharatGPT is its
                             accuracy. By leveraging the latest advances in AI
                             and machine learning, BharatGPT is able to
                             accurately process and analyze Indian language text
                             data, giving you insights and information that you
-                            can trust.
+                            can trust. */}
                           </EditPencil>
                         </p>
                       </div>
@@ -221,11 +224,12 @@ const SupportArea = () => {
                       >
                         <EditPencil
                           id={66}
-                          existing={"Scalability"}
+                          existing={data[66]?.display_content}
                           content_type={"txt"}
                         >
                           {" "}
-                          Scalability
+                          {data[66]?.display_content}
+                          {/* Scalability */}
                         </EditPencil>
                       </button>
                     </h2>
@@ -239,15 +243,14 @@ const SupportArea = () => {
                         <p>
                           <EditPencil
                             id={67}
-                            existing={
-                              "BharatGPT has been designed to be scalable, making it suitable for use in a variety of settings, from small research projects to large-scale business applications."
-                            }
+                            existing={data[67]?.display_content}
                             content_type={"txt"}
                           >
-                            BharatGPT has been designed to be scalable, making
+                            {data[67]?.display_content}
+                            {/* BharatGPT has been designed to be scalable, making
                             it suitable for use in a variety of settings, from
                             small research projects to large-scale business
-                            applications.
+                            applications. */}
                           </EditPencil>
                         </p>
                       </div>

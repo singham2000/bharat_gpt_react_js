@@ -21,37 +21,6 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
 </body>
-
-<script>
-  var swiper = new Swiper(".hx", {
-    slidesPerView: 5, // Change slidesPerView to 1 for phone screen
-    spaceBetween: 50,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      // Additional breakpoints for responsiveness
-      768: {
-        slidesPerView: 1, // Number of slides per view for tablets and larger screens
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 4, // Number of slides per view for desktops
-        spaceBetween: 50,
-      },
-      1080: {
-        slidesPerView: 4, // Number of slides per view for desktops
-        spaceBetween: 50,
-      },
-      2000: {
-        slidesPerView: 4, // Number of slides per view for desktops
-        spaceBetween: 50,
-      },
-    },
-  });
-</script>
 <script>
   function scrollToDiv(divId) {
     var element = document.getElementById(divId);

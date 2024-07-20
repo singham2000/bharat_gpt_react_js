@@ -3,7 +3,7 @@ import ShapeTwo from "../Assets/images/brand/shape-2.png";
 import Count from "./Count";
 import EditPencil from "../Components/EditPencil";
 
-const Brand = () => {
+const Brand = ({ data }) => {
   return (
     //  < !--brand area start-- >
 
@@ -36,19 +36,20 @@ const Brand = () => {
                   <h4 class="tp-support-feature-content-title">
                     <EditPencil
                       id={17}
-                      existing={"  India's 1st Gen AI"}
+                      existing={data[17]?.display_content}
                       content_type={"txt"}
                     >
-                      India's 1st Gen AI
+                      {data[17]?.display_content}
+                      {/* India's 1st Gen AI */}
                     </EditPencil>
                   </h4>
                   <p>
                     <EditPencil
                       id={18}
-                      existing={"1st LLM in 12+ Indian Languages."}
+                      existing={data[18]?.display_content}
                       content_type={"txt"}
                     >
-                      1st LLM in 12+ Indian Languages.
+                      {data[18]?.display_content}
                     </EditPencil>
                   </p>
                 </div>
@@ -74,16 +75,24 @@ const Brand = () => {
               </div>
               <div class="col-lg-8 col-8">
                 <div class="tp-support-feature-content">
-                  <h4 class="tp-support-feature-content-title">Omni-Channel</h4>
+                  <h4 class="tp-support-feature-content-title">
+                    <EditPencil
+                      id={86}
+                      existing={data[17]?.display_content}
+                      content_type={"txt"}
+                    >
+                      {data[86]?.display_content}
+                      {/* Omni-Channel */}
+                    </EditPencil>
+                  </h4>
                   <p>
                     <EditPencil
                       id={19}
-                      existing={
-                        " Multi-Lingual, Multi Format Platform with 120+ Languages."
-                      }
+                      existing={data[19]?.display_content}
                       content_type={"txt"}
                     >
-                      Multi-Lingual, Multi Format Platform with 120+ Languages.
+                      {data[19]?.display_content}
+                      {/* Multi-Lingual, Multi Format Platform with 120+ Languages. */}
                     </EditPencil>
                   </p>
                 </div>
@@ -109,16 +118,24 @@ const Brand = () => {
               </div>
               <div class="col-lg-8 col-8">
                 <div class="tp-support-feature-content">
-                  <h4 class="tp-support-feature-content-title">10X Faster</h4>
+                  <h4 class="tp-support-feature-content-title">
+                    <EditPencil
+                      id={87}
+                      existing={data[87]?.display_content}
+                      content_type={"txt"}
+                    >
+                      {data[87]?.display_content}
+                      {/* 10X Faster */}
+                    </EditPencil>
+                  </h4>
                   <p>
                     <EditPencil
                       id={20}
-                      existing={
-                        "Human-Centric Conversational AI Implementation."
-                      }
+                      existing={data[20]?.display_content}
                       content_type={"txt"}
                     >
-                      Human-Centric Conversational AI Implementation.
+                      {/* Human-Centric Conversational AI Implementation. */}
+                      {data[20]?.display_content}
                     </EditPencil>
                   </p>
                 </div>
@@ -128,7 +145,6 @@ const Brand = () => {
         </div>
       </div>
     </section>
-
     //    <!--brand area end-- >
   );
 };

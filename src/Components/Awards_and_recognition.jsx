@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import EditPencil from "../Components/EditPencil";
-const Awards_and_recognition = () => {
+const Awards_and_recognition = ({ data }) => {
   return (
     <div>
       <section
@@ -14,7 +14,16 @@ const Awards_and_recognition = () => {
             <div className="col-xl-10">
               <div className="breadcrumb__content text-center">
                 <h3 className="breadcrumb__title">
-                  <h3 className="tp-section-title">Awards and Recognition</h3>
+                  <h3 className="tp-section-title">
+                    <EditPencil
+                      id={93}
+                      existing={"Awards and Recognition"}
+                      content_type={"txt"}
+                    >
+                      {data[93]?.display_content}
+                      {/* Awards and Recognition */}
+                    </EditPencil>
+                  </h3>
                 </h3>
               </div>
             </div>
@@ -39,24 +48,24 @@ const Awards_and_recognition = () => {
                     <h3 className="team-title">
                       <span style={{ textDecoration: "none", color: "black" }}>
                         <EditPencil
-                          id={12}
-                          existing={"Global Fintech Competition"}
+                          id={92}
+                          existing={data[92]?.display_content}
                           content_type={"txt"}
                         >
-                          Global Fintech Competition
+                          {data[92]?.display_content}
+                          {/* Global Fintech Competition */}
                         </EditPencil>
                       </span>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
                       <EditPencil
                         id={13}
-                        existing={
-                          "Winner of Global Fintech Award 2021 by GEP - DIT, Government of UK"
-                        }
+                        existing={data[13]?.display_content}
                         content_type={"txt"}
                       >
-                        Winner of Global Fintech Award 2021 by GEP - DIT,
-                        Government of UK
+                        {data[13]?.display_content}
+                        {/* Winner of Global Fintech Award 2021 by GEP - DIT,
+                        Government of UK */}
                       </EditPencil>
                     </p>
                   </div>
@@ -81,20 +90,20 @@ const Awards_and_recognition = () => {
                           existing={"Certificate of Recognition"}
                           content_type={"txt"}
                         >
-                          Certificate of Recognition
+                          {data[14]?.display_content}
+                          {/* Certificate of Recognition */}
                         </EditPencil>
                       </span>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
                       <EditPencil
                         id={15}
-                        existing={
-                          "Certified by Department of Industrial Promotion and Policy, Startup India"
-                        }
+                        existing={data[15]?.display_content}
                         content_type={"txt"}
                       >
-                        Certified by Department of Industrial Promotion and
-                        Policy , Startup India
+                        {data[15]?.display_content}
+                        {/* Certified by Department of Industrial Promotion and
+                        Policy , Startup India */}
                       </EditPencil>
                     </p>
                   </div>
@@ -114,19 +123,25 @@ const Awards_and_recognition = () => {
                   <div className="tp-team-wrapper-content-text">
                     <h3 className="team-title">
                       <span style={{ textDecoration: "none", color: "black" }}>
-                        Best firm for Data Scientists
+                        <EditPencil
+                          id={94}
+                          existing={data[94]?.display_content}
+                          content_type={"txt"}
+                        >
+                          {data[94]?.display_content}
+                        </EditPencil>
+                        {/* Best firm for Data Scientists */}
                       </span>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
                       <EditPencil
                         id={16}
-                        existing={
-                          "Best Company for Data Scientists, Data Analysts and Engineers"
-                        }
+                        existing={data[16]?.display_content}
                         content_type={"txt"}
                       >
-                        Best Company for Data Scientists, Data Analysts and
-                        Engineers
+                        {data[16]?.display_content}
+                        {/* Best Company for Data Scientists, Data Analysts and
+                        Engineers */}
                       </EditPencil>
                     </p>
                   </div>

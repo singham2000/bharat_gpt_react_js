@@ -24,7 +24,6 @@ const Home = () => {
   const { getContent } = useContext(contentContext);
   useEffect(() => {
     getContent().then((data) => {
-      console.log(data);
       setFetchedData(data.result);
     });
     const elementId = location.hash.slice(1);

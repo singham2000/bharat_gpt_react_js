@@ -7,7 +7,7 @@ import axiosInstance from "../utils/axios";
 
 const FloatingPencilIcon = ({ children, id, existing, content_type }) => {
   const [showModal, setShowModal] = useState(false);
-  const [dataset, setDataset] = useState(existing);
+  const [dataset, setDataset] = useState("");
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
 
@@ -55,35 +55,35 @@ const FloatingPencilIcon = ({ children, id, existing, content_type }) => {
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={updateContent}>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">
+            <div className="mb-3">
+              <label for="exampleInputEmail1" className="form-label">
                 Existing
               </label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="exampleInputEmail1"
                 value={existing}
                 disabled
                 aria-describedby="emailHelp"
               />
-              <div id="emailHelp" class="form-text">
+              <div id="emailHelp" className="form-text">
                 This is currently shown.
               </div>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">
+            <div className="mb-3">
+              <label for="exampleInputPassword1" className="form-label">
                 Update with
               </label>
               <input
                 type="text"
-                value={existing}
+                value={dataset}
                 onChange={(e) => setDataset(e.target.value)}
-                class="form-control"
+                className="form-control"
                 id="exampleInputPassword1"
               />
             </div>
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" className="btn btn-primary">
               Submit
             </button>
           </form>

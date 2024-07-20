@@ -4,7 +4,6 @@ import ShapeTwo from "../Assets/images/shape-4.png";
 import BannerOne from "../Assets/images/banner1.jpg";
 import EditPencil from "../Components/EditPencil";
 const Hero = ({ data }) => {
-  console.log(data);
   const refA = useRef(null);
   return (
     <section ref={refA} className="tp-hero-area tp-hero-space">

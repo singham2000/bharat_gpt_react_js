@@ -60,15 +60,15 @@ const About = ({ data }) => {
     <section
       ref={refB}
       id="about-area"
-      class="tp-about-area box-plr p-relative"
+      className="tp-about-area box-plr p-relative"
       style={{ height: "max-content" }}
     >
-      <div class="tp-about-shape d-none d-xl-block">
-        <img class="shape-1" src="assets/img/about/shape-1.png" alt="" />
+      <div className="tp-about-shape d-none d-xl-block">
+        <img className="shape-1" src="assets/img/about/shape-1.png" alt="" />
       </div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-5 col-lg-12">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-xl-5 col-lg-12">
             <video
               id="corover_video"
               className="w-100 rounded-1"
@@ -86,7 +86,7 @@ const About = ({ data }) => {
                 {/* Your browser does not support the video tag. */}
               </EditPencil>
             </video>
-            <center class="d-flex flex-column">
+            <center className="d-flex flex-column">
               <label
                 htmlFor="corover_video"
                 style={{ fontSize: "18px", textAlign: "center" }}
@@ -100,7 +100,7 @@ const About = ({ data }) => {
                   {data[2]?.display_content}
                 </EditPencil>
               </label>
-              <h3 class="tp-feature-title">
+              <h3 className="tp-feature-title">
                 <EditPencil
                   id={3}
                   existing={data[3]?.display_content}
@@ -127,15 +127,15 @@ const About = ({ data }) => {
               </center>
             </center>
           </div>
-          <div class="col-xl-7 col-lg-10">
-            <div class="tp-about-wrapper pl-50">
-              <div class="row">
-                <div class="col-lg-12">
+          <div className="col-xl-7 col-lg-10">
+            <div className="tp-about-wrapper pl-50">
+              <div className="row">
+                <div className="col-lg-12">
                   <div
-                    class="tp-about-title-wrapper p-relative"
+                    className="tp-about-title-wrapper p-relative"
                     style={{ marginBottom: "50px" }}
                   >
-                    <span class="tp-section-title__pre">
+                    <span className="tp-section-title__pre">
                       <EditPencil
                         id={4}
                         existing={data[4]?.display_content}
@@ -144,7 +144,7 @@ const About = ({ data }) => {
                         {data[4]?.display_content}
                         {/* AI AUTOMATED WORKFORCES: */}
                       </EditPencil>
-                      <span class="title-pre-color">
+                      <span className="title-pre-color">
                         <EditPencil
                           id={5}
                           existing={data[5]?.display_content}
@@ -156,12 +156,12 @@ const About = ({ data }) => {
                       </span>
                     </span>
                     <h3
-                      class="tp-section-title"
+                      className="tp-section-title"
                       style={{ marginBottom: "0px", important: "true" }}
                     >
                       Choose multiple LLMs to create a world class
                       Virtual Assistant
-                      <span class="title-left-shape">
+                      <span className="title-left-shape">
                         <svg
                           width="194"
                           height="5"
@@ -179,7 +179,7 @@ const About = ({ data }) => {
                   </div>
                 </div>
               </div>
-              <div class="tp-about-item-wrapper">
+              <div className="tp-about-item-wrapper">
                 <Swiper
                   {...setting}
                   loop={isLoop}
@@ -195,9 +195,9 @@ const About = ({ data }) => {
                         height={200}
                       />
                     </div>
-                    <div class="tp-about-item-content">
+                    <div className="tp-about-item-content">
                       <h4
-                        class="about-title"
+                        className="about-title"
                         style={{ fontSize: "18px", important: "true" }}
                       >
                         <EditPencil
@@ -224,13 +224,13 @@ const About = ({ data }) => {
                     </div>
                   </SwiperSlide>
                   <SwiperSlide style={{ height: "max-content" }}>
-                    <div class="tp-about-item mb-30">
-                      <div class="tp-about-item-thumb">
+                    <div className="tp-about-item mb-30">
+                      <div className="tp-about-item-thumb">
                         <img src={LogoImg2} alt="" />
                       </div>
-                      <div class="tp-about-item-content">
+                      <div className="tp-about-item-content">
                         <h4
-                          class="about-title"
+                          className="about-title"
                           style={{ fontSize: "18px", important: "true" }}
                         >
                           <EditPencil
@@ -258,13 +258,13 @@ const About = ({ data }) => {
                     </div>
                   </SwiperSlide>
                   <SwiperSlide style={{ height: "max-content" }}>
-                    <div class="tp-about-item mb-30">
-                      <div class="tp-about-item-thumb">
+                    <div className="tp-about-item mb-30">
+                      <div className="tp-about-item-thumb">
                         <img src={LogoImg3} alt="" />
                       </div>
-                      <div class="tp-about-item-content">
+                      <div className="tp-about-item-content">
                         <h5
-                          class="about-title"
+                          className="about-title"
                           style={{ fontSize: "18px", important: "true" }}
                         >
                           <EditPencil

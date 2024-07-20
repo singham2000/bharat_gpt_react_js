@@ -14,7 +14,6 @@ const Footer = ({ data }) => {
 
   useEffect(() => {
     const getCountry = Country.getAllCountries();
-    console.log("country:", getCountry);
     setCountries(getCountry);
   }, []);
   const [validated, setValidated] = useState(false);
@@ -42,11 +41,10 @@ const Footer = ({ data }) => {
     }
 
     try {
-      const response = await axiosInstance.post("/api/user/sendMail", {
+      await axiosInstance.post("/api/user/sendMail", {
         ...formData,
         captchaValue,
       });
-      console.log(response.data.message);
     } catch (error) {
       console.error(error.response.data.message);
     }
@@ -216,7 +214,7 @@ const Footer = ({ data }) => {
                                 {countries.map((country) => (
                                   <option
                                     key={country.isoCode}
-                                    value={country.isoCode}
+                                    value={country.name}
                                   >
                                     {country.phonecode}{" "}
                                     {country.name.split("+")[0]}
@@ -295,7 +293,7 @@ const Footer = ({ data }) => {
                           <Row className="mb-3">
                             <Col md="12">
                               <ReCAPTCHA
-                                sitekey="YOUR_RECAPTCHA_SITE_KEY"
+                                sitekey="6LcwehQqAAAAANQtCdPk7mGvPhvBl2zCvXQnG82I"
                                 onChange={handleCaptchaChange}
                               />
                             </Col>

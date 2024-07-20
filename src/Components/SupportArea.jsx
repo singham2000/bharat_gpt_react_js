@@ -16,9 +16,9 @@ const SupportArea = ({ data }) => {
         />
       </div>
       <div className="container container-large">
-        <div class="tp-fun-fact-shape">
+        <div className="tp-fun-fact-shape">
           <img alt="" />
-          <img class="shape-2_copy" src={ShapeBg} alt="" />
+          <img className="shape-2_copy" src={ShapeBg} alt="" />
         </div>
         <div className="row justify-content-center">
           <div className="col-xxl-8 col-xl-10">

@@ -7,14 +7,14 @@ const Brand = ({ data }) => {
   return (
     //  < !--brand area start-- >
 
-    <section class="tp-support-feature-area pb-30">
-      <div class="container  container-large">
-        <div class="row">
-          <div class="col-lg-4 col-12">
-            <div class="row abc tp-support-feature-item">
-              <div class="col-lg-4 col-4">
-                <div class="tp-support-feature-counter">
-                  <div class="tp-support-feature-thumb">
+    <section className="tp-support-feature-area pb-30">
+      <div className="container  container-large">
+        <div className="row">
+          <div className="col-lg-4 col-12">
+            <div className="row abc tp-support-feature-item">
+              <div className="col-lg-4 col-4">
+                <div className="tp-support-feature-counter">
+                  <div className="tp-support-feature-thumb">
                     <img src={ShapeTwo} alt="" />
                   </div>
                   <h3
@@ -31,9 +31,9 @@ const Brand = ({ data }) => {
                   </h3>
                 </div>
               </div>
-              <div class="col-lg-8 col-8">
-                <div class="tp-support-feature-content">
-                  <h4 class="tp-support-feature-content-title">
+              <div className="col-lg-8 col-8">
+                <div className="tp-support-feature-content">
+                  <h4 className="tp-support-feature-content-title">
                     <EditPencil
                       id={17}
                       existing={data[17]?.display_content}
@@ -56,11 +56,11 @@ const Brand = ({ data }) => {
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-12">
-            <div class="row abc tp-support-feature-item">
-              <div class="col-lg-4 col-4">
-                <div class="tp-support-feature-counter">
-                  <div class="tp-support-feature-thumb">
+          <div className="col-lg-4 col-12">
+            <div className="row abc tp-support-feature-item">
+              <div className="col-lg-4 col-4">
+                <div className="tp-support-feature-counter">
+                  <div className="tp-support-feature-thumb">
                     <img src={ShapeTwo} alt="" />
                   </div>
                   <h3
@@ -73,9 +73,9 @@ const Brand = ({ data }) => {
                   </h3>
                 </div>
               </div>
-              <div class="col-lg-8 col-8">
-                <div class="tp-support-feature-content">
-                  <h4 class="tp-support-feature-content-title">
+              <div className="col-lg-8 col-8">
+                <div className="tp-support-feature-content">
+                  <h4 className="tp-support-feature-content-title">
                     <EditPencil
                       id={86}
                       existing={data[17]?.display_content}
@@ -99,11 +99,11 @@ const Brand = ({ data }) => {
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-12">
-            <div class="row abc tp-support-feature-item">
-              <div class="col-lg-4 col-4">
-                <div class="tp-support-feature-counter">
-                  <div class="tp-support-feature-thumb">
+          <div className="col-lg-4 col-12">
+            <div className="row abc tp-support-feature-item">
+              <div className="col-lg-4 col-4">
+                <div className="tp-support-feature-counter">
+                  <div className="tp-support-feature-thumb">
                     <img src={ShapeTwo} alt="" />
                   </div>
                   <h3
@@ -116,9 +116,9 @@ const Brand = ({ data }) => {
                   </h3>
                 </div>
               </div>
-              <div class="col-lg-8 col-8">
-                <div class="tp-support-feature-content">
-                  <h4 class="tp-support-feature-content-title">
+              <div className="col-lg-8 col-8">
+                <div className="tp-support-feature-content">
+                  <h4 className="tp-support-feature-content-title">
                     <EditPencil
                       id={87}
                       existing={data[87]?.display_content}

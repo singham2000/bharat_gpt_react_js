@@ -4,16 +4,16 @@ import EditPencil from "../Components/EditPencil";
 const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
   return (
     <section
-      class="breadcrumb__area breadcrumb-style pt-20 pb-20 p-relative z-index-1"
+      className="breadcrumb__area breadcrumb-style pt-20 pb-20 p-relative z-index-1"
       id="community"
       style={{ height: "max-content", marginBottom: "5px" }}
     >
-      <div class="breadcrumb__bg-overlay m-img"></div>
-      <div class="container mb-10" style={{ marginBottom: "10px" }}>
-        <div class="row justify-content-center">
-          <div class="col-xl-10">
-            <div class="breadcrumb__content text-center">
-              <h3 class="breadcrumb__title">
+      <div className="breadcrumb__bg-overlay m-img"></div>
+      <div className="container mb-10" style={{ marginBottom: "10px" }}>
+        <div className="row justify-content-center">
+          <div className="col-xl-10">
+            <div className="breadcrumb__content text-center">
+              <h3 className="breadcrumb__title">
                 <EditPencil
                   id={21}
                   existing={data[92]?.display_content}
@@ -28,17 +28,17 @@ const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
         </div>
       </div>
 
-      <div class="container-fluid gx-0">
-        <div class="row row-equal-height gx-0">
+      <div className="container-fluid gx-0">
+        <div className="row row-equal-height gx-0">
           <div
-            class="feature-3-active swiper-container"
+            className="feature-3-active swiper-container"
             style={{ height: "auto", padding: "20px 50px " }}
           >
-            <div class="d-flex flex-lg-row flex-column gap-3">
-              <div class="col-lg-4 col-md-6 col-equal-height">
-                <div class="tp-feature-3-content-inner d-flex align-items-center text-decoration-none">
-                  <div class="tp-feature-3-content">
-                    <h3 class="tp-feature-title">
+            <div className="d-flex flex-lg-row flex-column gap-3">
+              <div className="col-lg-4 col-md-6 col-equal-height">
+                <div className="tp-feature-3-content-inner d-flex align-items-center text-decoration-none">
+                  <div className="tp-feature-3-content">
+                    <h3 className="tp-feature-title">
                       <EditPencil
                         id={22}
                         existing={data[22]?.display_content}
@@ -61,22 +61,22 @@ const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
                       <br />
                     </p>
                     <span
-                      class="text-decoration-none d-flex flex-row justify-content-start align-items-center"
+                      className="text-decoration-none d-flex flex-row justify-content-start align-items-center"
                       data-toggle="modal"
                       data-target="#supportModal"
                       style={{ cursor: "pointer", color: "blue" }}
                       onClick={() => handleOpenModal(1)}
                     >
-                      Know more <i class="fa fa-link-simple pl-10"></i>
+                      Know more <i className="fa fa-link-simple pl-10"></i>
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 col-equal-height">
-                <div class="tp-feature-3-content-inner d-flex align-items-center text-decoration-none">
-                  <div class="tp-feature-3-content">
-                    <h3 class="tp-feature-title">
+              <div className="col-lg-4 col-md-6 col-equal-height">
+                <div className="tp-feature-3-content-inner d-flex align-items-center text-decoration-none">
+                  <div className="tp-feature-3-content">
+                    <h3 className="tp-feature-title">
                       <EditPencil
                         id={24}
                         existing={data[24]?.display_content}
@@ -98,22 +98,22 @@ const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
                       </EditPencil>
                     </p>
                     <span
-                      class="text-decoration-none d-flex flex-row justify-content-start align-items-center"
+                      className="text-decoration-none d-flex flex-row justify-content-start align-items-center"
                       data-toggle="modal"
                       data-target="#supportModal"
                       style={{ cursor: "pointer", color: "blue" }}
                       onClick={() => handleOpenModal(2)}
                     >
-                      Know more <i class="fa fa-link-simple pl-10"></i>
+                      Know more <i className="fa fa-link-simple pl-10"></i>
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 col-equal-height">
-                <div class="tp-feature-3-content-inner d-flex align-items-center text-decoration-none">
-                  <div class="tp-feature-3-content">
-                    <h3 class="tp-feature-title">
+              <div className="col-lg-4 col-md-6 col-equal-height">
+                <div className="tp-feature-3-content-inner d-flex align-items-center text-decoration-none">
+                  <div className="tp-feature-3-content">
+                    <h3 className="tp-feature-title">
                       <EditPencil
                         id={26}
                         existing={data[26]?.display_content}
@@ -135,13 +135,13 @@ const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
                       </EditPencil>
                     </p>
                     <span
-                      class="text-decoration-none d-flex flex-row justify-content-start align-items-center"
+                      className="text-decoration-none d-flex flex-row justify-content-start align-items-center"
                       data-toggle="modal"
                       data-target="#supportModal"
                       style={{ cursor: "pointer", color: "blue" }}
                       onClick={() => handleOpenModal(3)}
                     >
-                      Know more <i class="fa fa-link-simple pl-10"></i>
+                      Know more <i className="fa fa-link-simple pl-10"></i>
                     </span>
                   </div>
                 </div>

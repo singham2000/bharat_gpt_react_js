@@ -40,13 +40,13 @@ const Navbar = () => {
   return (
     <div>
       <div
-        class="back-to-top-wrapper"
+        className="back-to-top-wrapper"
         onClick={scrollToTop}
         style={{ display: visible ? "inline" : "none" }}
       >
         <a
           type="button"
-          class="back-to-top-btn"
+          className="back-to-top-btn"
           href="https://corover.ai/demo"
           target="_blank"
           style={{ color: "white" }}
@@ -124,16 +124,16 @@ const Navbar = () => {
                       style={{ borderRadius: "15px" }}
                       onClick={handleExternalClick}
                     >
-                      <div class="flip-button-container">
-                        <div class="flip-button">
-                          <div class="front">
-                            <span class="tp-btn" id="get-started-btn">
+                      <div className="flip-button-container">
+                        <div className="flip-button">
+                          <div className="front">
+                            <span className="tp-btn" id="get-started-btn">
                               Get Started Today!
                             </span>
                           </div>
-                          <div class="back">
+                          <div className="back">
                             <span
-                              class="tp-btn"
+                              className="tp-btn"
                               style={{
                                 background: "#FF6900",
                                 important: "true",

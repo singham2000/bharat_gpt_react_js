@@ -30,11 +30,10 @@ const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
     }
 
     try {
-      const response = await axiosInstance.post("/api/user/sendMail", {
+      await axiosInstance.post("/api/user/sendMail", {
         ...formData,
         captchaValue,
       });
-      console.log(response.data.message);
     } catch (error) {
       console.error(error.response.data.message);
     }
@@ -48,7 +47,6 @@ const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
 
   useEffect(() => {
     const getCountry = Country.getAllCountries();
-    console.log("country:", getCountry);
     setCountries(getCountry);
   }, []);
   return (
@@ -134,7 +132,7 @@ const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
                   >
                     <option value="">Select a country...</option>
                     {countries.map((country) => (
-                      <option key={country.isoCode} value={country.isoCode}>
+                      <option key={country.isoCode} value={country.name}>
                         {country.phonecode} {country.name}
                       </option>
                     ))}

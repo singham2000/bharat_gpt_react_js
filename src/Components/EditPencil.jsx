@@ -7,22 +7,39 @@ import axiosInstance from "../utils/axios";
 
 const FloatingPencilIcon = ({ children, id, existing, content_type }) => {
   const [showModal, setShowModal] = useState(false);
-  const [dataset, setDataset] = useState("");
+  const [dataset, setDataset] = useState(null);
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
-
+  const handleFileChange = (e) => {
+    setDataset(e.target.files[0]);
+  };
   const updateContent = async (e) => {
+    // console.log(dataset);
     e.preventDefault();
-    const { data } = await axiosInstance.post(
-      "/api/content/content",
-      { id: id + 1, display_content: dataset, content_type },
-      {
+    if (content_type === "txt") {
+      await axiosInstance.post(
+        "/api/content/content",
+        { id: id + 1, display_content: dataset, content_type },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+      window.location.reload();
+    } else {
+      const formdata = new FormData();
+      formdata.append("id", id + 1);
+      formdata.append("file", dataset);
+      formdata.append("content_type", content_type);
+      await axiosInstance.post("/api/content/content", formdata, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-      }
-    );
-    console.log(data);
+        "Content-Type": "multipart/form-data",
+      });
+      window.location.reload();
+    }
   };
 
   useEffect(() => {
@@ -75,13 +92,22 @@ const FloatingPencilIcon = ({ children, id, existing, content_type }) => {
               <label for="exampleInputPassword1" className="form-label">
                 Update with
               </label>
-              <input
-                type="text"
-                value={dataset}
-                onChange={(e) => setDataset(e.target.value)}
-                className="form-control"
-                id="exampleInputPassword1"
-              />
+              {content_type === "img" ? (
+                <input
+                  type="file"
+                  onChange={handleFileChange}
+                  className="form-control"
+                  id="exampleInputPassword1"
+                />
+              ) : (
+                <input
+                  type="text"
+                  value={dataset}
+                  onChange={(e) => setDataset(e.target.value)}
+                  className="form-control"
+                  id="exampleInputPassword1"
+                />
+              )}
             </div>
             <button type="submit" className="btn btn-primary">
               Submit

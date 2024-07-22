@@ -5,6 +5,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import BannerS from "../Assets/images/banner.jpg";
 import EditPencil from "../Components/EditPencil";
+import axiosInstance from "../utils/axios";
 
 const Awards = () => {
   const location = useLocation();
@@ -62,11 +63,17 @@ const Awards = () => {
             <div className="col-lg-4 col-sm-6 border py-3 px-4">
               <div className="tp-team-wrapper p-relative mb-30">
                 <div className="tp-team-wrapper-thumb">
-                  <img
-                    height="250px"
-                    src="assets/img/awards/award_1.PNG"
-                    alt=""
-                  />
+                  <EditPencil
+                    id={113}
+                    existing={fetchedData[113]?.display_content}
+                    content_type={"img"}
+                  >
+                    <img
+                      height="250px"
+                      src={`${axiosInstance.defaults.baseURL}/uploads/${fetchedData[113]?.display_content}`}
+                      alt=""
+                    />
+                  </EditPencil>
                 </div>
                 <div className="tp-team-wrapper-content d-flex justify-content-between">
                   <div className="tp-team-wrapper-content-text">
@@ -100,11 +107,17 @@ const Awards = () => {
             <div className="col-lg-4 col-sm-6 border py-3 px-4">
               <div className="tp-team-wrapper p-relative mb-30">
                 <div className="tp-team-wrapper-thumb">
-                  <img
-                    height="250px"
-                    src="assets/img/awards/award_2.PNG"
-                    alt=""
-                  />
+                  <EditPencil
+                    id={114}
+                    existing={fetchedData[114]?.display_content}
+                    content_type={"img"}
+                  >
+                    <img
+                      height="250px"
+                      src={`${axiosInstance.defaults.baseURL}/uploads/${fetchedData[114]?.display_content}`}
+                      alt=""
+                    />
+                  </EditPencil>
                 </div>
                 <div className="tp-team-wrapper-content d-flex justify-content-between">
                   <div className="tp-team-wrapper-content-text">
@@ -135,11 +148,17 @@ const Awards = () => {
             <div className="col-lg-4 col-sm-6 border py-3 px-4">
               <div className="tp-team-wrapper p-relative mb-30">
                 <div className="tp-team-wrapper-thumb">
-                  <img
-                    height="250px"
-                    src="assets/img/awards/award_3.PNG"
-                    alt=""
-                  />
+                  <EditPencil
+                    id={115}
+                    existing={fetchedData[115]?.display_content}
+                    content_type={"img"}
+                  >
+                    <img
+                      height="250px"
+                      src={`${axiosInstance.defaults.baseURL}/uploads/${fetchedData[115]?.display_content}`}
+                      alt=""
+                    />
+                  </EditPencil>
                 </div>
                 <div className="tp-team-wrapper-content d-flex justify-content-between">
                   <div className="tp-team-wrapper-content-text">
@@ -157,9 +176,7 @@ const Awards = () => {
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
                       <EditPencil
                         id={100}
-                        existing={
-                          fetchedData[100]?.display_content
-                        }
+                        existing={fetchedData[100]?.display_content}
                         content_type={"txt"}
                       >
                         {fetchedData[100]?.display_content}
@@ -174,11 +191,17 @@ const Awards = () => {
             <div className="col-lg-4 col-sm-6 border py-3 px-4">
               <div className="tp-team-wrapper p-relative mb-30">
                 <div className="tp-team-wrapper-thumb">
-                  <img
-                    height="250px"
-                    src="assets/img/awards/award_4.PNG"
-                    alt=""
-                  />
+                  <EditPencil
+                    id={116}
+                    existing={fetchedData[116]?.display_content}
+                    content_type={"img"}
+                  >
+                    <img
+                      height="250px"
+                      src={`${axiosInstance.defaults.baseURL}/uploads/${fetchedData[116]?.display_content}`}
+                      alt=""
+                    />
+                  </EditPencil>
                 </div>
                 <div className="tp-team-wrapper-content d-flex justify-content-between">
                   <div className="tp-team-wrapper-content-text">
@@ -211,11 +234,17 @@ const Awards = () => {
             <div className="col-lg-4 col-sm-6 border py-3 px-4">
               <div className="tp-team-wrapper p-relative mb-30">
                 <div className="tp-team-wrapper-thumb">
-                  <img
-                    height="250px"
-                    src="assets/img/awards/award_5.PNG"
-                    alt=""
-                  />
+                  <EditPencil
+                    id={117}
+                    existing={fetchedData[117]?.display_content}
+                    content_type={"img"}
+                  >
+                    <img
+                      height="250px"
+                      src={`${axiosInstance.defaults.baseURL}/uploads/${fetchedData[117]?.display_content}`}
+                      alt=""
+                    />
+                  </EditPencil>
                 </div>
                 <div className="tp-team-wrapper-content d-flex justify-content-between">
                   <div className="tp-team-wrapper-content-text">
@@ -246,11 +275,17 @@ const Awards = () => {
             <div className="col-lg-4 col-sm-6 border py-3 px-4">
               <div className="tp-team-wrapper p-relative mb-30">
                 <div className="tp-team-wrapper-thumb">
-                  <img
-                    height="250px"
-                    src="assets/img/awards/award_6.PNG"
-                    alt=""
-                  />
+                  <EditPencil
+                    id={118}
+                    existing={fetchedData[118]?.display_content}
+                    content_type={"img"}
+                  >
+                    <img
+                      height="250px"
+                      src={`${axiosInstance.defaults.baseURL}/uploads/${fetchedData[118]?.display_content}`}
+                      alt=""
+                    />
+                  </EditPencil>
                 </div>
                 <div className="tp-team-wrapper-content d-flex justify-content-between">
                   <div className="tp-team-wrapper-content-text">
@@ -281,11 +316,17 @@ const Awards = () => {
             <div className="col-lg-4 col-sm-6 border py-3 px-4">
               <div className="tp-team-wrapper p-relative mb-30">
                 <div className="tp-team-wrapper-thumb">
-                  <img
-                    height="250px"
-                    src="assets/img/awards/award_7.PNG"
-                    alt=""
-                  />
+                  <EditPencil
+                    id={119}
+                    existing={fetchedData[119]?.display_content}
+                    content_type={"img"}
+                  >
+                    <img
+                      height="250px"
+                      src={`${axiosInstance.defaults.baseURL}/uploads/${fetchedData[119]?.display_content}`}
+                      alt=""
+                    />
+                  </EditPencil>
                 </div>
                 <div className="tp-team-wrapper-content d-flex justify-content-between">
                   <div className="tp-team-wrapper-content-text">
@@ -318,11 +359,17 @@ const Awards = () => {
             <div className="col-lg-4 col-sm-6 border py-3 px-4">
               <div className="tp-team-wrapper p-relative mb-30">
                 <div className="tp-team-wrapper-thumb">
-                  <img
-                    height="250px"
-                    src="assets/img/awards/award_8.PNG"
-                    alt=""
-                  />
+                  <EditPencil
+                    id={120}
+                    existing={fetchedData[120]?.display_content}
+                    content_type={"img"}
+                  >
+                    <img
+                      height="250px"
+                      src={`${axiosInstance.defaults.baseURL}/uploads/${fetchedData[120]?.display_content}`}
+                      alt=""
+                    />
+                  </EditPencil>
                 </div>
                 <div className="tp-team-wrapper-content d-flex justify-content-between">
                   <div className="tp-team-wrapper-content-text">
@@ -355,11 +402,22 @@ const Awards = () => {
             <div className="col-lg-4 col-sm-6 border py-3 px-4">
               <div className="tp-team-wrapper p-relative mb-30">
                 <div className="tp-team-wrapper-thumb">
-                  <img
+                  <EditPencil
+                    id={121}
+                    existing={fetchedData[121]?.display_content}
+                    content_type={"img"}
+                  >
+                    <img
+                      height="250px"
+                      src={`${axiosInstance.defaults.baseURL}/uploads/${fetchedData[121]?.display_content}`}
+                      alt=""
+                    />
+                  </EditPencil>
+                  {/* <img
                     height="250px"
                     src="assets/img/awards/award_9.PNG"
                     alt=""
-                  />
+                  /> */}
                 </div>
                 <div className="tp-team-wrapper-content d-flex justify-content-between">
                   <div className="tp-team-wrapper-content-text">

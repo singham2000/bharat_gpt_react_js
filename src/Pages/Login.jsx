@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axiosInstance from "../utils/axios";
 import { useNavigate } from "react-router-dom";
+import BharatAiLogo from "../Assets/images/bharatai.jpg";
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -35,6 +36,14 @@ const Login = () => {
       className="d-flex justify-content-center align-items-center bg-white flex-column gap-2"
       style={{ height: "100vh", width: "100vw" }}
     >
+      <div className="">
+        <img
+          src={BharatAiLogo}
+          alt="Bharat gpt"
+          width={200}
+          className="mb-20"
+        />
+      </div>
       <form onSubmit={handleLogin}>
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
@@ -61,16 +70,6 @@ const Login = () => {
             className="form-control"
             id="exampleInputPassword1"
           />
-        </div>
-        <div className="mb-3 form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-          />
-          <label className="form-check-label" for="exampleCheck1">
-            Check me out
-          </label>
         </div>
         <div className="d-flex justify-content-between">
           <button type="submit" className="btn btn-primary w-100 m-2">

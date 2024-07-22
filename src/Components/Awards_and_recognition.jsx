@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import EditPencil from "../Components/EditPencil";
+import axiosInstance from "../utils/axios";
 const Awards_and_recognition = ({ data }) => {
   return (
     <div>
@@ -37,11 +38,17 @@ const Awards_and_recognition = ({ data }) => {
             <div className="col-lg-4 col-sm-6">
               <div className="tp-team-wrapper p-relative mb-30">
                 <div className="tp-team-wrapper-thumb ">
-                  <img
-                    height="250px"
-                    src="assets/img/awards/award_1.PNG"
-                    alt=""
-                  />
+                  <EditPencil
+                    id={113}
+                    existing={data[113]?.display_content}
+                    content_type={"img"}
+                  >
+                    <img
+                      height="250px"
+                      src={`${axiosInstance.defaults.baseURL}/uploads/${data[113]?.display_content}`}
+                      alt=""
+                    />
+                  </EditPencil>
                 </div>
                 <div className="tp-team-wrapper-content d-flex justify-content-between">
                   <div className="tp-team-wrapper-content-text">
@@ -75,11 +82,18 @@ const Awards_and_recognition = ({ data }) => {
             <div className="col-lg-4 col-sm-6">
               <div className="tp-team-wrapper p-relative mb-30">
                 <div className="tp-team-wrapper-thumb ">
-                  <img
-                    height="250px"
-                    src="assets/img/awards/award_2.PNG"
-                    alt=""
-                  />
+                  <EditPencil
+                    id={114}
+                    existing={data[114]?.display_content}
+                    content_type={"img"}
+                  >
+                    <img
+                      height="250px"
+                      // src="assets/img/awards/award_2.PNG"
+                      src={`${axiosInstance.defaults.baseURL}/uploads/${data[114]?.display_content}`}
+                      alt=""
+                    />
+                  </EditPencil>
                 </div>
                 <div className="tp-team-wrapper-content d-flex justify-content-between">
                   <div className="tp-team-wrapper-content-text">
@@ -113,11 +127,17 @@ const Awards_and_recognition = ({ data }) => {
             <div className="col-lg-4 col-sm-6">
               <div className="tp-team-wrapper p-relative mb-30">
                 <div className="tp-team-wrapper-thumb ">
-                  <img
-                    height="250px"
-                    src="assets/img/awards/award_3.PNG"
-                    alt=""
-                  />
+                  <EditPencil
+                    id={115}
+                    existing={data[115]?.display_content}
+                    content_type={"img"}
+                  >
+                    <img
+                      height="250px"
+                      src={`${axiosInstance.defaults.baseURL}/uploads/${data[115]?.display_content}`}
+                      alt=""
+                    />
+                  </EditPencil>
                 </div>
                 <div className="tp-team-wrapper-content d-flex justify-content-between">
                   <div className="tp-team-wrapper-content-text">

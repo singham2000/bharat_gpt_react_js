@@ -16,6 +16,7 @@ import Awardsandrecognition from "../Components/Awards_and_recognition";
 import VideoGallery from "../Components/VideoGallery";
 import Developer from "../Components/Developer";
 import ModalService from "../Components/ModalService";
+import TermAndCondition from "../Components/termAndCondition";
 
 const Home = () => {
   const location = useLocation();
@@ -58,6 +59,7 @@ const Home = () => {
         <SupportArea data={fetchedData} />
         <Awardsandrecognition data={fetchedData} />
         <VideoGallery data={fetchedData} />
+        <TermAndCondition data={fetchedData} />
         <Developer
           data={fetchedData}
           handleOpenModal={handleOpenModal}

@@ -7,6 +7,7 @@ import axiosInstance from "./utils/axios";
 import { useEffect } from "react";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import BusinessBenifit from "./Pages/businessBenifit";
 function App() {
   const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ function App() {
     {
       path: "/awards",
       element: <Awards />,
+    },
+    {
+      path: "/business-benefits",
+      element: <BusinessBenifit />,
     },
     {
       path: "/login",

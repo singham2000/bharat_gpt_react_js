@@ -4,8 +4,10 @@ import BharatAiLogo from "../Assets/images/bharatai.jpg";
 import { Link } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import EditPencil from "../Components/EditPencil";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const [visible, setVisible] = useState(false);
 
@@ -211,68 +213,43 @@ const Navbar = () => {
                   </span>
                 </span>
               </Link>
-              <Link to={"#services"}>
-                <span onclick={() => scrollToDiv("services")}>
-                  <span
+              <a
+                href="https://corover.ai/home/"
+                style={{ textDecoration: "none", color: "black" }}
+                target="_blank"
+                without
+                rel="noreferrer"
+              >
+                <span
+                  style={{
+                    fontSize: "15px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    fontWeight: "100",
+                    color: "grey",
+                  }}
+                >
+                  <i
+                    className="fa-solid fa-cart-arrow-down"
                     style={{
                       fontSize: "15px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      cursor: "pointer",
-                      fontWeight: "100",
+                      marginRight: "13px",
+                      color: "grey",
                     }}
+                  ></i>
+                  <EditPencil
+                    id={43}
+                    existing={"Products"}
+                    content_type={"txt"}
                   >
-                    <i
-                      className="fa-solid fa-gear"
-                      style={{
-                        fontSize: "15px",
-                        marginRight: "13px",
-                        color: "grey",
-                      }}
-                    ></i>
-                    <EditPencil
-                      id={40}
-                      existing={"Services"}
-                      content_type={"txt"}
-                    >
-                      Services
-                    </EditPencil>
-                  </span>
+                    Products
+                  </EditPencil>
                 </span>
-              </Link>
-              <Link to={"#clients-feedback"}>
-                <span onclick={() => scrollToDiv("clients-feedback")}>
-                  <span
-                    style={{
-                      fontSize: "15px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      cursor: "pointer",
-                      fontWeight: "100",
-                    }}
-                  >
-                    <i
-                      className="fa-solid fa-people-simple"
-                      style={{
-                        fontSize: "15px",
-                        marginRight: "13px",
-                        color: "grey",
-                      }}
-                    ></i>
-                    <EditPencil
-                      id={41}
-                      existing={"Testimonials"}
-                      content_type={"txt"}
-                    >
-                      Testimonials
-                    </EditPencil>
-                  </span>
-                </span>
-              </Link>
-              <Link to={"#faq"}>
-                <span onclick={() => scrollToDiv("faq")}>
+              </a>
+              <Link to={"/business-benefits"}>
+                <span onclick={() => navigate("/business-benefits")}>
                   <span
                     style={{
                       fontSize: "15px",
@@ -320,7 +297,7 @@ const Navbar = () => {
                   }}
                 >
                   <i
-                    className="fa-solid fa-cart-arrow-down"
+                    className="fa-solid fa-handshake"
                     style={{
                       fontSize: "15px",
                       marginRight: "13px",
@@ -328,14 +305,164 @@ const Navbar = () => {
                     }}
                   ></i>
                   <EditPencil
-                    id={43}
-                    existing={"Products"}
+                    id={47}
+                    existing={"Become a partner"}
                     content_type={"txt"}
                   >
-                    Products
+                    Become a partner
                   </EditPencil>
                 </span>
               </a>
+              <Link to={"#community"}>
+                <span onclick={() => scrollToDiv("community")}>
+                  <span
+                    style={{
+                      fontSize: "15px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      cursor: "pointer",
+                      fontWeight: "100",
+                    }}
+                  >
+                    <i
+                      className="fa-solid fa-people-arrows"
+                      style={{
+                        fontSize: "15px",
+                        marginRight: "13px",
+                        color: "grey",
+                      }}
+                    ></i>
+                    <EditPencil
+                      id={46}
+                      existing={"Developer Community"}
+                      content_type={"txt"}
+                    >
+                      Developer Community
+                    </EditPencil>
+                  </span>
+                </span>
+              </Link>
+              <Link to={"#term-and-condition"}>
+                <span onclick={() => scrollToDiv("term-and-condition")}>
+                  <span
+                    style={{
+                      fontSize: "15px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      cursor: "pointer",
+                      fontWeight: "100",
+                    }}
+                  >
+                    <i
+                      className="fa-solid fa-file-contract"
+                      style={{
+                        fontSize: "15px",
+                        marginRight: "13px",
+                        color: "grey",
+                      }}
+                    ></i>
+                    <EditPencil
+                      id={41}
+                      existing={"termandcondition"}
+                      content_type={"txt"}
+                    >
+                      Terms and Condition
+                    </EditPencil>
+                  </span>
+                </span>
+              </Link>
+              {/* <Link to={"#services"}>
+                <span onclick={() => scrollToDiv("services")}>
+                  <span
+                    style={{
+                      fontSize: "15px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      cursor: "pointer",
+                      fontWeight: "100",
+                    }}
+                  >
+                    <i
+                      className="fa-solid fa-gear"
+                      style={{
+                        fontSize: "15px",
+                        marginRight: "13px",
+                        color: "grey",
+                      }}
+                    ></i>
+                    <EditPencil
+                      id={40}
+                      existing={"Services"}
+                      content_type={"txt"}
+                    >
+                      Services
+                    </EditPencil>
+                  </span>
+                </span>
+              </Link> */}
+              <Link to={"#clients-feedback"}>
+                <span onclick={() => scrollToDiv("clients-feedback")}>
+                  <span
+                    style={{
+                      fontSize: "15px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      cursor: "pointer",
+                      fontWeight: "100",
+                    }}
+                  >
+                    <i
+                      className="fa-solid fa-people-simple"
+                      style={{
+                        fontSize: "15px",
+                        marginRight: "13px",
+                        color: "grey",
+                      }}
+                    ></i>
+                    <EditPencil
+                      id={41}
+                      existing={"Testimonials"}
+                      content_type={"txt"}
+                    >
+                      Testimonials
+                    </EditPencil>
+                  </span>
+                </span>
+              </Link>
+              <Link to={"#video-gallery"}>
+                <span onclick={() => scrollToDiv("video-gallery")}>
+                  <span
+                    style={{
+                      fontSize: "15px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      cursor: "pointer",
+                      fontWeight: "100",
+                    }}
+                  >
+                    <i
+                      className="fa-solid fa-video"
+                      style={{
+                        fontSize: "15px",
+                        marginRight: "13px",
+                        color: "grey",
+                      }}
+                    ></i>
+                    <EditPencil
+                      id={45}
+                      existing={"Video Gallery"}
+                      content_type={"txt"}
+                    >
+                      Video Gallery
+                    </EditPencil>
+                  </span>
+                </span>
+              </Link>
               <a
                 href="https://corover.ai/quote/"
                 style={{ textDecoration: "none", color: "black" }}
@@ -368,101 +495,6 @@ const Navbar = () => {
                     content_type={"txt"}
                   >
                     Professional Service
-                  </EditPencil>
-                </span>
-              </a>
-              <Link to={"#video-gallery"}>
-                <span onclick={() => scrollToDiv("video-gallery")}>
-                  <span
-                    style={{
-                      fontSize: "15px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      cursor: "pointer",
-                      fontWeight: "100",
-                    }}
-                  >
-                    <i
-                      className="fa-solid fa-video"
-                      style={{
-                        fontSize: "15px",
-                        marginRight: "13px",
-                        color: "grey",
-                      }}
-                    ></i>
-                    <EditPencil
-                      id={45}
-                      existing={"Video Gallery"}
-                      content_type={"txt"}
-                    >
-                      Video Gallery
-                    </EditPencil>
-                  </span>
-                </span>
-              </Link>
-              <Link to={"#community"}>
-                <span onclick={() => scrollToDiv("community")}>
-                  <span
-                    style={{
-                      fontSize: "15px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      cursor: "pointer",
-                      fontWeight: "100",
-                    }}
-                  >
-                    <i
-                      className="fa-solid fa-people-arrows"
-                      style={{
-                        fontSize: "15px",
-                        marginRight: "13px",
-                        color: "grey",
-                      }}
-                    ></i>
-                    <EditPencil
-                      id={46}
-                      existing={"Developer Community"}
-                      content_type={"txt"}
-                    >
-                      Developer Community
-                    </EditPencil>
-                  </span>
-                </span>
-              </Link>
-              <a
-                href="https://corover.ai/home/"
-                style={{ textDecoration: "none", color: "black" }}
-                target="_blank"
-                without
-                rel="noreferrer"
-              >
-                <span
-                  style={{
-                    fontSize: "15px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    cursor: "pointer",
-                    fontWeight: "100",
-                    color: "grey",
-                  }}
-                >
-                  <i
-                    className="fa-solid fa-handshake"
-                    style={{
-                      fontSize: "15px",
-                      marginRight: "13px",
-                      color: "grey",
-                    }}
-                  ></i>
-                  <EditPencil
-                    id={47}
-                    existing={"Become a partner"}
-                    content_type={"txt"}
-                  >
-                    Become a partner
                   </EditPencil>
                 </span>
               </a>
@@ -543,6 +575,23 @@ const Navbar = () => {
               rel="noreferrer"
             >
               <i className="fab fa-linkedin" style={{ color: "grey" }}></i>
+            </a>
+            <a
+              className="icon instagram"
+              style={{
+                borderRadius: "50%",
+                border: "1px solid gray",
+                display: "inline-block",
+                width: "40px",
+                height: "40px",
+                textAlign: "center",
+                lineHeight: "40px",
+              }}
+              href="https://www.instagram.com/corover/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fab fa-instagram" style={{ color: "grey" }}></i>
             </a>
           </div>
         </Offcanvas.Body>

@@ -351,6 +351,16 @@ const Footer = ({ data }) => {
                   </EditPencil>
                 </p>
               </div>
+              <div className="text-center">
+                <a
+                  style={{ fontSize: "12px" }}
+                  href="https://corover.ai/terms-conditions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Terms and Conditions
+                </a>
+              </div>
             </div>
           </div>
         </div>

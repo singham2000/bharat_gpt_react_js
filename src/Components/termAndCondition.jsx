@@ -2,11 +2,8 @@ import React from "react";
 
 const TermAndCondition = () => {
   return (
-    <section
-      id="term-and-condition"
-      className="tp-industry-area p-relative pt-50 pb-10"
-    >
-      <div className="row">
+    <section id="term-and-condition">
+      {/* <div className="row">
         <div className="col-lg-12">
           <div className="tp-industry-title-wrapper text-center">
             <h2 className="tp-section-title">
@@ -29,7 +26,7 @@ const TermAndCondition = () => {
             </h2>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -1,10 +1,33 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ShapeOne from "../Assets/images/shape-1.png";
 import ShapeTwo from "../Assets/images/shape-4.png";
 import BannerOne from "../Assets/images/banner1.jpg";
+import BannerTwo from "../Assets/images/Davis.png";
 import EditPencil from "../Components/EditPencil";
 const Hero = ({ data }) => {
   const refA = useRef(null);
+  const [backgroundImage, setBackgroundImage] = useState(BannerOne);
+
+  useEffect(() => {
+    const updateBackgroundImage = () => {
+      if (window.innerWidth <= 767) {
+        setBackgroundImage(BannerTwo); // Mobile screen
+      } else {
+        setBackgroundImage(BannerOne); // Desktop screen
+      }
+    };
+
+    // Initial check
+    updateBackgroundImage();
+
+    // Listen for resize events
+    window.addEventListener("resize", updateBackgroundImage);
+
+    // Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener("resize", updateBackgroundImage);
+    };
+  }, []);
   return (
     <section ref={refA} className="tp-hero-area tp-hero-space">
       <div className="tp-hero-wrapper p-relative">
@@ -21,7 +44,7 @@ const Hero = ({ data }) => {
                   <div className="tp-hero-1">
                     <div
                       className="tp-hero-bg tp-hero-overlay p-relative"
-                      style={{ backgroundImage: `url(${BannerOne})` }}
+                      style={{ backgroundImage: `url(${backgroundImage})` }}
                     ></div>
                     <div className="row">
                       <div className="col-lg-7">

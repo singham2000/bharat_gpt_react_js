@@ -343,36 +343,7 @@ const Navbar = () => {
                   </span>
                 </span>
               </Link>
-              <Link to={"#term-and-condition"}>
-                <span onclick={() => scrollToDiv("term-and-condition")}>
-                  <span
-                    style={{
-                      fontSize: "15px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      cursor: "pointer",
-                      fontWeight: "100",
-                    }}
-                  >
-                    <i
-                      className="fa-solid fa-file-contract"
-                      style={{
-                        fontSize: "15px",
-                        marginRight: "13px",
-                        color: "grey",
-                      }}
-                    ></i>
-                    <EditPencil
-                      id={41}
-                      existing={"termandcondition"}
-                      content_type={"txt"}
-                    >
-                      Terms and Condition
-                    </EditPencil>
-                  </span>
-                </span>
-              </Link>
+
               {/* <Link to={"#services"}>
                 <span onclick={() => scrollToDiv("services")}>
                   <span
@@ -403,7 +374,14 @@ const Navbar = () => {
                   </span>
                 </span>
               </Link> */}
-              <Link to={"#clients-feedback"}>
+              {/* <Link to={"#clients-feedback"}> */}
+              <a
+                href="https://corover.ai/testimonials/"
+                style={{ textDecoration: "none", color: "black" }}
+                target="_blank"
+                without
+                rel="noreferrer"
+              >
                 <span onclick={() => scrollToDiv("clients-feedback")}>
                   <span
                     style={{
@@ -432,8 +410,16 @@ const Navbar = () => {
                     </EditPencil>
                   </span>
                 </span>
-              </Link>
-              <Link to={"#video-gallery"}>
+              </a>
+              {/* </Link> */}
+              {/* <Link to={"#video-gallery"}> */}
+              <a
+                href="https://corover.ai/videos/"
+                style={{ textDecoration: "none", color: "black" }}
+                target="_blank"
+                without
+                rel="noreferrer"
+              >
                 <span onclick={() => scrollToDiv("video-gallery")}>
                   <span
                     style={{
@@ -462,8 +448,9 @@ const Navbar = () => {
                     </EditPencil>
                   </span>
                 </span>
-              </Link>
-              <a
+              </a>
+              {/* </Link> */}
+              {/* <a
                 href="https://corover.ai/quote/"
                 style={{ textDecoration: "none", color: "black" }}
                 target="_blank"
@@ -497,7 +484,7 @@ const Navbar = () => {
                     Professional Service
                   </EditPencil>
                 </span>
-              </a>
+              </a> */}
             </div>
           </div>
           <div

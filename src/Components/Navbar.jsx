@@ -183,7 +183,14 @@ const Navbar = () => {
               className="d-flex justify-content-center align-items-start flex-column gap-3 mb-10"
               style={{ fontWeight: "600" }}
             >
-              <Link to={"#about-area"}>
+              {/* <Link to={"#about-area"}> */}
+              <a
+                href="https://corover.ai/about-us/"
+                style={{ textDecoration: "none", color: "black" }}
+                target="_blank"
+                without
+                rel="noreferrer"
+              >
                 <span onclick={() => scrollToDiv("about-area")}>
                   <span
                     style={{
@@ -213,7 +220,8 @@ const Navbar = () => {
                     </EditPencil>
                   </span>
                 </span>
-              </Link>
+              </a>
+              {/* </Link> */}
               <a
                 href="https://corover.ai/home/"
                 style={{ textDecoration: "none", color: "black" }}
@@ -394,7 +402,7 @@ const Navbar = () => {
                       alignItems: "center",
                       cursor: "pointer",
                       fontWeight: "100",
-                      color: 'grey'
+                      color: "grey",
                     }}
                   >
                     <i
@@ -433,7 +441,7 @@ const Navbar = () => {
                       alignItems: "center",
                       cursor: "pointer",
                       fontWeight: "100",
-                      color: "grey"
+                      color: "grey",
                     }}
                   >
                     <i
@@ -588,7 +596,7 @@ const Navbar = () => {
           </div>
         </Offcanvas.Body>
       </Offcanvas>
-    </div >
+    </div>
   );
 };
 

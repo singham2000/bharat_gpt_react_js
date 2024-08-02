@@ -174,7 +174,6 @@ const Testimonial = ({ data }) => {
                           content_type={"txt"}
                         >
                           {data[73]?.display_content}
-                          Bikram Singh Bedi
                         </EditPencil>
                       </h4>
                       <p>
@@ -258,7 +257,6 @@ const Testimonial = ({ data }) => {
                           content_type={"txt"}
                         >
                           {data[76]?.display_content}
-                          {/* Hazimi Suzuki */}
                         </EditPencil>
                       </h4>
                       <p>
@@ -268,7 +266,6 @@ const Testimonial = ({ data }) => {
                           content_type={"txt"}
                         >
                           {data[77]?.display_content}
-                          {/* Ceo of innovation Hills Inc */}
                         </EditPencil>
                       </p>
                     </div>
@@ -422,7 +419,6 @@ const Testimonial = ({ data }) => {
                           content_type={"txt"}
                         >
                           {data[82]?.display_content}
-                          Hazimi Suzuki
                         </EditPencil>
                       </h4>
                       <p>
@@ -432,7 +428,6 @@ const Testimonial = ({ data }) => {
                           content_type={"txt"}
                         >
                           {data[83]?.display_content}
-                          {/* Ceo of innovation Hills Inc */}
                         </EditPencil>
                       </p>
                     </div>

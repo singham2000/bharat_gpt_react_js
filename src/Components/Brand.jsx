@@ -7,7 +7,7 @@ const Brand = ({ data }) => {
   return (
     //  < !--brand area start-- >
 
-    <section className="tp-support-feature-area pb-30">
+    <section className="tp-support-feature-area pb-30 pt-30">
       <div className="container  container-large">
         <div className="row">
           <div className="col-lg-4 col-12">

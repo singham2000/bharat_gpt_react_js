@@ -43,16 +43,15 @@ const FloatingPencilIcon = ({ children, id, existing, content_type }) => {
   };
 
   useEffect(() => {
-    return () => {};
+    return () => { };
   }, []);
 
   return (
     <div className="floating-pencil-icon " style={{ zIndex: "0" }}>
       {children}
       <div
-        className={`pencil-icon ${
-          localStorage.getItem("token") ? "d-block" : "d-none"
-        }`}
+        className={`pencil-icon ${localStorage.getItem("token") ? "d-block" : "d-none"
+          }`}
         onClick={handleShow}
       >
         <svg

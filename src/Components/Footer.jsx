@@ -70,17 +70,24 @@ const Footer = ({ data }) => {
             <div className="tp-footer-top-area">
               <div className="row align-items-center">
                 <div className="col-lg-3 d-flex justify-content-center align-items-center">
-                  <div
-                    className="tp-hero-btn"
-                    data-toggle="modal"
-                    data-target="#exampleModalCenter"
-                  >
-                    <span className="tp-btn-plus" style={{ fontWeight: "600" }}>
-                      Reach Us{" "}
-                      <i className="fa-regular fa-arrow-right-long"></i>
-                    </span>
+                  <div className="tp-demo-copyright-content text-center">
+                    <div
+                      className="tp-hero-btn"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                    >
+                      <span
+                        className="tp-btn-plus"
+                        style={{ fontWeight: "600" }}
+                      >
+                        Reach Us{" "}
+                        <i className="fa-regular fa-arrow-right-long"></i>
+                      </span>
+                      <br></br>
+                    </div>
                   </div>
                 </div>
+
                 <div className="col-lg-6">
                   <div className="tp-demo-copyright-content text-center">
                     <h3 className="text-white">
@@ -305,6 +312,7 @@ const Footer = ({ data }) => {
                     </div>
                   </div>
                 </div>
+
                 <div className="col-lg-3 ">
                   <div className="tp-footer-top-right d-flex justify-content-center align-items-center">
                     <div className="tp-footer-top-right-headphone">
@@ -324,6 +332,16 @@ const Footer = ({ data }) => {
                     <div className="tp-footer-top-right-content ml-10">
                       <a href="mailto:chat@CoRover.ai">chat@CoRover.ai</a>
                     </div>
+                  </div>
+                  <div className="d-flex justify-content-center align-items-center mt-15">
+                    <a
+                      style={{ fontSize: "13px", color: "#cac2c2" }}
+                      href="https://corover.ai/terms-conditions/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Terms and Conditions
+                    </a>
                   </div>
                 </div>
               </div>
@@ -349,16 +367,6 @@ const Footer = ({ data }) => {
                     {data[31]?.display_content}
                   </EditPencil>
                 </p>
-              </div>
-              <div className="text-center">
-                <a
-                  style={{ fontSize: "12px" }}
-                  href="https://corover.ai/terms-conditions/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Terms and Conditions
-                </a>
               </div>
             </div>
           </div>

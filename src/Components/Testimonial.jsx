@@ -145,7 +145,7 @@ const Testimonial = ({ data }) => {
                         </p>
                       </div>
 
-                      <div className="tp-testimonial-rating d-flex justify-content-center">
+                      {/* <div className="tp-testimonial-rating d-flex justify-content-center">
                         <span>
                           <i className="fa-solid fa-star-sharp"></i>
                         </span>
@@ -161,7 +161,7 @@ const Testimonial = ({ data }) => {
                         <span>
                           <i className="fa-regular fa-star-half-stroke"></i>
                         </span>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="tp-testimonial-user-thumb">
                       <img src={User1} alt="" />
@@ -229,7 +229,7 @@ const Testimonial = ({ data }) => {
                           </EditPencil>
                         </p>
                       </div>
-                      <div className="tp-testimonial-rating d-flex justify-content-center">
+                      {/* <div className="tp-testimonial-rating d-flex justify-content-center">
                         <span>
                           <i className="fa-solid fa-star-sharp"></i>
                         </span>
@@ -245,7 +245,7 @@ const Testimonial = ({ data }) => {
                         <span>
                           <i className="fa-solid fa-star-sharp"></i>
                         </span>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="tp-testimonial-user-thumb">
                       <img src={User2} alt="" />
@@ -308,7 +308,7 @@ const Testimonial = ({ data }) => {
                           </EditPencil>
                         </p>
                       </div>
-                      <div className="tp-testimonial-rating d-flex justify-content-center">
+                      {/* <div className="tp-testimonial-rating d-flex justify-content-center">
                         <span>
                           <i className="fa-solid fa-star-sharp"></i>
                         </span>
@@ -324,7 +324,7 @@ const Testimonial = ({ data }) => {
                         <span>
                           <i className="fa-solid fa-star-sharp"></i>
                         </span>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="tp-testimonial-user-thumb">
                       <img src={User3} alt="" />
@@ -393,7 +393,7 @@ const Testimonial = ({ data }) => {
                           </EditPencil>
                         </p>
                       </div>
-                      <div className="tp-testimonial-rating d-flex justify-content-center">
+                      {/* <div className="tp-testimonial-rating d-flex justify-content-center">
                         <span>
                           <i className="fa-solid fa-star-sharp"></i>
                         </span>
@@ -409,7 +409,7 @@ const Testimonial = ({ data }) => {
                         <span>
                           <i className="fa-solid fa-star-sharp"></i>
                         </span>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="tp-testimonial-user-thumb">
                       <img src={User2} alt="" />

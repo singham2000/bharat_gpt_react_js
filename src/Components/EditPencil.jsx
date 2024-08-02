@@ -81,7 +81,6 @@ const FloatingPencilIcon = ({ children, id, existing, content_type }) => {
                 className="form-control"
                 id="exampleInputEmail1"
                 value={existing}
-                disabled
                 aria-describedby="emailHelp"
               />
               <div id="emailHelp" className="form-text">

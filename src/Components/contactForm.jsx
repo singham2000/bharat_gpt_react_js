@@ -120,7 +120,7 @@ const ContactForm = () => {
             />
           </Col>
         </Row>
-        <Button type="submit">Submit form</Button>
+        <Button type="submit">Submit</Button>
       </Form>
     </div>
   );

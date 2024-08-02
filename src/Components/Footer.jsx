@@ -298,7 +298,7 @@ const Footer = ({ data }) => {
                               />
                             </Col>
                           </Row>
-                          <Button type="submit">Submit form</Button>
+                          <Button type="submit">Submit</Button>
                         </Form>
                         <p className="ajax-response"></p>
                       </div>
@@ -347,7 +347,6 @@ const Footer = ({ data }) => {
                     content_type={"txt"}
                   >
                     {data[31]?.display_content}
-                    All rights reserved. Patent Pending.
                   </EditPencil>
                 </p>
               </div>

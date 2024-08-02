@@ -229,7 +229,7 @@ const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
                   />
                 </Col>
               </Row>
-              <Button type="submit">Submit form</Button>
+              <Button type="submit">Submit</Button>
             </Form>
             <p className="ajax-response"></p>
           </div>

@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import contentContext from "../utils/contentContext";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import BannerS from "../Assets/images/awardBanner.jpeg";
+import BannerS from "../Assets/images/awardsBaaner.jpg";
 import EditPencil from "../Components/EditPencil";
 import axiosInstance from "../utils/axios";
 

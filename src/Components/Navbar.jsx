@@ -193,6 +193,7 @@ const Navbar = () => {
                       alignItems: "center",
                       cursor: "pointer",
                       fontWeight: "100",
+                      color: "grey",
                     }}
                   >
                     <i
@@ -258,6 +259,7 @@ const Navbar = () => {
                       alignItems: "center",
                       cursor: "pointer",
                       fontWeight: "100",
+                      color: "grey",
                     }}
                   >
                     <i
@@ -323,6 +325,7 @@ const Navbar = () => {
                       alignItems: "center",
                       cursor: "pointer",
                       fontWeight: "100",
+                      color: "grey",
                     }}
                   >
                     <i
@@ -377,7 +380,7 @@ const Navbar = () => {
               {/* <Link to={"#clients-feedback"}> */}
               <a
                 href="https://corover.ai/testimonials/"
-                style={{ textDecoration: "none", color: "black" }}
+                style={{ textDecoration: "none" }}
                 target="_blank"
                 without
                 rel="noreferrer"
@@ -391,6 +394,7 @@ const Navbar = () => {
                       alignItems: "center",
                       cursor: "pointer",
                       fontWeight: "100",
+                      color: 'grey'
                     }}
                   >
                     <i
@@ -429,6 +433,7 @@ const Navbar = () => {
                       alignItems: "center",
                       cursor: "pointer",
                       fontWeight: "100",
+                      color: "grey"
                     }}
                   >
                     <i
@@ -583,7 +588,7 @@ const Navbar = () => {
           </div>
         </Offcanvas.Body>
       </Offcanvas>
-    </div>
+    </div >
   );
 };
 

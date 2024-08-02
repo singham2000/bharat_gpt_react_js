@@ -92,7 +92,7 @@ const Service = ({ data }) => {
             <img className="shape-3" src={ShapeThree} alt="" />
           </div>
           <div className="row">
-            <div className="col-lg-4 col-md-4">
+            <div className="col-lg-3 col-md-4">
               <div className="tp-fun-fact-wrapper-box">
                 <div className="tp-fun-fact-wrapper">
                   <h3
@@ -159,12 +159,12 @@ const Service = ({ data }) => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-8">
+            <div className="col-lg-3 col-md-8">
               <div className="tp-fun-fact-thumb p-relative">
-                <img id="reload" sizes="50" src={World} alt="scroll" />
+                <img id="reload" src={World} alt="scroll" />
               </div>
             </div>
-            <div className="col-lg-4 col-md-12">
+            <div className="col-lg-6 col-md-12">
               <div className="tp-fun-fact-content">
                 <div className="tp-fun-fact-title-wrapper">
                   <h3 className="tp-section-title">

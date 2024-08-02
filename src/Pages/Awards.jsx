@@ -39,8 +39,8 @@ const Awards = () => {
             <div className="col-xl-10">
               <div className="breadcrumb__content text-center">
                 <h3
-                  className="tp-section-title"
-                  style={{ color: "black", fontSize: "45px" }}
+                  className="tp-hero-title"
+                  style={{ color: "black", fontSize: "54px", fontWeight: '700' }}
                 >
                   <EditPencil
                     id={93}

@@ -9,6 +9,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import EditPencil from "../Components/EditPencil";
 import axiosInstance from "../utils/axios";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 const Footer = ({ data }) => {
   const [countries, setCountries] = useState([]);
@@ -36,15 +37,20 @@ const Footer = ({ data }) => {
     event.preventDefault();
     event.stopPropagation();
 
-    if (form.checkValidity() === false || !captchaValue) {
-      setValidated(true);
-      return;
-    }
+    // if (form.checkValidity() === false || !captchaValue) {
+    //   setValidated(true);
+    //   return;
+    // }
 
     try {
       await axiosInstance.post("/api/user/sendMail", {
         ...formData,
         captchaValue,
+      });
+      Swal.fire({
+        title: "Submitted!",
+        text: "We have noted your query!",
+        icon: "success"
       });
     } catch (error) {
       console.error(error.response.data.message);

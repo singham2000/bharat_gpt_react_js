@@ -39,7 +39,7 @@ const Navbar = () => {
     }
   };
   const handleExternalClick = () => {
-    window.open("https://corover.ai/home/", "_blank"); // Open external link in new tab
+    window.open("https://builder.corover.ai/#/auth/signin", "_blank"); // Open external link in new tab
   };
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -47,7 +47,6 @@ const Navbar = () => {
     <div>
       <div
         className="back-to-top-wrapper"
-        onClick={scrollToTop}
         style={{ display: visible ? "inline" : "none" }}
       >
         <a
@@ -60,9 +59,7 @@ const Navbar = () => {
           onmouseout="this.style.color='white'"
           rel={"noreferrer"}
         >
-          <EditPencil id={37} existing={"Book a Demo"} content_type={"txt"}>
-            Book a Demo
-          </EditPencil>
+          Book a Demo
         </a>
       </div>
       <header
@@ -327,7 +324,7 @@ const Navbar = () => {
                   </EditPencil>
                 </span>
               </a>
-              <Link to={"#community"}>
+              <Link to={"/#community"}>
                 <span onclick={() => scrollToDiv("community")}>
                   <span
                     style={{
@@ -551,7 +548,8 @@ const Navbar = () => {
                 textAlign: "center",
                 lineHeight: "40px",
               }}
-              href="https://x.com/i/flow/login?redirect_after_login=%2FCoRover_App"
+              href="https://x.com/CoRover_App"
+              target="_blank"
             >
               <i className="fab fa-twitter" style={{ color: "grey" }}></i>
             </a>

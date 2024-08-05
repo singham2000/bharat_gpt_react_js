@@ -8,6 +8,7 @@ import { Country } from "country-state-city";
 import ReCAPTCHA from "react-google-recaptcha";
 import EditPencil from "../Components/EditPencil";
 import axiosInstance from "../utils/axios";
+import { Link } from "react-router-dom";
 
 const Footer = ({ data }) => {
   const [countries, setCountries] = useState([]);
@@ -367,9 +368,15 @@ const Footer = ({ data }) => {
               </div>
               <div className="tp-footer-top-right-copyright">
                 <p>
-                  <span style={{ color: "#ff6900", cursor: "pointer" }}>
-                    Terms & Conditions
-                  </span>
+                  <a
+                    href="https://corover.ai/terms-conditions/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span style={{ color: "#ff6900", cursor: "pointer" }}>
+                      Terms & Conditions
+                    </span>
+                  </a>
                   {" | "}PATENT PENDING
                   <EditPencil
                     id={31}
@@ -378,7 +385,6 @@ const Footer = ({ data }) => {
                   >
                     {data[31]?.display_content}
                   </EditPencil>
-
                 </p>
               </div>
             </div>

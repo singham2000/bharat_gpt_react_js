@@ -24,6 +24,13 @@ const Awards = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [])
   return (
     <div>
       <Navbar />

@@ -13,7 +13,7 @@ const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
         <div className="row justify-content-center">
           <div className="col-xl-10">
             <div className="breadcrumb__content text-center">
-              <h3 className="breadcrumb__title" style={{ color: "black" }}>
+              <h3 className="tp-section-title" style={{ color: "black" }}>
                 <EditPencil
                   id={21}
                   existing={data[21]?.display_content}

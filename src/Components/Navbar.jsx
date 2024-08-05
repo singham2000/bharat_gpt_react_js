@@ -223,7 +223,7 @@ const Navbar = () => {
               </a>
               {/* </Link> */}
               <a
-                href="https://corover.ai/home/"
+                href="https://corover.ai/products/conversational-ai-platform/"
                 style={{ textDecoration: "none", color: "black" }}
                 target="_blank"
                 without
@@ -289,7 +289,7 @@ const Navbar = () => {
                 </span>
               </Link>
               <a
-                href="https://corover.ai/home/"
+                href="https://corover.ai/corover-partner-program/"
                 style={{ textDecoration: "none", color: "black" }}
                 target="_blank"
                 without

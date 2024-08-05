@@ -246,7 +246,7 @@ const Service = ({ data }) => {
                         existing={data[56]?.display_content}
                         content_type={"txt"}
                       >
-                        {data[55]?.display_content}
+                        {data[56]?.display_content}
                         {/* Delight customers with Enhanced User Experience */}
                       </EditPencil>
                     </li>

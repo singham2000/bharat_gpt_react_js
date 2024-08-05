@@ -138,7 +138,6 @@ const SupportArea = ({ data }) => {
                           content_type={"txt"}
                         >
                           {data[63]?.display_content}
-                          Accessibility
                         </EditPencil>
                       </button>
                     </h2>
@@ -223,12 +222,12 @@ const SupportArea = ({ data }) => {
                         aria-controls="collapseFour"
                       >
                         <EditPencil
-                          id={66}
-                          existing={data[66]?.display_content}
+                          id={123}
+                          existing={data[123]?.display_content}
                           content_type={"txt"}
                         >
                           {" "}
-                          {data[66]?.display_content}
+                          {data[123]?.display_content}
                           {/* Scalability */}
                         </EditPencil>
                       </button>

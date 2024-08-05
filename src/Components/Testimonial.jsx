@@ -69,7 +69,6 @@ const Testimonial = ({ data }) => {
                   {/* Testimonial */}
                 </EditPencil>
                 <span className="title-color">
-                  &
                   <EditPencil
                     id={71}
                     existing={data[71]?.display_content}

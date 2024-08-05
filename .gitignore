@@ -10,6 +10,7 @@
 
 # production
 /build
+/src/utils/axios.js
 
 # misc
 .DS_Store

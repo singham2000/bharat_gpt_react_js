@@ -13,10 +13,10 @@ const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
         <div className="row justify-content-center">
           <div className="col-xl-10">
             <div className="breadcrumb__content text-center">
-              <h3 className="breadcrumb__title">
+              <h3 className="breadcrumb__title" style={{ color: 'black' }}>
                 <EditPencil
                   id={21}
-                  existing={data[92]?.display_content}
+                  existing={data[21]?.display_content}
                   content_type={"txt"}
                 >
                   {data[21]?.display_content}
@@ -32,7 +32,7 @@ const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
         <div className="row row-equal-height gx-0">
           <div
             className="feature-3-active swiper-container"
-            style={{ height: "auto", padding: "20px 50px " }}
+            style={{ height: "auto", padding: "20px 25px " }}
           >
             <div className="d-flex flex-lg-row flex-column gap-3">
               <div className="col-lg-4 col-md-6 col-equal-height">

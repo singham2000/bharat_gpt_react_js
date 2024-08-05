@@ -30,7 +30,7 @@ const Awards = () => {
 
       <section
         className="breadcrumb__area breadcrumb-style pt-100 pb-100 mb-60 p-relative z-index-1"
-        style={{ backgroundSize: "100%", backgroundImage: `url(${BannerS})` }}
+        style={{ backgroundSize: "100% 150%", objectFit: 'center', opacity: "2", backgroundImage: `url(${BannerS})` }}
         data-background="assets/img/banners.png"
       >
         <div className="breadcrumb__bg-overlay m-img"></div>
@@ -381,18 +381,17 @@ const Awards = () => {
                       <spana style={{ textDecoration: "none", color: "black" }}>
                         <EditPencil
                           id={109}
-                          existing={"CMMI Level 5 Appraised"}
+                          existing={fetchedData[109]?.display_content}
                           content_type={"txt"}
                         >
                           {fetchedData[109]?.display_content}
                         </EditPencil>
-                        CMMI Level 5 Appraised
                       </spana>
                     </h3>
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
                       <EditPencil
                         id={110}
-                        existing={"CMMI Level 5 Appraised"}
+                        existing={fetchedData[110]?.display_content}
                         content_type={"txt"}
                       >
                         {fetchedData[110]?.display_content}
@@ -440,9 +439,7 @@ const Awards = () => {
                     <p style={{ fontSize: "16px", color: "#9f9b94" }}>
                       <EditPencil
                         id={112}
-                        existing={
-                          "CoRover’s AskDoc.ai is a winner in Combat Covid-19                      Challenge launched by Karnataka Innovation & Technology                      Society"
-                        }
+                        existing={fetchedData[112]?.display_content}
                         content_type={"txt"}
                       >
                         {fetchedData[112]?.display_content}

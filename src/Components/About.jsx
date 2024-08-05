@@ -159,8 +159,16 @@ const About = ({ data }) => {
                       className="tp-section-title"
                       style={{ marginBottom: "0px", important: "true" }}
                     >
-                      Choose multiple LLMs to create a world class
-                      Virtual Assistant
+                      <EditPencil
+                        id={122}
+                        // existing={"Choose multiple LLMs to create a world class Virtual Assistant"}
+                        content_type={"txt"}
+                      >
+                        {data[122]?.display_content}
+                        {/* THE FUTURE OF ENTERPRISE */}
+                      </EditPencil>
+
+
                       <span className="title-left-shape">
                         <svg
                           width="194"

@@ -19,7 +19,11 @@ const Navbar = () => {
       setVisible(false);
     }
   };
-
+  const logout = (e) => {
+    e.preventDefault();
+    localStorage.removeItem("token");
+    navigate("/");
+  };
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -505,13 +509,21 @@ const Navbar = () => {
             data-toggle="modal"
             data-target="#exampleModalCenter"
           >
-            <span className="tp-btn mt-20" style={{ cursor: "pointer" }}>
+            <span className="tp-btn mt-20" style={{ cursor: "pointer", display: 'flex', width: '150px' }}>
               <EditPencil id={48} existing={"Reach Us"} content_type={"txt"}>
                 Reach Us
               </EditPencil>
               <i className="fa-regular fa-arrow-right-long"></i>
             </span>
+
           </div>
+          {localStorage.getItem('token') && <button onClick={logout}>
+            <span className="tp-btn mt-20" style={{ cursor: "pointer", background: "red" }}>
+              Logout
+            </span>
+          </button>}
+
+
           <div className="offcanvas__social mt-20">
             <a
               className="icon facebook"
@@ -596,7 +608,7 @@ const Navbar = () => {
           </div>
         </Offcanvas.Body>
       </Offcanvas>
-    </div>
+    </div >
   );
 };
 

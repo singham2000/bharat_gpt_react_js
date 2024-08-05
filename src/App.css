@@ -835,8 +835,9 @@ div.demo img {
   display: block;
   border-radius: 50%;
   z-index: 99;
-  opacity: 0;
-  visibility: hidden;
+  top: 60vh;
+  /* opacity: 0; */
+  /* visibility: hidden; */
 }
 
 @media (max-width: 575px) {

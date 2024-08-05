@@ -6,6 +6,8 @@ import Row from "react-bootstrap/Row";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Country } from "country-state-city";
 import axiosInstance from "../utils/axios";
+import Swal from 'sweetalert2';
+
 const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
   const [validated, setValidated] = useState(false);
   const [captchaValue, setCaptchaValue] = useState(null);
@@ -24,15 +26,20 @@ const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
     event.preventDefault();
     event.stopPropagation();
 
-    if (form.checkValidity() === false || !captchaValue) {
-      setValidated(true);
-      return;
-    }
+    // if (form.checkValidity() === false || !captchaValue) {
+    //   setValidated(true);
+    //   return;
+    // }
 
     try {
       await axiosInstance.post("/api/user/sendMail", {
         ...formData,
         captchaValue,
+      });
+      Swal.fire({
+        title: "Submitted!",
+        text: "We have noted your query!",
+        icon: "success"
       });
     } catch (error) {
       console.error(error.response.data.message);

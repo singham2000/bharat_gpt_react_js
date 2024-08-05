@@ -192,11 +192,36 @@ const Navbar = () => {
               className="d-flex justify-content-center align-items-start flex-column gap-3 mb-10"
               style={{ fontWeight: "600" }}
             >
+              <Link to={'/'}>
+                <span>
+                  <span
+                    style={{
+                      fontSize: "15px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      cursor: "pointer",
+                      fontWeight: "100",
+                      color: "grey",
+                    }}
+                  >
+                    <i
+                      className="fa-solid fa-home"
+                      style={{
+                        fontSize: "15px",
+                        marginRight: "13px",
+                        color: "grey",
+                      }}
+                    ></i>
+                    Home
+                  </span>
+                </span>
+              </Link>
               {/* <Link to={"#about-area"}> */}
               <a
                 href="https://corover.ai/about-us/"
-                style={{ textDecoration: "none", color: "black" }}
                 target="_blank"
+                style={{ textDecoration: "none", color: "black" }}
                 without
                 rel="noreferrer"
               >
@@ -233,8 +258,8 @@ const Navbar = () => {
               {/* </Link> */}
               <a
                 href="https://corover.ai/products/conversational-ai-platform/"
-                style={{ textDecoration: "none", color: "black" }}
                 target="_blank"
+                style={{ textDecoration: "none", color: "black" }}
                 without
                 rel="noreferrer"
               >
@@ -299,8 +324,8 @@ const Navbar = () => {
               </Link>
               <a
                 href="https://corover.ai/corover-partner-program/"
-                style={{ textDecoration: "none", color: "black" }}
                 target="_blank"
+                style={{ textDecoration: "none", color: "black" }}
                 without
                 rel="noreferrer"
               >
@@ -397,8 +422,8 @@ const Navbar = () => {
               {/* <Link to={"#clients-feedback"}> */}
               <a
                 href="https://corover.ai/testimonials/"
-                style={{ textDecoration: "none" }}
                 target="_blank"
+                style={{ textDecoration: "none" }}
                 without
                 rel="noreferrer"
               >
@@ -436,8 +461,8 @@ const Navbar = () => {
               {/* <Link to={"#video-gallery"}> */}
               <a
                 href="https://corover.ai/videos/"
-                style={{ textDecoration: "none", color: "black" }}
                 target="_blank"
+                style={{ textDecoration: "none", color: "black" }}
                 without
                 rel="noreferrer"
               >
@@ -537,6 +562,8 @@ const Navbar = () => {
 
           <div className="offcanvas__social mt-20">
             <a
+              href="https://www.facebook.com/CoRover"
+              target="_blank"
               className="icon facebook"
               style={{
                 borderRadius: "50%",
@@ -547,11 +574,12 @@ const Navbar = () => {
                 textAlign: "center",
                 lineHeight: "40px",
               }}
-              href="https://www.facebook.com/CoRover"
             >
               <i className="fab fa-facebook-f" style={{ color: "grey" }}></i>
             </a>
             <a
+              href="https://x.com/CoRover_App"
+              target="_blank"
               className="icon twitter"
               style={{
                 borderRadius: "50%",
@@ -562,12 +590,12 @@ const Navbar = () => {
                 textAlign: "center",
                 lineHeight: "40px",
               }}
-              href="https://x.com/CoRover_App"
-              target="_blank"
             >
               <i className="fab fa-twitter" style={{ color: "grey" }}></i>
             </a>
             <a
+              href="https://www.youtube.com/c/CoRoverApp"
+              target="_blank"
               className="icon youtube"
               style={{
                 borderRadius: "50%",
@@ -578,11 +606,12 @@ const Navbar = () => {
                 textAlign: "center",
                 lineHeight: "40px",
               }}
-              href="https://www.youtube.com/c/CoRoverApp"
             >
               <i className="fab fa-youtube" style={{ color: "grey" }}></i>
             </a>
             <a
+              href="https://www.linkedin.com/company/corover"
+              target="_blank"
               className="icon linkedin"
               style={{
                 borderRadius: "50%",
@@ -593,14 +622,14 @@ const Navbar = () => {
                 textAlign: "center",
                 lineHeight: "40px",
               }}
-              href="https://www.linkedin.com/company/corover"
-              target="_blank"
               without
               rel="noreferrer"
             >
               <i className="fab fa-linkedin" style={{ color: "grey" }}></i>
             </a>
             <a
+              href="https://www.instagram.com/corover/"
+              target="_blank"
               className="icon instagram"
               style={{
                 borderRadius: "50%",
@@ -611,8 +640,7 @@ const Navbar = () => {
                 textAlign: "center",
                 lineHeight: "40px",
               }}
-              href="https://www.instagram.com/corover/"
-              target="_blank"
+
               rel="noreferrer"
             >
               <i className="fab fa-instagram" style={{ color: "grey" }}></i>

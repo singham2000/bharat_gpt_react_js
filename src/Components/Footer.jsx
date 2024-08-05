@@ -110,7 +110,7 @@ const Footer = ({ data }) => {
                     <img
                       width={300}
                       src={Trans_Back_Logo}
-                      alt="corover ai | Bharat GPT"
+                      alt="corover ai | BharatGPT"
                     />
                   </div>
                   <div className="tp-demo-copyright-area">

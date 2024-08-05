@@ -68,16 +68,15 @@ const Testimonial = ({ data }) => {
                   {data[70]?.display_content}
                   {/* Testimonial */}
                 </EditPencil>
-                <span className="title-color">
+                {/* <span className="title-color">
                   <EditPencil
                     id={71}
                     existing={data[71]?.display_content}
                     content_type={"txt"}
                   >
                     {data[71]?.display_content}
-                    {/* Feedback */}
                   </EditPencil>
-                </span>
+                </span> */}
                 <span className="title-center-shape">
                   <svg
                     width="194"

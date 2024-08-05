@@ -44,7 +44,7 @@ const BusinessBenifit = () => {
     <div>
       <Navbar />
       <section
-        className="breadcrumb__area breadcrumb-style pt-100 pb-100 mb-60 p-relative z-index-1"
+        className="breadcrumb__area breadcrumb-style pt-100 pb-100 p-relative z-index-1 breadcrumb__area-mobile"
         style={{ backgroundSize: "100%", backgroundImage: `url(${BannerS})` }}
       >
         <div class="breadcrumb__bg-overlay m-img"></div>
@@ -53,9 +53,7 @@ const BusinessBenifit = () => {
             <div class="col-xl-10">
               <div class="breadcrumb__content text-center">
                 <h3 class="breadcrumb__title">
-                  Business Benefits <br className="p-0 m-0" />
-                  of
-                  <br className="p-0 m-0" /> Gen AI based Virtual Benefits
+                  Business Benefits of Gen AI based Virtual Benefits
                   <img src="assets/img/breadcrumb/titile.svg" alt="" />
                 </h3>
               </div>
@@ -64,10 +62,10 @@ const BusinessBenifit = () => {
         </div>
       </section>
 
-      <section className="tp-service-details-area pt-120 pb-120">
+      <section className="tp-service-details-area pt-20 pb-120">
         <div className="container">
           <div className="row g-5">
-            <div className="col-lg-4 col-md-12  mb-md-0">
+            <div className="col-12 col-md-12 col-lg-4 hide-on-mobile mb-md-0">
               <div className="tp-service-widget">
                 <div className="tp-service-widget-item mb-40">
                   <div className="tp-service-widget-tab">

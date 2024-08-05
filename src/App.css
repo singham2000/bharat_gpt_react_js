@@ -2794,7 +2794,19 @@ div.demo img {
     right: 27%;
   }
 }
-
+@media (max-width: 768px) {
+  .breadcrumb__area-mobile {
+    padding-top: 0 !important; /* Remove pt-100 equivalent */
+    padding-bottom: 0 !important; /* Remove pb-100 equivalent */
+    position: static !important; /* Remove p-relative equivalent */
+    z-index: auto !important; /* Remove z-index-1 equivalent */
+  }
+}
+@media (max-width: 767px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
 .breadcrumb__title-pre {
   display: inline-block;
   height: 24px;

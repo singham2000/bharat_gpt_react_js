@@ -13,7 +13,7 @@ const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
         <div className="row justify-content-center">
           <div className="col-xl-10">
             <div className="breadcrumb__content text-center">
-              <h3 className="breadcrumb__title" style={{ color: 'black' }}>
+              <h3 className="breadcrumb__title" style={{ color: "black" }}>
                 <EditPencil
                   id={21}
                   existing={data[21]?.display_content}
@@ -30,10 +30,7 @@ const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
 
       <div className="container-fluid gx-0">
         <div className="row row-equal-height gx-0">
-          <div
-            className="feature-3-active swiper-container"
-            style={{ height: "auto", padding: "20px 25px " }}
-          >
+          <div className="feature-3-active swiper-container">
             <div className="d-flex flex-lg-row flex-column gap-3">
               <div className="col-lg-4 col-md-6 col-equal-height">
                 <div className="tp-feature-3-content-inner d-flex align-items-center text-decoration-none">
@@ -135,7 +132,7 @@ const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
                       </EditPencil>
                     </p>
                     <span
-                      className="text-decoration-none d-flex flex-row justify-content-start align-items-center"
+                      className="text-decoration-none justify-content-start align-items-center"
                       data-toggle="modal"
                       data-target="#supportModal"
                       style={{ cursor: "pointer", color: "blue" }}

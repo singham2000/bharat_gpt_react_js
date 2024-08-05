@@ -30,7 +30,12 @@ const Awards = () => {
 
       <section
         className="breadcrumb__area breadcrumb-style pt-100 pb-100 mb-60 p-relative z-index-1"
-        style={{ backgroundSize: "100% 150%", objectFit: 'center', opacity: "2", backgroundImage: `url(${BannerS})` }}
+        style={{
+          backgroundSize: "100% 150%",
+          objectFit: "center",
+          opacity: "2",
+          backgroundImage: `url(${BannerS})`,
+        }}
         data-background="assets/img/banners.png"
       >
         <div className="breadcrumb__bg-overlay m-img"></div>
@@ -318,7 +323,7 @@ const Awards = () => {
               </div>
             </div>
             <div className="col-lg-4 col-sm-6 border py-3 px-4">
-              <div className="tp-team-wrapper p-relative mb-30">
+              <div className="tp-team-wrapper text-center p-relative mb-30">
                 <div className="tp-team-wrapper-thumb">
                   <EditPencil
                     id={119}

@@ -64,7 +64,11 @@ const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
           <div className="modal-header" style={{ padding: "25px 30px" }}>
             <h3
               className="tp-section-title"
-              style={{ fontSize: "26px", marginBottom: "0px" }}
+              style={{
+                fontSize: "26px",
+                marginBottom: "0px",
+                cursor: "pointer",
+              }}
             >
               REACH<span className="title-color"> US </span>
             </h3>

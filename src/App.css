@@ -8011,7 +8011,7 @@ div.demo img {
 .tp-video-play {
   position: absolute;
   top: 40%;
-  left: 50%;
+  /* left: 50%; */
   z-index: auto;
 }
 
@@ -10247,7 +10247,7 @@ div.demo img {
 }
 
 .tp-service-widget-tab ul li .active i {
-  background-color: var(--tp-theme-secondary);
+  background-color: #ff6900;
 }
 
 .tp-service-widget-tab ul li a {
@@ -10270,7 +10270,7 @@ div.demo img {
 }
 
 .tp-service-widget-tab ul li a:hover i {
-  background-color: var(--tp-theme-secondary);
+  background-color: #ff6900;
 }
 
 .tp-service-widget-tab ul li a i {

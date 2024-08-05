@@ -505,7 +505,7 @@ const Navbar = () => {
             data-toggle="modal"
             data-target="#exampleModalCenter"
           >
-            <span className="tp-btn mt-20">
+            <span className="tp-btn mt-20" style={{ cursor: "pointer" }}>
               <EditPencil id={48} existing={"Reach Us"} content_type={"txt"}>
                 Reach Us
               </EditPencil>

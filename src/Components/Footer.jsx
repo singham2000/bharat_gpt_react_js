@@ -78,7 +78,7 @@ const Footer = ({ data }) => {
                     >
                       <span
                         className="tp-btn-plus"
-                        style={{ fontWeight: "600" }}
+                        style={{ fontWeight: "600", cursor: "pointer" }}
                       >
                         Reach Us{" "}
                         <i className="fa-regular fa-arrow-right-long"></i>
@@ -140,7 +140,11 @@ const Footer = ({ data }) => {
                       >
                         <h3
                           className="tp-section-title"
-                          style={{ fontSize: "26px", marginBottom: "0px" }}
+                          style={{
+                            fontSize: "26px",
+                            marginBottom: "0px",
+                            cursor: "pointer",
+                          }}
                         >
                           REACH<span className="title-color"> US </span>
                         </h3>
@@ -335,7 +339,6 @@ const Footer = ({ data }) => {
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
               <div className="tp-footer-top-right-copyright">
@@ -351,7 +354,9 @@ const Footer = ({ data }) => {
               </div>
               <div className="tp-footer-top-right-copyright">
                 <p>
-                  <span style={{ color: "#ff6900" }}>Terms & Conditions</span>
+                  <span style={{ color: "#ff6900", cursor: "pointer" }}>
+                    Terms & Conditions
+                  </span>
                   {" | "}
                   <EditPencil
                     id={31}

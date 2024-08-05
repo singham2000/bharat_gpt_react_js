@@ -5,11 +5,16 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import BannerS from "../Assets/images/awardsBaaner.jpg";
 import BusinessBenifitImage from "../Assets/images/businessBenifits.jpg";
+import Competitive from "../Assets/images/Competitive.jpg";
+import RiskImage from "../Assets/images/risk.jpg";
+import Operational from "../Assets/images/operational.jpg";
+import Enhanced from "../Assets/images/enhance.jpg";
 
 const BusinessBenifit = () => {
   const location = useLocation();
   const { getContent } = useContext(contentContext);
   const [fetchedData, setFetchedData] = useState([]);
+
   useEffect(() => {
     getContent().then((data) => {
       console.log(data);
@@ -22,13 +27,19 @@ const BusinessBenifit = () => {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [location]);
-  const [activeTab, setActiveTab] = useState("Business Benefits");
 
-  // Function to handle tab click
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
+  const [activeTab, setActiveTab] = useState("#business-benefits"); // Default active tab
+
+  const handleTabClick = (event, href) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    setActiveTab(href); // Set the clicked tab as active
+
+    // Scroll to the corresponding section
+    const section = document.querySelector(href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
-
   return (
     <div>
       <Navbar />
@@ -74,31 +85,75 @@ const BusinessBenifit = () => {
                   <div className="tp-service-widget-tab">
                     <ul>
                       <li>
-                        <a className="active" href="#business-benefits">
+                        <a
+                          href="#business-benefits"
+                          className={
+                            activeTab === "#business-benefits" ? "active" : ""
+                          }
+                          onClick={(e) =>
+                            handleTabClick(e, "#business-benefits")
+                          }
+                        >
                           Business Benefits
                           <i className="fa-regular fa-arrow-right-long"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#enhanced-employee-experience">
+                        <a
+                          href="#enhanced-employee-experience"
+                          className={
+                            activeTab === "#enhanced-employee-experience"
+                              ? "active"
+                              : ""
+                          }
+                          onClick={(e) =>
+                            handleTabClick(e, "#enhanced-employee-experience")
+                          }
+                        >
                           Enhanced Employee Experience
                           <i className="fa-regular fa-arrow-right-long"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#operational-efficiency">
+                        <a
+                          href="#operational-efficiency"
+                          className={
+                            activeTab === "#operational-efficiency"
+                              ? "active"
+                              : ""
+                          }
+                          onClick={(e) =>
+                            handleTabClick(e, "#operational-efficiency")
+                          }
+                        >
                           Operational Efficiency
                           <i className="fa-regular fa-arrow-right-long"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#risk-mitigation">
+                        <a
+                          href="#risk-mitigation"
+                          className={
+                            activeTab === "#risk-mitigation" ? "active" : ""
+                          }
+                          onClick={(e) => handleTabClick(e, "#risk-mitigation")}
+                        >
                           Risk Mitigation
                           <i className="fa-regular fa-arrow-right-long"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#competitive-advantage">
+                        <a
+                          href="#competitive-advantage"
+                          className={
+                            activeTab === "#competitive-advantage"
+                              ? "active"
+                              : ""
+                          }
+                          onClick={(e) =>
+                            handleTabClick(e, "#competitive-advantage")
+                          }
+                        >
                           Competitive Advantage
                           <i className="fa-regular fa-arrow-right-long"></i>
                         </a>
@@ -166,12 +221,12 @@ const BusinessBenifit = () => {
                         alt=""
                       />
                       <div className="tp-video-play text-center">
-                        <a
-                          className="popup-video effect-1 effect-2"
-                          href="https://www.youtube.com/watch?v=hQIfjJbIy6o&amp;ab_channel=GaanBanglaTV"
-                        >
-                          <i className="fa-sharp fa-solid fa-play"></i>
-                        </a>
+                        <img
+                          src={Enhanced}
+                          alt="Business Benefits"
+                          height={400}
+                          width={400}
+                        />
                       </div>
                     </div>
                   </div>
@@ -235,17 +290,8 @@ const BusinessBenifit = () => {
                   </div>
                   <div className="col-lg-6">
                     <div className="tp-service-details-thumb p-relative">
-                      <img
-                        src="assets/img/services/service-details/img-2.jpg"
-                        alt=""
-                      />
                       <div className="tp-video-play text-center">
-                        <a
-                          className="popup-video effect-1 effect-2"
-                          href="https://www.youtube.com/watch?v=hQIfjJbIy6o&amp;ab_channel=GaanBanglaTV"
-                        >
-                          <i className="fa-sharp fa-solid fa-play"></i>
-                        </a>
+                        <img src={Operational} alt="Business Benefits" />
                       </div>
                     </div>
                   </div>
@@ -253,28 +299,8 @@ const BusinessBenifit = () => {
 
                 {/* Risk Mitigation Section */}
                 <div id="risk-mitigation" className="row">
-                  <h3 className="tp-service-details-title">Risk Mitigation</h3>
-                  <p className="fs-6">
-                    <strong>Compliance adherence:</strong> Adherence to complex
-                    regulatory and industry standards is increasingly critical
-                    for businesses. These compliance mandates are time-consuming
-                    and resource intensive. Gen AI can streamline this process
-                    by ensuring compliance with benefit regulations.
-                  </p>
-                  <p className="fs-6">
-                    <strong>Fraud prevention:</strong> Protect against financial
-                    losses by utilizing Gen AI to detect and prevent fraudulent
-                    benefit claims.
-                  </p>
-                  <p className="fs-6">
-                    <strong>Data security: </strong> Implement robust Gen
-                    AI-powered security measures to safeguard employee
-                    information and maintain data privacy.
-                  </p>
-                </div>
+                  {/* <h3 className="tp-service-details-title">Risk Mitigation</h3> */}
 
-                {/* Competitive Advantage Section */}
-                <div id="competitive-advantage" className="row">
                   <div className="col-lg-6">
                     <div className="tp-service-details-thumb p-relative">
                       <img
@@ -282,15 +308,39 @@ const BusinessBenifit = () => {
                         alt=""
                       />
                       <div className="tp-video-play text-center">
-                        <a
-                          className="popup-video effect-1 effect-2"
-                          href="https://www.youtube.com/watch?v=hQIfjJbIy6o&amp;ab_channel=GaanBanglaTV"
-                        >
-                          <i className="fa-sharp fa-solid fa-play"></i>
-                        </a>
+                        <img src={RiskImage} alt="Business Benefits" />
                       </div>
                     </div>
                   </div>
+                  <div className="col-lg-6">
+                    <div className="tp-service-details-list">
+                      <h3 className="tp-service-details-title">
+                        Risk Mitigation
+                      </h3>
+                      <p className="fs-6">
+                        <strong>Compliance adherence:</strong> Adherence to
+                        complex regulatory and industry standards is
+                        increasingly critical for businesses. These compliance
+                        mandates are time-consuming and resource intensive. Gen
+                        AI can streamline this process by ensuring compliance
+                        with benefit regulations.
+                      </p>
+                      <p className="fs-6">
+                        <strong>Fraud prevention:</strong> Protect against
+                        financial losses by utilizing Gen AI to detect and
+                        prevent fraudulent benefit claims.
+                      </p>
+                      <p className="fs-6">
+                        <strong>Data security: </strong> Implement robust Gen
+                        AI-powered security measures to safeguard employee
+                        information and maintain data privacy.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Competitive Advantage Section */}
+                <div id="competitive-advantage" className="row">
                   <div className="col-lg-6">
                     <div className="tp-service-details-list">
                       <h3 className="tp-service-details-title">
@@ -315,6 +365,17 @@ const BusinessBenifit = () => {
                         employee well-being through Gen AI enhances an
                         organization's reputation.
                       </p>
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="tp-service-details-thumb p-relative">
+                      <img
+                        src="assets/img/services/service-details/img-2.jpg"
+                        alt=""
+                      />
+                      <div className="tp-video-play text-center">
+                        <img src={Competitive} alt="Business Benefits" />
+                      </div>
                     </div>
                   </div>
                 </div>

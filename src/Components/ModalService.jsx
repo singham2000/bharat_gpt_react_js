@@ -61,7 +61,7 @@ const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
     >
       <div className="modal-dialog modal-dialog-centered" role="document">
         <div className="modal-content">
-          <div className="modal-header" style={{ padding: "25px 30px" }}>
+          <div className="modal-header" style={{ padding: "20px 20px" }}>
             <h3
               className="tp-section-title"
               style={{
@@ -104,7 +104,13 @@ const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
                     Please enter your name.
                   </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group as={Col} md="6" controlId="validationCustom02">
+
+                <Form.Group
+                  as={Col}
+                  md="6"
+                  className="mt-3 mt-md-0"
+                  controlId="validationCustom02"
+                >
                   <Form.Control
                     required
                     name="email"
@@ -121,6 +127,7 @@ const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
                   </Form.Control.Feedback>
                 </Form.Group>
               </Row>
+
               <Row className="mb-3">
                 <Form.Group as={Col} md="6" controlId="validationCustom03">
                   <Form.Control
@@ -145,7 +152,13 @@ const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
                     Please select a country.
                   </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group as={Col} md="6" controlId="validationCustom04">
+
+                <Form.Group
+                  as={Col}
+                  md="6"
+                  className="mt-3 mt-md-0"
+                  controlId="validationCustom04"
+                >
                   <Form.Control
                     required
                     name="number"
@@ -161,6 +174,7 @@ const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
                   </Form.Control.Feedback>
                 </Form.Group>
               </Row>
+
               <Row className="mb-3">
                 <Form.Group as={Col} md="12" controlId="validationCustom05">
                   <Form.Control
@@ -233,7 +247,11 @@ const ModalService = ({ showModal, handleCloseModal, selectedId }) => {
                   />
                 </Col>
               </Row>
-              <Button type="submit">Submit</Button>
+              <div className="d-flex justify-content-end">
+                <Button type="submit" className="text-end">
+                  Submit
+                </Button>
+              </div>
             </Form>
             <p className="ajax-response"></p>
           </div>

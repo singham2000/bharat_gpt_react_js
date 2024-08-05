@@ -62,7 +62,7 @@ const BusinessBenifit = () => {
         </div>
       </section>
 
-      <section className="tp-service-details-area pt-20 pb-120">
+      <section className="tp-service-details-area pt-20 mt-40 pb-120">
         <div className="container">
           <div className="row g-5">
             <div className="col-12 col-md-12 col-lg-4 hide-on-mobile mb-md-0">
@@ -156,16 +156,6 @@ const BusinessBenifit = () => {
                 <div id="business-benefits" className="mb-5">
                   <div className="row">
                     <div className="col-md-12">
-                      <div className="tp-service-details-thumb">
-                        <img
-                          src={BusinessBenifitImage}
-                          alt="Business Benefits"
-                          className="img-fluid w-100 mb-4"
-                          height={50}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-12">
                       <h3 className="tp-service-details-title">
                         Business Benefits
                       </h3>
@@ -183,6 +173,16 @@ const BusinessBenifit = () => {
                         professionals from all walks of life, as it does not
                         require a signee to have technology background.
                       </p>
+                      <div className="col-md-12">
+                        <div className="tp-service-details-thumb">
+                          <img
+                            src={BusinessBenifitImage}
+                            alt="Business Benefits"
+                            className="img-fluid w-100 mb-4"
+                            height={30}
+                          />
+                        </div>
+                      </div>
                       <p className="fs-6">
                         The conversational Virtual Assistants, developed using
                         BharatGPT platform are industry agnostic and support

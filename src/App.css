@@ -2807,6 +2807,12 @@ div.demo img {
     display: none !important;
   }
 }
+select#validationCustom01 {
+  color: gray;
+}
+/* .form-control {
+  color: gray;
+} */
 .breadcrumb__title-pre {
   display: inline-block;
   height: 24px;

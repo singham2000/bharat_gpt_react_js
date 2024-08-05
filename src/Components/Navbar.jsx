@@ -112,12 +112,20 @@ const Navbar = () => {
                           <img src={BharatAi} alt="" className="logo-main" />
                         </Link>
 
-                        <span
+                        {/* <span
                           className="tp-btn d-block d-sm-none back-change"
                           style={{ padding: "9px 12px", marginLeft: "15px" }}
                         >
                           <div id="buttonText"></div>
-                        </span>
+                        </span> */}
+                        <a
+                          target="_blank"
+                          href="https://builder.corover.ai/#/auth/signin"
+                          className="tp-btn d-block d-sm-none back-change"
+                          style={{ padding: "9px 12px", marginLeft: "15px" }}
+                        >
+                          <div id="buttonText"></div>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -509,20 +517,26 @@ const Navbar = () => {
             data-toggle="modal"
             data-target="#exampleModalCenter"
           >
-            <span className="tp-btn mt-20" style={{ cursor: "pointer", display: 'flex', width: '150px' }}>
+            <span
+              className="tp-btn mt-20"
+              style={{ cursor: "pointer", display: "flex", width: "150px" }}
+            >
               <EditPencil id={48} existing={"Reach Us"} content_type={"txt"}>
                 Reach Us
               </EditPencil>
               <i className="fa-regular fa-arrow-right-long"></i>
             </span>
-
           </div>
-          {localStorage.getItem('token') && <button onClick={logout}>
-            <span className="tp-btn mt-20" style={{ cursor: "pointer", background: "red" }}>
-              Logout
-            </span>
-          </button>}
-
+          {localStorage.getItem("token") && (
+            <button onClick={logout}>
+              <span
+                className="tp-btn mt-20"
+                style={{ cursor: "pointer", background: "red" }}
+              >
+                Logout
+              </span>
+            </button>
+          )}
 
           <div className="offcanvas__social mt-20">
             <a
@@ -608,7 +622,7 @@ const Navbar = () => {
           </div>
         </Offcanvas.Body>
       </Offcanvas>
-    </div >
+    </div>
   );
 };
 

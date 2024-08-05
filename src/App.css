@@ -2816,7 +2816,12 @@ only screen and (min-width: 576px) and (max-width: 767px),
     display: none !important;
   }
 }
-
+select#validationCustom01 {
+  color: gray;
+}
+/* .form-control {
+  color: gray;
+} */
 .breadcrumb__title-pre {
   display: inline-block;
   height: 24px;

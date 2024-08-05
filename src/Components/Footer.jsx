@@ -136,7 +136,7 @@ const Footer = ({ data }) => {
                     <div className="modal-content">
                       <div
                         className="modal-header"
-                        style={{ padding: "25px 30px" }}
+                        style={{ padding: "20px 20px" }}
                       >
                         <h3
                           className="tp-section-title"
@@ -184,15 +184,19 @@ const Footer = ({ data }) => {
                                   })
                                 }
                               />
+                              <Form.Control.Feedback type="invalid">
+                                Please enter your name.
+                              </Form.Control.Feedback>
                             </Form.Group>
+
                             <Form.Group
                               as={Col}
                               md="6"
+                              className="mt-3 mt-md-0"
                               controlId="validationCustom02"
                             >
                               <Form.Control
                                 required
-                                type="text"
                                 name="email"
                                 placeholder="Enter your email id"
                                 onChange={(e) =>
@@ -202,8 +206,12 @@ const Footer = ({ data }) => {
                                   })
                                 }
                               />
+                              <Form.Control.Feedback type="invalid">
+                                Please enter a valid email.
+                              </Form.Control.Feedback>
                             </Form.Group>
                           </Row>
+
                           <Row className="mb-3">
                             <Form.Group
                               as={Col}
@@ -236,6 +244,7 @@ const Footer = ({ data }) => {
                             <Form.Group
                               as={Col}
                               md="6"
+                              className="mt-3 mt-md-0"
                               controlId="validationCustom02"
                             >
                               <Form.Control
@@ -302,14 +311,18 @@ const Footer = ({ data }) => {
                             </Form.Group>
                           </Row>
                           <Row className="mb-3">
-                            <Col md="12">
+                            <Col md="12" className="text-end">
                               <ReCAPTCHA
                                 sitekey="6LcwehQqAAAAANQtCdPk7mGvPhvBl2zCvXQnG82I"
                                 onChange={handleCaptchaChange}
                               />
                             </Col>
                           </Row>
-                          <Button type="submit">Submit</Button>
+                          <div className="d-flex justify-content-end">
+                            <Button type="submit" className="text-end">
+                              Submit
+                            </Button>
+                          </div>
                         </Form>
                         <p className="ajax-response"></p>
                       </div>
@@ -357,7 +370,7 @@ const Footer = ({ data }) => {
                   <span style={{ color: "#ff6900", cursor: "pointer" }}>
                     Terms & Conditions
                   </span>
-                  {" | "}
+                  {" | "}PATENT PENDING
                   <EditPencil
                     id={31}
                     existing={data[31]?.display_content}
@@ -365,7 +378,7 @@ const Footer = ({ data }) => {
                   >
                     {data[31]?.display_content}
                   </EditPencil>
-                  {"."} PATENT PENDING
+
                 </p>
               </div>
             </div>

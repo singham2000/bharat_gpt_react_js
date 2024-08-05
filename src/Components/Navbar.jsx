@@ -319,7 +319,7 @@ const Navbar = () => {
                     existing={"Become a partner"}
                     content_type={"txt"}
                   >
-                    Become a partner
+                    Become a Partner
                   </EditPencil>
                 </span>
               </a>

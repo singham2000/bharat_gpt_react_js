@@ -31,7 +31,7 @@ const Developer = ({ handleOpenModal, handleCloseModal, data }) => {
       <div className="container-fluid gx-0">
         <div className="row row-equal-height gx-0">
           <div className="feature-3-active swiper-container">
-            <div className="d-flex flex-lg-row flex-column gap-3">
+            <div className="d-flex flex-lg-row flex-column">
               <div className="col-lg-4 col-md-6 col-equal-height">
                 <div className="tp-feature-3-content-inner d-flex align-items-center text-decoration-none">
                   <div className="tp-feature-3-content">

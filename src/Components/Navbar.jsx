@@ -168,7 +168,7 @@ const Navbar = () => {
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
-            <a href="home-main.html">
+            <a href="/">
               <img
                 src={BharatAiLogo}
                 alt="logo"

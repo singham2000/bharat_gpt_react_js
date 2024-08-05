@@ -29,14 +29,8 @@ const Awards = () => {
       <Navbar />
 
       <section
-        className="breadcrumb__area breadcrumb-style pt-100 pb-100 mb-60 p-relative z-index-1"
-        style={{
-          backgroundSize: "100% 150%",
-          objectFit: "center",
-          opacity: "2",
-          backgroundImage: `url(${BannerS})`,
-        }}
-        data-background="assets/img/banners.png"
+        className="breadcrumb__area breadcrumb-style pt-100 pb-100 mb-60 p-relative z-index-1 award_banner"
+
       >
         <div className="breadcrumb__bg-overlay m-img"></div>
         <div className="container">

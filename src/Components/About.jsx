@@ -131,10 +131,7 @@ const About = ({ data }) => {
             <div className="tp-about-wrapper pl-50">
               <div className="row">
                 <div className="col-lg-12">
-                  <div
-                    className="tp-about-title-wrapper p-relative"
-                    style={{ marginBottom: "50px" }}
-                  >
+                  <div className="tp-about-title-wrapper p-relative">
                     <span className="tp-section-title__pre">
                       <EditPencil
                         id={4}
@@ -167,7 +164,6 @@ const About = ({ data }) => {
                         {data[122]?.display_content}
                         {/* THE FUTURE OF ENTERPRISE */}
                       </EditPencil>
-
 
                       <span className="title-left-shape">
                         <svg

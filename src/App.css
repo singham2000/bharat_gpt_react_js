@@ -266,7 +266,7 @@ li,
 }
 
 .logo-main {
-  width: 280px;
+  width: 220px;
   /* height: 150px"; */
 }
 
@@ -2771,7 +2771,7 @@ div.demo img {
   font-weight: 700;
   font-size: 38px;
   line-height: 50px;
-  color: #121d2c;
+  color: white;
   margin-bottom: 25px;
   text-transform: capitalize;
   margin-top: 22px;
@@ -2783,7 +2783,11 @@ div.demo img {
   right: 35%;
   z-index: -1;
 }
-
+@media (max-width: 767px) {
+  .breadcrumb__title {
+    font-size: 18px; /* Reduced font size for mobile */
+  }
+}
 @media (max-width: 575px) {
   .breadcrumb__title img {
     bottom: -10px;

@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import contentContext from "../utils/contentContext";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import BannerS from "../Assets/images/awardsBaaner.jpg";
+import BannerS from "../Assets/images/awardBanner.png";
 import EditPencil from "../Components/EditPencil";
 import axiosInstance from "../utils/axios";
 
@@ -40,7 +40,11 @@ const Awards = () => {
               <div className="breadcrumb__content text-center">
                 <h3
                   className="tp-hero-title"
-                  style={{ color: "black", fontSize: "54px", fontWeight: '700' }}
+                  style={{
+                    color: "white",
+                    fontSize: "54px",
+                    fontWeight: "700",
+                  }}
                 >
                   <EditPencil
                     id={93}

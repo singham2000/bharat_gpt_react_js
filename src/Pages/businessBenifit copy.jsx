@@ -3,8 +3,8 @@ import { useLocation } from "react-router-dom";
 import contentContext from "../utils/contentContext";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import BannerS from "../Assets/images/businessBenifit.jpg";
-import BusinessBenifitImage from "../Assets/images/business.png";
+import BannerS from "../Assets/images/awardsBaaner.jpg";
+import BusinessBenifitImage from "../Assets/images/businessBenifits.jpg";
 import Competitive from "../Assets/images/Competitive.jpg";
 import RiskImage from "../Assets/images/risk.jpg";
 import Operational from "../Assets/images/operational.jpg";
@@ -46,6 +46,7 @@ const BusinessBenifit = () => {
       <section
         className="breadcrumb__area breadcrumb-style pt-100 pb-100 mb-60 p-relative z-index-1"
         style={{ backgroundSize: "100%", backgroundImage: `url(${BannerS})` }}
+        data-background="assets/img/banners.png"
       >
         <div class="breadcrumb__bg-overlay m-img"></div>
         <div class="container">
@@ -53,11 +54,26 @@ const BusinessBenifit = () => {
             <div class="col-xl-10">
               <div class="breadcrumb__content text-center">
                 <h3 class="breadcrumb__title">
-                  Business Benefits <br className="p-0 m-0" />
-                  of
-                  <br className="p-0 m-0" /> Gen AI based Virtual Benefits
+                  <u>
+                    Business Benefits <br />
+                    of
+                  </u>
+                  <br /> Gen AI based Virtual Benefits
                   <img src="assets/img/breadcrumb/titile.svg" alt="" />
                 </h3>
+                {/* <div class="breadcrumb__list breadcrumb__list-translate">
+                  <span>
+                    <a href="home.html">Home</a>
+                  </span>
+                  <span class="dvdr">
+                    <i class="fa-regular fa-angle-right"></i>
+                  </span>
+                  <span>pages</span>
+                  <span class="dvdr">
+                    <i class="fa-regular fa-angle-right"></i>
+                  </span>
+                  <span>Service Details</span>
+                </div> */}
               </div>
             </div>
           </div>
@@ -66,8 +82,8 @@ const BusinessBenifit = () => {
 
       <section className="tp-service-details-area pt-120 pb-120">
         <div className="container">
-          <div className="row g-5">
-            <div className="col-lg-4 col-md-12  mb-md-0">
+          <div className="row">
+            <div className="col-lg-4 col-md-12 mb-4">
               <div className="tp-service-widget">
                 <div className="tp-service-widget-item mb-40">
                   <div className="tp-service-widget-tab">
@@ -152,77 +168,73 @@ const BusinessBenifit = () => {
               </div>
             </div>
 
-            <div className="col-lg-8 col-md-12 mb-5 mb-md-0">
+            <div className="col-lg-8 col-md-12">
               <div className="tp-service-details-wrapper">
                 {/* Business Benefits Section */}
-                <div id="business-benefits" className="mb-5">
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div className="tp-service-details-thumb">
-                        <img
-                          src={BusinessBenifitImage}
-                          alt="Business Benefits"
-                          className="img-fluid w-100 mb-4"
-                          height={50}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <h3 className="tp-service-details-title">
-                        Business Benefits
-                      </h3>
-                      <p className="fs-6">
-                        The platform BharatGPT has its unique features, which
-                        have direct business benefits. The platform offers 14
-                        Indian/Vernacular languages through voice, 22
-                        Indian/Vernacular Languages for text modality and 100+
-                        Foreign/International Languages across platforms.
-                      </p>
-                      <p className="fs-6">
-                        The BharatGPT Platform offers a choice of
-                        multi-foundational LLMS and is almost No Code/Low Code
-                        configuration box. The platform is available for
-                        professionals from all walks of life, as it does not
-                        require a signee to have technology background.
-                      </p>
-                      <p className="fs-6">
-                        The conversational Virtual Assistants, developed using
-                        BharatGPT platform are industry agnostic and support
-                        countless use cases, having SLA bound proficiency. These
-                        Virtual Assistants have contextual, historic and
-                        transactional capabilities, having potential of extreme
-                        integrations across third party applications like ERP,
-                        CRM, Payment Gateways, Manufacturing Floor Assemblies.
-                      </p>
-                      <p className="fs-6">
-                        The Conversational Dashboard from CoRover.ai makes the
-                        top management experience elevated and easy. The Virtual
-                        Assistants developed using BharatGPT have text, voice
-                        and video based conversational abilities, in lines with
-                        human like conversation.
-                      </p>
-                      <p className="fs-6">
-                        A businesses can transform themselves and drive employee
-                        satisfaction, operational efficiency, and competitive
-                        advantage, ultimately creating a more efficient,
-                        cost-effective, and employee-centric organization.
-                      </p>
-                    </div>
+                <div id="business-benefits">
+                  <div className="tp-service-details-thumb">
+                    <img src={BusinessBenifitImage} alt="Business Benefits" />
                   </div>
+                  <h3 className="tp-service-details-title">
+                    Business Benefits
+                  </h3>
+                  <p className="fs-6">
+                    The platform BharatGPT has its unique features, which have
+                    direct business benefits. The platform offers 14
+                    Indian/Vernacular languages through voice, 22
+                    Indian/Vernacular Languages for text modality and 100+
+                    Foreign/International Languages across platforms.
+                  </p>
+                  <p className="fs-6">
+                    The BharatGPT Platform offers a choice of multi-foundational
+                    LLMS and is almost No Code/Low Code configuration box. The
+                    platform is available for professionals from all walks of
+                    life, as it does not require a signee to have technology
+                    background.
+                  </p>
+                  <p className="fs-6">
+                    The conversational Virtual Assistants, developed using
+                    BharatGPT platform are industry agnostic and support
+                    countless use cases, having SLA bound proficiency. These
+                    Virtual Assistants have contextual, historic and
+                    transactional capabilities, having potential of extreme
+                    integrations across third party applications like ERP, CRM,
+                    Payment Gateways, Manufacturing Floor Assemblies.
+                  </p>
+                  <p className="fs-6">
+                    The Conversational Dashboard from CoRover.ai makes the top
+                    management experience elevated and easy. The Virtual
+                    Assistants developed using BharatGPT have text, voice and
+                    video based conversational abilities, in lines with human
+                    like conversation.
+                  </p>
+                  <p className="fs-6">
+                    A businesses can transform themselves and drive employee
+                    satisfaction, operational efficiency, and competitive
+                    advantage, ultimately creating a more efficient,
+                    cost-effective, and employee-centric organization.
+                  </p>
                 </div>
 
                 {/* Enhanced Employee Experience Section */}
-                <div id="enhanced-employee-experience" className="row mb-5">
-                  <div className="col-lg-6 col-md-12 mb-4">
+                <div id="enhanced-employee-experience" className="row">
+                  <div className="col-lg-6">
                     <div className="tp-service-details-thumb p-relative">
                       <img
-                        src={Enhanced}
-                        alt="Enhanced Employee Experience"
-                        className="img-fluid w-100"
+                        src="assets/img/services/service-details/img-2.jpg"
+                        alt=""
                       />
+                      <div className="tp-video-play text-center">
+                        <img
+                          src={Enhanced}
+                          alt="Business Benefits"
+                          height={400}
+                          width={400}
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div className="col-lg-6 col-md-12">
+                  <div className="col-lg-6">
                     <div className="tp-service-details-list">
                       <h3 className="tp-service-details-title">
                         Enhanced Employee Experience
@@ -254,9 +266,9 @@ const BusinessBenifit = () => {
                   </div>
                 </div>
 
-                {/* Additional sections like Operational Efficiency, Risk Mitigation, Competitive Advantage */}
-                <div id="operational-efficiency" className="row mb-5">
-                  <div className="col-lg-6 col-md-12">
+                {/* Operational Efficiency Section */}
+                <div id="operational-efficiency" className="row">
+                  <div className="col-lg-6">
                     <div className="tp-service-details-list">
                       <h3 className="tp-service-details-title">
                         Operational Efficiency
@@ -280,27 +292,31 @@ const BusinessBenifit = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="col-lg-6 col-md-12 mb-4">
+                  <div className="col-lg-6">
                     <div className="tp-service-details-thumb p-relative">
-                      <img
-                        src={Operational}
-                        alt="Enhanced Employee Experience"
-                        className="img-fluid w-100"
-                      />
+                      <div className="tp-video-play text-center">
+                        <img src={Operational} alt="Business Benefits" />
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div id="risk-mitigation" className="row mb-5">
-                  <div className="col-lg-6 col-md-12 mb-4">
+
+                {/* Risk Mitigation Section */}
+                <div id="risk-mitigation" className="row">
+                  {/* <h3 className="tp-service-details-title">Risk Mitigation</h3> */}
+
+                  <div className="col-lg-6">
                     <div className="tp-service-details-thumb p-relative">
                       <img
-                        src={RiskImage}
-                        alt="Enhanced Employee Experience"
-                        className="img-fluid w-100"
+                        src="assets/img/services/service-details/img-2.jpg"
+                        alt=""
                       />
+                      <div className="tp-video-play text-center">
+                        <img src={RiskImage} alt="Business Benefits" />
+                      </div>
                     </div>
                   </div>
-                  <div className="col-lg-6 col-md-12">
+                  <div className="col-lg-6">
                     <div className="tp-service-details-list">
                       <h3 className="tp-service-details-title">
                         Risk Mitigation
@@ -326,8 +342,10 @@ const BusinessBenifit = () => {
                     </div>
                   </div>
                 </div>
-                <div id="competitive-advantage" className="row mb-5">
-                  <div className="col-lg-6 col-md-12">
+
+                {/* Competitive Advantage Section */}
+                <div id="competitive-advantage" className="row">
+                  <div className="col-lg-6">
                     <div className="tp-service-details-list">
                       <h3 className="tp-service-details-title">
                         Competitive Advantage
@@ -353,13 +371,15 @@ const BusinessBenifit = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="col-lg-6 col-md-12 mb-4">
+                  <div className="col-lg-6">
                     <div className="tp-service-details-thumb p-relative">
                       <img
-                        src={Competitive}
-                        alt="Enhanced Employee Experience"
-                        className="img-fluid w-100"
+                        src="assets/img/services/service-details/img-2.jpg"
+                        alt=""
                       />
+                      <div className="tp-video-play text-center">
+                        <img src={Competitive} alt="Business Benefits" />
+                      </div>
                     </div>
                   </div>
                 </div>

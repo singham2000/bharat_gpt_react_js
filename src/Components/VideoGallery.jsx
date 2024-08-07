@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import EditPencil from "../Components/EditPencil";
 import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
 
 const VideoGallery = () => {
   const videos = [

@@ -14,7 +14,7 @@ const FloatingPencilIcon = ({ children, id, existing, content_type }) => {
     setDataset(e.target.files[0]);
   };
   const updateContent = async (e) => {
-    // console.log(dataset);
+    console.log("dataset");
     e.preventDefault();
     if (content_type === "txt") {
       await axiosInstance.post(
@@ -111,7 +111,7 @@ const FloatingPencilIcon = ({ children, id, existing, content_type }) => {
                 />
               )}
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" onClick={updateContent}>
               Submit
             </button>
           </form>
